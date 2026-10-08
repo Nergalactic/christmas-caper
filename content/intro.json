@@ -1,80 +1,223 @@
 {
-  "_note": "PLACEHOLDER content to exercise the engine (scene moves, goggles, a boost, the ending). Replace with the real intro script.",
+  "_note": "Intro script, first draft. Hotspot yaw/pitch values are rough guesses; place them for real with editor.html once the panoramas exist.",
   "scenes": {
     "office": {
       "name": "Tiny's Office",
       "panorama": null,
       "startYaw": 0,
       "startPitch": -10,
-      "on_enter": "office_enter",
+      "ambience": "office",
+      "dark_open": true,
+      "on_enter": "office_open",
       "hotspots": [
-        { "id": "granny", "label": "Granny Slush", "yaw": 0, "pitch": 5, "beat": "office_granny", "sets": ["took_case"] },
-        { "id": "goggles", "label": "Desk drawer", "yaw": 70, "pitch": -15, "beat": "office_goggles", "grants": "goggles", "requires": ["took_case"] },
-        { "id": "door", "label": "Door", "yaw": 180, "pitch": 0, "go": "alley", "requires": ["has_goggles"] }
+        { "id": "door", "label": "Knock at the door", "yaw": 20, "pitch": 15, "beat": "office_knock", "sets": ["met_granny"] },
+        { "id": "drip", "label": "Puddle by the door", "yaw": 15, "pitch": -40, "beat": "office_drip", "requires": ["met_granny"], "sets": ["saw_drip"] },
+        { "id": "granny", "label": "Granny Slush", "yaw": 10, "pitch": 20, "beat": "office_granny", "requires": ["saw_drip"], "sets": ["took_case"] },
+        { "id": "drawer", "label": "Bottom desk drawer", "yaw": -60, "pitch": -25, "beat": "office_drawer", "grants": "goggles", "requires": ["took_case"] },
+        { "id": "hallway", "label": "Hallway", "yaw": 30, "pitch": 0, "beat": "office_leave", "go": "street", "requires": ["has_goggles"] }
+      ]
+    },
+    "street": {
+      "name": "The Street",
+      "panorama": null,
+      "startYaw": 0,
+      "startPitch": -5,
+      "ambience": "street",
+      "on_enter": "street_enter",
+      "hotspots": [
+        { "id": "granny", "label": "Granny Slush", "yaw": -25, "pitch": 15, "beat": "street_granny", "sets": ["granny_coming"] },
+        { "id": "bus_stop", "label": "Bus stop", "yaw": 40, "pitch": 0, "beat": "street_choice", "go": "bus_stop", "requires": ["granny_coming"] }
+      ]
+    },
+    "bus_stop": {
+      "name": "The Bus Stop",
+      "panorama": null,
+      "startYaw": 0,
+      "startPitch": -5,
+      "ambience": "bus_stop",
+      "on_enter": "bus_stop_enter",
+      "hotspots": [
+        { "id": "bus", "label": "The bus", "yaw": 0, "pitch": 5, "beat": "bus_ride", "go": "alley" }
       ]
     },
     "alley": {
       "name": "The Alley Behind the Mistletoe Lounge",
       "panorama": null,
       "startYaw": 0,
-      "startPitch": -15,
+      "startPitch": -10,
+      "ambience": "alley",
       "on_enter": "alley_enter",
       "hotspots": [
-        { "id": "puddle", "label": "Puddle", "yaw": 0, "pitch": -35, "beat": "alley_puddle", "sets": ["saw_puddle"] },
-        { "id": "scorch", "label": "Scorch marks", "yaw": -40, "pitch": -20, "goggles": true, "beat": "alley_scorch", "requires": ["saw_puddle"], "sets": ["saw_scorch"] },
+        { "id": "snap", "label": "Sgt. Snap", "yaw": -20, "pitch": 10, "beat": "alley_snap", "sets": ["met_snap"] },
+        { "id": "puddle", "label": "Puddle", "yaw": 0, "pitch": -40, "beat": "alley_puddle", "requires": ["met_snap"], "sets": ["saw_puddle"] },
+        { "id": "comet", "label": "Comet and Lil' Sleet", "yaw": 55, "pitch": 0, "beat": "alley_comet", "requires": ["saw_puddle"], "sets": ["met_comet"] },
+        { "id": "scorch", "label": "Scorch marks", "yaw": 25, "pitch": -35, "goggles": true, "beat": "alley_scorch", "requires": ["met_comet"], "sets": ["saw_scorch"] },
         {
           "id": "kiss",
           "label": "Smoking lipstick kiss",
-          "yaw": 45,
-          "pitch": 30,
-          "requires": ["saw_scorch"],
+          "yaw": -10,
+          "pitch": 35,
           "boost": { "by": "granny", "beat": "alley_boost" },
           "beat": "alley_kiss",
-          "end": true
+          "requires": ["saw_scorch"],
+          "sets": ["saw_kiss"]
+        },
+        {
+          "id": "granny",
+          "label": "Granny Slush",
+          "yaw": -45,
+          "pitch": 15,
+          "beat": "alley_demand",
+          "requires": ["saw_kiss"],
+          "end": true,
+          "end_title": "To be continued..."
         }
       ]
     }
   },
   "beats": {
-    "office_enter": {
+    "office_open": {
       "lines": [
-        { "speaker": "tiny", "text": "Christmas Eve. The kind of cold that gets into your boots and files a change of address." }
+        { "speaker": "tiny", "text": "The North Pole. Christmas Eve. Snow coming down like it had somewhere better to be." },
+        { "speaker": "tiny", "text": "The name's Tiny Hightower. Private investigator. I see this town from knee level, and believe me, it doesn't look any better from down here." },
+        { "speaker": "tiny", "text": "My office is a broom closet off the third floor hallway. The broom still lives here. We don't talk." },
+        { "speaker": "tiny", "text": "I was four hot cocoas deep when trouble came knocking. Trouble usually knocks at my height. This trouble knocked way up high." }
+      ]
+    },
+    "office_knock": {
+      "lines": [
+        { "speaker": "granny", "text": "Hello? Is this the detective? The sign on the door said detective." },
+        { "speaker": "tiny", "text": "The sign was right, ma'am. Down here." },
+        { "speaker": "granny", "text": "Oh! Oh, my. I've been talking to your coat rack." },
+        { "speaker": "tiny", "text": "Happens a lot. The coat rack's solved two cases." }
+      ]
+    },
+    "office_drip": {
+      "lines": [
+        { "speaker": "tiny", "text": "She was leaving a little puddle everywhere she stood. Old snow does that." },
+        { "speaker": "tiny", "text": "I made a mental note to forget it." }
       ]
     },
     "office_granny": {
       "lines": [
-        { "speaker": "granny", "text": "Are you the detective? Down here? Oh my. My Jimmy is missing." },
-        { "speaker": "tiny", "text": "I weighed my options. Take the case. Or take the case. I took the case." }
+        { "speaker": "granny", "text": "It's my son, Jimmy. He sings at the Mistletoe Lounge. He didn't come home last night." },
+        { "speaker": "granny", "text": "He calls himself Jimmy Mittens now. For show business. His real name is Jimmy Slush, like his father, may he rest in the freezer." },
+        { "speaker": "tiny", "text": "A stage name. Every crooner's got one. Every crooner's also got enemies." },
+        { "speaker": "granny", "text": "I told him he had a snowball's chance in hell in show business. He never listened." },
+        { "speaker": "tiny", "text": "I weighed my options. I could take the case. I could take the case. Or, and hear me out, I could take the case." },
+        { "speaker": "tiny", "text": "It was agonizing. I took the case." }
       ]
     },
-    "office_goggles": {
+    "office_drawer": {
       "lines": [
-        { "speaker": "tiny", "text": "My tinsel goggles. Sophisticated forensic instruments. Also festive." }
+        { "speaker": "tiny", "text": "The bottom drawer. The only drawer I can reach. Inside, my most trusted instrument." },
+        { "speaker": "tiny", "text": "Tinsel goggles. Military grade. Okay, party grade. But they see things the naked eye can't." },
+        { "speaker": "tiny", "text": "Mostly sparkles. But also things." }
+      ]
+    },
+    "office_leave": {
+      "lines": [
+        { "speaker": "granny", "text": "Do you need a lift, dear? Or a ride? Or a step stool?" },
+        { "speaker": "tiny", "text": "I'll take the stairs, ma'am. All forty of them. Each one up to my chin." }
+      ]
+    },
+    "street_enter": {
+      "lines": [
+        { "speaker": "tiny", "text": "Outside, the snow was falling sideways, like it was trying to leave town too." },
+        { "speaker": "tiny", "text": "The Mistletoe Lounge was six blocks away. For a regular guy, that's a stroll. For me, that's a pilgrimage." }
+      ]
+    },
+    "street_granny": {
+      "lines": [
+        { "speaker": "granny", "text": "I'm coming with you. Jimmy's my boy." },
+        { "speaker": "tiny", "text": "It could get dangerous, ma'am." },
+        { "speaker": "granny", "text": "Dear, I'm eighty-seven and made of snow. Everything is dangerous." }
+      ]
+    },
+    "street_choice": {
+      "lines": [
+        { "speaker": "tiny", "text": "Two paths lay before me. Walk six blocks. Or take the bus." },
+        { "speaker": "tiny", "text": "Walking meant freedom. The bus meant a seat. I ran the numbers. Then I ran them again. Then I lost count." },
+        { "speaker": "tiny", "text": "I took the bus. A man's gotta know his limits. Mine are about three feet." }
+      ]
+    },
+    "bus_stop_enter": {
+      "lines": [
+        { "speaker": "tiny", "text": "The bus stop. Where this city's lost souls wait for the eleven fifteen that always shows up at eleven forty." }
+      ]
+    },
+    "bus_ride": {
+      "lines": [
+        { "speaker": "tiny", "text": "The bus pulled up. The first step came up to my eyebrows." },
+        { "speaker": "granny", "text": "Up you go, dear. My, you had a snowball's chance in hell with that step." },
+        { "speaker": "tiny", "text": "We rode in silence. The city slid past the window. Six blocks. The longest six blocks of my life." },
+        { "speaker": "tiny", "text": "Around block three, I questioned everything. By block four, I had answers. By block five, I'd forgotten them." },
+        { "speaker": "tiny", "text": "Block six. Our stop. Granny pulled the cord. I pointed at it with authority." }
       ]
     },
     "alley_enter": {
       "lines": [
-        { "speaker": "tiny", "text": "The alley smelled like jazz and wet carrots." }
+        { "speaker": "tiny", "text": "The alley behind the Mistletoe Lounge. The band was still playing Jimmy's song through the wall, like nothing happened." },
+        { "speaker": "tiny", "text": "Police tape. A gingerbread cop. And a lady reindeer, warm as a July sidewalk, chatting up a snowman by the dumpster." },
+        { "speaker": "tiny", "text": "Just another night in the big icy." }
+      ]
+    },
+    "alley_snap": {
+      "lines": [
+        { "speaker": "sgt_snap", "text": "Whoa, whoa. Crime scene. No civilians. Sergeant Snap, North Pole PD." },
+        { "speaker": "tiny", "text": "Tiny Hightower. Private." },
+        { "speaker": "sgt_snap", "text": "Private what? Where are you even... oh. Down there." },
+        { "speaker": "sgt_snap", "text": "Look, pal, it's open and shut. Snowman goes out, snowman doesn't come back. Happens every spring." },
+        { "speaker": "tiny", "text": "It's December, sergeant." },
+        { "speaker": "sgt_snap", "text": "Don't push me, pal. I'm already crumbling under the pressure. Literally. That was my elbow." }
       ]
     },
     "alley_puddle": {
       "lines": [
-        { "speaker": "tiny", "text": "A puddle. A top hat. A scarf. Could mean anything." }
+        { "speaker": "tiny", "text": "There he was. Or there he wasn't. A top hat. A scarf. A carrot. Two lumps of coal, staring up at me." },
+        { "speaker": "granny", "text": "Oh, Jimmy. My poor baby. You always did spread yourself too thin." },
+        { "speaker": "tiny", "text": "A puddle. Could mean anything. Rain. A spilled drink. A very sad cloud." },
+        { "speaker": "tiny", "text": "I wasn't ruling anything out. Except the obvious. I always rule out the obvious. It's too obvious." }
+      ]
+    },
+    "alley_comet": {
+      "lines": [
+        { "speaker": "comet", "text": "Well, hello there, little man. Somebody call a detective?" },
+        { "speaker": "tiny", "text": "From down here, all I could see of her were her hooves. They were on fire. Probably a fashion thing." },
+        { "speaker": "comet", "text": "I'm Comet. Poor Jimmy. We were... acquainted. He was a real cool guy. Before." },
+        { "speaker": "lil_sleet", "text": "H-hi. I'm Lil' Sleet. Big fan of Jimmy's. Is it hot out here, or is it just me?" },
+        { "speaker": "comet", "text": "It's just you, sugar." },
+        { "speaker": "tiny", "text": "The kid was sweating bullets. Big, wet, drippy bullets. Nerves, probably. Murder does that to people." },
+        { "speaker": "tiny", "text": "Something about this alley didn't add up. Time for the goggles." }
       ]
     },
     "alley_scorch": {
       "lines": [
-        { "speaker": "tiny", "text": "Scorch marks, shaped exactly like hooves. Probably nothing." }
+        { "speaker": "tiny", "text": "With the tinsel goggles on, the alley lit up like a department store window." },
+        { "speaker": "tiny", "text": "Scorch marks. Shaped like hooves. A trail of them, leading up to the puddle, and then over to the dumpster." },
+        { "speaker": "tiny", "text": "Somebody'd been having a barbecue back here. In a blizzard. The plot thickened, like gravy." },
+        { "speaker": "tiny", "text": "And up on the wall, way out of reach, something was smoking." }
       ]
     },
     "alley_boost": {
       "lines": [
-        { "speaker": "granny", "text": "Up you go, dear. Oof. You had a snowball's chance in hell of reaching that." }
+        { "speaker": "granny", "text": "Hold still, dear. Up we go. Oof. You had a snowball's chance in hell of reaching that on your own." }
       ]
     },
     "alley_kiss": {
       "lines": [
-        { "speaker": "tiny", "text": "A lipstick kiss. Still smoking. The plot thickens. Like slush." }
+        { "speaker": "tiny", "text": "Up close, I saw it. A lipstick kiss on the brick, right about where a snowman's face would be. Still smoking." },
+        { "speaker": "tiny", "text": "Warm to the touch. Very warm. Ow." },
+        { "speaker": "tiny", "text": "Whoever kissed Jimmy last left their mark. And then they left him a puddle." },
+        { "speaker": "tiny", "text": "I had a theory. A big one. I'd tell you, but I'm saving it." }
+      ]
+    },
+    "alley_demand": {
+      "lines": [
+        { "speaker": "granny", "text": "Well? Do you know who did this to my Jimmy?" },
+        { "speaker": "tiny", "text": "I have several leads, ma'am. All of them point inside that lounge. One of them points at the dumpster." },
+        { "speaker": "granny", "text": "Find who did this. Or I'll find a detective who can reach the doorbell." },
+        { "speaker": "tiny", "text": "I looked up at the Mistletoe Lounge. Way, way up. Somewhere in there was a killer. And hopefully a step stool." }
       ]
     }
   }

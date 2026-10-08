@@ -4,6 +4,8 @@
   "speakers": {
     "tiny": "Tiny Hightower",
     "granny": "Granny Slush",
+    "sgt_snap": "Sgt. Snap",
+    "lil_sleet": "Lil' Sleet",
     "comet": "Comet",
     "vixen": "Vixen",
     "prancer": "Prancer",
@@ -15,6 +17,10 @@
     "dasher": "Dasher"
   },
   "chapters": [
-    { "id": "intro", "title": "Cold Case", "file": "intro.json" }
+    {
+      "id": "intro",
+      "title": "Cold Case",
+      "file": "intro.json"
+    }
   ]
 }

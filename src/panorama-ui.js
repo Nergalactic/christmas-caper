@@ -470,7 +470,7 @@ async function onHotspotClick(h) {
   setBusy(false);
 
   if (result.end) {
-    await runEnding();
+    await runEnding(result.hotspot.end_title);
     return;
   }
   if (result.go) {
@@ -499,22 +499,32 @@ async function enterScene(id) {
   statusStripEl.hidden = false;
   statusSceneEl.textContent = scene.name || scene.id;
   updateGogglesButton();
-  updateTutorialPanel();
+  // `dark_open`: the scene stays black while its opening beat plays, then
+  // fades in (the game's noir cold open).
+  const dark = !!(scene.dark_open && beat);
+  viewerEl.classList.toggle("dark", dark);
+  if (dark) tutorialPanelEl.hidden = true;
+  else updateTutorialPanel();
   await setScene(scene.panorama, scene.name, scene.startYaw, scene.startPitch, { fov: scene.fov || 75 });
-  flashLookAroundHint();
+  if (!dark) flashLookAroundHint();
   if (beat) {
     setBusy(true);
     await playBeat(beat);
     setBusy(false);
   }
+  if (dark) {
+    viewerEl.classList.remove("dark");
+    flashLookAroundHint();
+    updateTutorialPanel();
+  }
   refreshHotspots();
 }
 
-async function runEnding() {
+async function runEnding(title = "Case closed.") {
   clearHotspots();
   clearCaption();
   captionBarEl.classList.add("chapter-card");
-  appendCaption("Case closed.");
+  appendCaption(title);
   const choice = await chooseInCaption([{ label: "View credits", value: "credits", primary: true }]);
   clearCaption();
   if (choice === "credits") await showCredits();

@@ -815,3 +815,13 @@ body.beat-playing .hotspot {
 #viewer.boosted #viewer-canvas {
   transform: translateY(6%) scale(1.06);
 }
+
+/* Noir cold open: the scene is black until its opening beat finishes. */
+#viewer.dark #viewer-canvas {
+  opacity: 0;
+  transition: none; /* cut to black instantly; only the fade back in is slow */
+}
+
+#viewer-canvas {
+  transition: transform 0.6s ease, opacity 2.5s ease;
+}
