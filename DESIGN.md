@@ -23,7 +23,7 @@ The killer is obvious from the very first scene. Her name is **Comet**, and her 
 |---|---|---|
 | **Tiny Hightower** | Elf P.I. Hardboiled narration, gravel voice, very short. Overthinks everything. | Deep, dramatic noir narrator. Completely serious about everything, including jumping. |
 | **Granny Slush** | Jimmy's mother. Old snowman lady, already partly melted from age. Catchphrase: "a snowball's chance in hell," used about everything except the obvious. | A deliberately terrible old-lady voice. Warbly, slow, overacted. |
-| **Jimmy Mittens** (victim) | Lounge singer at the Mistletoe Lounge. Born Jimmy Slush; changed his name for show business. Granny never forgave him. Now a puddle. | No lines (he's a puddle). Possibly a recorded lounge song playing in Chapter 1. |
+| **Jimmy Mittens** (victim) | Lounge singer at the Mistletoe Lounge. Born Jimmy Slush; changed his name for show business. Granny never forgave him. Now a puddle. | No lines (he's a puddle). His signature lounge song plays in Chapter 1: an original, AI-generated track. |
 | **Comet** | Reindeer whose hooves are always on fire, like a comet. Leaves scorched hoofprints and puddles wherever she goes. Knows she melted Jimmy. It's a pattern; she has a trail of melted exes. Tiny never suspects her. | Sultry, smoky, a little too calm. |
 | **Vixen** | Rival lounge singer, bumped from her slot for Jimmy. | Classic femme fatale, wasted on a red herring. |
 | **Prancer** | Jimmy's vain manager, took 40%. Always seen with the Easter Bunny, since they both hop everywhere. | Fast-talking agent. |
@@ -80,7 +80,7 @@ The final clue, Comet's scrapbook of melted exes, sits on a high shelf. The game
 Target: 2 to 3 panoramas.
 
 ### Ending
-One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook, finally solves the case, and delivers a long, self-satisfied closing monologue.
+One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook and confronts Comet in a stupidly over-the-top big reveal: he walks everyone through what happened, step by step, treating every painfully obvious clue (the flaming hooves, the scorch marks, the smoking kiss, the puddles) as a stunning revelation nobody could have seen coming.
 
 **Total target:** roughly 13 to 18 panoramas.
 
@@ -116,9 +116,12 @@ The content format is documented in `content/README.md`. `npm run check` validat
 | Oct 29 to Nov 3 | Ambience, polish, playtesting |
 | Nov 4 to 5 | Buffer and submission |
 
+## Contest requirements
+
+- Submitted as a hosted URL, served from GitHub Pages. The game has no build step, so the repo root serves as-is.
+- No hard size limit; keep it within reason (compressed panoramas, mp3 audio).
+- AI-generated art, voice, and music are all allowed.
+
 ## Open questions
 
-- How does the contest want entries submitted (hosted URL, repo, file upload)? Any size limits?
-- Contest rules on AI-generated art and voice?
-- Does Comet get a confrontation scene at the end, or does the scrapbook speak for itself?
-- What lounge song does Jimmy sing in Chapter 1 (must be original or public domain)?
+- Jimmy's song: title, style, and lyrics, to be generated as an original AI track.
