@@ -1,0 +1,4 @@
+node_modules/
+
+# ElevenLabs API key for scripts/generate-narration.mjs -- never committed.
+.env

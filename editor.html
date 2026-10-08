@@ -1,0 +1,61 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Cold Case Hotspot Editor</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="panorama.css" />
+<link rel="stylesheet" href="editor.css" />
+
+<div id="app">
+  <header id="app-header">
+    <h1>Hotspot Editor</h1>
+  </header>
+
+  <p class="system-line">
+    Click the panorama to drop a pin and give it a hotspot id. Reusing an
+    existing id moves that hotspot and keeps its other fields. Copy the JSON
+    into the scene's <code>hotspots</code> in <code>content/&lt;chapter&gt;.json</code>.
+  </p>
+
+  <div id="picker-row">
+    <label>Chapter <select id="zone-select"></select></label>
+    <label>Scene <select id="room-select"></select></label>
+  </div>
+
+  <div id="viewer">
+    <canvas id="viewer-canvas"></canvas>
+    <div id="hotspot-layer"></div>
+  </div>
+  <p id="viewer-hint" class="system-line">Drag to look around. Click to drop a pin.</p>
+
+  <section id="pending-pin" hidden>
+    <div class="action-group-label">New pin -- yaw <span id="pending-yaw"></span>, pitch <span id="pending-pitch"></span></div>
+    <label>Hotspot id <input id="pending-target" type="text" list="pending-target-ids" placeholder="e.g. puddle" autocomplete="off" /></label>
+    <datalist id="pending-target-ids"></datalist>
+    <input id="pending-label" type="text" placeholder="Label shown on the marker" autocomplete="off" />
+    <div class="journal-buttons">
+      <button id="pending-add" class="primary">Add hotspot</button>
+      <button id="pending-cancel">Cancel</button>
+    </div>
+  </section>
+
+  <section id="pin-list"></section>
+
+  <section id="export-panel">
+    <div class="action-group-label">hotspots JSON for this scene</div>
+    <textarea id="export-text" rows="10" readonly></textarea>
+    <div class="journal-buttons">
+      <button id="export-copy">Copy to clipboard</button>
+    </div>
+  </section>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+<script type="module" src="src/editor-ui.js"></script>

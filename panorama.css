@@ -1,0 +1,817 @@
+/* Additive to styles.css -- this file only covers the panorama viewer and
+   its hotspot markers; every other panel (log, actions, journal, status
+   strip) reuses index.html's own styles unchanged. */
+
+#viewer {
+  position: relative;
+  width: 100%;
+  height: 42vh;
+  min-height: 260px;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #05070a;
+  border: 1px solid var(--border);
+  touch-action: none;
+}
+
+#viewer-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#hotspot-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: rgba(18, 22, 26, 0.75);
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.hotspot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px 2px var(--accent);
+  flex: none;
+}
+
+/* Exit hotspots get a dimmer, non-glowing marker -- visually distinct from
+   an examinable object, same intent as ui.js's separate "Go" action group. */
+.hotspot.exit {
+  border-color: var(--dim);
+  color: var(--text);
+}
+
+.hotspot.exit::before {
+  background: var(--text);
+  box-shadow: none;
+}
+
+/* Already-examined object hotspot -- light gray, no glow, so the player can
+   see at a glance what's left to look at in a room. Takes priority over the
+   plain (unvisited) object look; exit hotspots never carry this class. */
+.hotspot.visited {
+  border-color: var(--dim);
+  color: var(--dim);
+}
+
+.hotspot.visited::before {
+  background: var(--dim);
+  box-shadow: none;
+}
+
+#viewer-hint {
+  text-align: center;
+  margin: 6px 0 0;
+}
+
+/* -- Zone 1-only radial/spoke action menu (experimental pilot) -----------
+   Fans actionsForObject()'s buttons out in a circle around the tapped
+   hotspot instead of opening the full-height #sheet, so the rest of the
+   scene stays visible while picking an action. Other zones are unaffected
+   -- they keep the sheet (see onHotspotClick in panorama-ui.js). */
+
+.panorama-shell #radial-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 22;
+  background: transparent;
+}
+
+.panorama-shell #radial-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 23;
+  pointer-events: none;
+}
+
+.radial-item {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  max-width: 150px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: rgba(18, 22, 26, 0.92);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.radial-item:hover,
+.radial-item:focus-visible {
+  background: var(--accent);
+  color: #05070a;
+}
+
+.radial-center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px 3px var(--accent);
+  pointer-events: none;
+}
+
+/* -- Full-screen shell (panorama.html only -- editor.html shares this
+   file's base #viewer/.hotspot rules above but never gets this class, so
+   its own in-flow layout is untouched). ------------------------------- */
+
+.panorama-shell {
+  max-width: none;
+  padding: 0;
+}
+
+.panorama-shell #viewer {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  z-index: 0;
+}
+
+.panorama-shell #app-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 30;
+  padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+  background: rgba(18, 22, 26, 0.6);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--border);
+}
+
+.panorama-shell #viewer-hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(env(safe-area-inset-bottom) + 10px);
+  z-index: 10;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* A brief every-scene reminder (see flashLookAroundHint() in
+   panorama-ui.js) -- anchored at the top instead of the bottom so it stays
+   visible even while the sheet (z-index 25) is covering the bottom of the
+   screen, above the sheet's own z-index so it isn't hidden behind it. */
+.panorama-shell #viewer-hint.pulse-top {
+  top: calc(env(safe-area-inset-top) + 60px);
+  bottom: auto;
+  z-index: 26;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 6px 14px;
+  background: rgba(18, 22, 26, 0.75);
+  border-radius: 999px;
+}
+
+.panorama-shell #sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.panorama-shell #sheet-backdrop.open {
+  opacity: 1;
+}
+
+.panorama-shell #sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 25;
+  max-width: 640px;
+  margin: 0 auto;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  /* The extra 40px (on top of the mobile-notch env() inset) is a fixed
+     safety margin so the last interactive control never sits flush
+     against the true viewport edge -- a real repro measured only 14px
+     of clearance there, right at the edge, on a normal desktop window
+     (no mobile notch/gesture-bar involved). Found via a Continue
+     button effectively unreachable at the bottom of the screen. */
+  padding: 8px 16px calc(env(safe-area-inset-bottom) + 40px);
+  /* Closed by default -- opened on demand by whichever function first puts
+     real content in front of the player (see openSheet() call sites in
+     panorama-ui.js: logParagraphs, addButton/addZoneButton, the name
+     form). Nothing here assumes call order, unlike an open-by-default
+     sheet would. */
+  transform: translateY(100%);
+  transition: transform 0.28s ease;
+}
+
+.panorama-shell #sheet.open {
+  transform: translateY(0);
+}
+
+/* -- Timed narration subtitles (solicitor-scene trial) --------------------
+   One line at a time, large and centered, timed against each narration
+   segment's own audio duration (see playSubtitledNarration in
+   panorama-ui.js). Swapping the line is driven from JS toggling
+   .visible: removing it fades/scrolls the current line out, then the text
+   is swapped and .visible re-added to fade/scroll the next line in --
+   giving the "top line fades out, next line fades in" scrolling feel with
+   only one line ever in the DOM. -------------------------------------- */
+
+#subtitle-bar {
+  /* Same box, same spot as #caption-bar (below) -- deliberately duplicated
+     rather than shared, so subtitle lines can be swapped without touching
+     #caption-text, which clearCaption() wipes via innerHTML. Sitting at
+     the same fixed rect with the same solid background means it stays
+     legible over bright panorama scenes, not just a text-shadow floating
+     over the image. */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 13;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+  background: rgba(18, 22, 26, 0.88);
+  border-top: 1px solid var(--border);
+  padding: 14px 16px calc(env(safe-area-inset-bottom) + 40px);
+  pointer-events: none;
+}
+
+/* Zone gameplay's #sheet (z-index 25, up to 70vh tall) covers the bottom
+   of the screen whenever there's result text/action buttons showing --
+   which is effectively always once the player's interacting with a
+   hotspot -- so a bottom-anchored subtitle would sit behind it. Object
+   narration uses this top-anchored variant instead; prologue beats keep
+   the default bottom placement since nothing covers it there. */
+#subtitle-bar.top {
+  top: calc(env(safe-area-inset-top) + 54px);
+  bottom: auto;
+  border-top: none;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+}
+
+#subtitle-line {
+  margin: 0;
+  max-width: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.06s ease, transform 0.06s ease;
+}
+
+#subtitle-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -- Prologue caption bar -- a lightweight, non-modal alternative to the
+   #sheet for narration text: pinned to the bottom of the viewport, sized to
+   its content (capped, scrolls if a beat runs long), no full-screen backdrop
+   behind it. Only used by runPrologue(); Zone 1+ room text still goes
+   through the sheet via logMessages(). ------------------------------------ */
+
+#caption-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 12;
+  max-width: 640px;
+  margin: 0 auto;
+  max-height: 34vh;
+  overflow-y: auto;
+  background: rgba(18, 22, 26, 0.88);
+  border-top: 1px solid var(--border);
+  /* See #sheet's identical padding comment -- same fixed safety margin,
+     same reason (the name-submit Continue button measured only 14px of
+     clearance from the true viewport bottom on a real desktop repro). */
+  padding: 14px 16px calc(env(safe-area-inset-bottom) + 40px);
+}
+
+#caption-bar.awaiting-continue {
+  cursor: pointer;
+}
+
+/* Used by the title screen so the "tap to begin"/"tap to continue" prompt
+   only appears once the player's first tap has unlocked audio and started
+   the music, rather than being visible immediately alongside the cover
+   image. Keyframes (rather than a plain opacity transition) so the fade's
+   duration/timing is set in one place and doesn't depend on what opacity
+   the element happened to start from. */
+@keyframes caption-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#caption-bar.fade-in {
+  opacity: 0;
+  /* The box itself stays invisible on the title screen -- only the
+     "Tap to continue" text inside it should read as present. */
+  background: none;
+  border-top: none;
+}
+
+#caption-bar.fade-in.visible {
+  animation: caption-fade-in 4s ease-in forwards;
+}
+
+/* On the title screen the caption bar shows no body text -- just the
+   "Tap to continue" hint, centered instead of its usual right-aligned
+   trailing position, glowing gently once it's fully faded in. */
+#caption-bar.fade-in #caption-hint {
+  text-align: center;
+  margin-top: 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #3498eb;
+}
+
+@keyframes caption-hint-glow {
+  0%,
+  100% {
+    color: #3498eb;
+    text-shadow: 0 0 4px #3498eb, 0 0 8px #3498eb;
+  }
+  50% {
+    color: #34c0eb;
+    text-shadow: 0 0 12px #34c0eb, 0 0 24px #34c0eb;
+  }
+}
+
+#caption-bar.fade-in.visible #caption-hint {
+  animation: caption-hint-glow 2.5s ease-in-out 4s infinite;
+}
+
+#caption-text p {
+  margin: 0 0 0.75em;
+}
+
+#caption-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Relocated here (out of #sheet) so the name_prompt beat's text and its
+   input can both stay in the same lightweight strip -- see name_prompt in
+   panorama-ui.js's runPrologue(). Reuses styles.css's base #name-form flex
+   row, just nested one level deeper. */
+#caption-bar #name-form {
+  margin-top: 10px;
+}
+
+#caption-hint {
+  display: block;
+  margin-top: 8px;
+  text-align: right;
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+}
+
+#sheet-peek {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + 46px);
+  transform: translateX(-50%);
+  z-index: 15;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(18, 22, 26, 0.75);
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+#sheet-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: fit-content;
+  margin: 0 auto 8px;
+  padding: 6px 16px;
+  background: rgba(77, 208, 225, 0.1);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+#sheet-handle-arrow {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+#zone-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#zone-actions:not(:empty) {
+  padding-top: 8px;
+}
+
+/* -- Tutorial checklist -- shown in the sheet until every step is done,
+   then hidden for good (see isTutorialComplete() in tutorial.js). ------ */
+
+#tutorial-panel {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  background: rgba(77, 208, 225, 0.06);
+  font-family: system-ui, sans-serif;
+}
+
+#tutorial-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+#tutorial-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#tutorial-steps li {
+  font-size: 0.85rem;
+  color: var(--dim);
+  padding-left: 1.4em;
+  position: relative;
+}
+
+#tutorial-steps li::before {
+  content: "\25CB"; /* open circle: not yet done */
+  position: absolute;
+  left: 0;
+}
+
+#tutorial-steps li.done {
+  color: var(--dim);
+  text-decoration: line-through;
+}
+
+#tutorial-steps li.done::before {
+  content: "\2713"; /* checkmark */
+  color: var(--accent);
+}
+
+#tutorial-steps li.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+#tutorial-steps li.active::before {
+  content: "\25B8"; /* pointer at the current step */
+  color: var(--accent);
+}
+
+#tutorial-skip {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+/* -- Pause menu (Esc, or the header's menu button) --------------------- */
+
+#pause-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#pause-menu {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 41;
+  width: min(320px, calc(100vw - 48px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+#pause-menu h2 {
+  margin: 0 0 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+/* -- Journal (opened from the pause menu's "Journal" button, not the
+   per-room sheet) -- alpha feedback: living inside #sheet meant it visually
+   re-appeared every time the sheet auto-opened on a new room, reading as
+   "popping up every scene" even though it was really just a collapsed
+   row riding along with the sheet. Pulled out into its own pause-menu-style
+   modal instead, same overlay pattern as #pause-menu above. ------------- */
+
+.panorama-shell #journal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.panorama-shell #journal-panel {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 41;
+  width: min(420px, calc(100vw - 48px));
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-family: system-ui, sans-serif;
+}
+
+.panorama-shell #journal-panel h2 {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+/* End-of-game credits crawl -- sits above everything else (including the
+   pause menu, z-index 40/41) since it only ever appears after a session
+   has already ended. Scroll duration is set inline from JS to match
+   content/audio/credits.mp3's real length rather than a hardcoded value
+   here, so the two can't quietly drift apart. */
+#credits-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(2, 3, 4, 0.9);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#credits-track {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  width: min(560px, calc(100vw - 64px));
+  text-align: center;
+  animation-name: credits-scroll;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes credits-scroll {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+
+#credits-track .credits-title {
+  margin: 0 0 8px;
+  font-family: system-ui, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+#credits-track h2 {
+  margin: 48px 0 12px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+#credits-track p {
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+#credits-track p.dim {
+  color: var(--dim);
+  font-size: 0.85rem;
+}
+
+#credits-track .credits-spacer {
+  height: 64px;
+}
+
+#credits-track .credits-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+#credits-skip {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 51;
+}
+
+/* == Cold Case additions ==================================================
+   Everything below is new for Cold Case. The rules above are carried over
+   from Skua Island unchanged (some, like the sheet and journal, are no
+   longer used by index.html). */
+
+/* Speaker name above each subtitle line, and a tap-to-skip affordance.
+   The bar itself takes clicks now (Skua's was click-through). */
+#subtitle-bar {
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+#subtitle-speaker {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+#subtitle-line {
+  font-size: 26px;
+}
+
+#subtitle-hint {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+
+/* Chapter title cards and the ending reuse the caption bar, centered. */
+#caption-bar.chapter-card #caption-text {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 0.04em;
+}
+
+#caption-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#caption-buttons:empty {
+  display: none;
+}
+
+/* Tutorial checklist floats over the viewer now that there's no sheet. */
+.panorama-shell #tutorial-panel {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 64px);
+  left: 16px;
+  z-index: 11;
+  max-width: min(320px, calc(100vw - 32px));
+  margin: 0;
+  background: rgba(18, 22, 26, 0.85);
+}
+
+#status-strip button {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+/* Hotspots are inert while a beat is playing. */
+body.beat-playing .hotspot {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Clues only the tinsel goggles can see. */
+.hotspot.goggles {
+  border-color: #ffd54f;
+  color: #ffd54f;
+}
+
+.hotspot.goggles::before {
+  background: #ffd54f;
+  box-shadow: 0 0 8px 3px #ffd54f;
+}
+
+/* Too high for Tiny: a little up-arrow so it reads as out of reach. */
+.hotspot.boost::after {
+  content: "\2191";
+  font-weight: 700;
+}
+
+/* Goggles on: a festive sparkle wash over the whole view. */
+#viewer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 80, 0.18) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.16) 0 2px, transparent 3px),
+    radial-gradient(circle at 45% 80%, rgba(255, 120, 120, 0.15) 0 2px, transparent 3px),
+    linear-gradient(rgba(255, 215, 80, 0.06), rgba(255, 215, 80, 0.06));
+  background-size: 140px 140px, 190px 190px, 110px 110px, auto;
+  animation: goggles-sparkle 3s linear infinite;
+}
+
+#viewer.goggles-on::after {
+  opacity: 1;
+}
+
+@keyframes goggles-sparkle {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 140px -140px, -190px 190px, 110px 110px, 0 0;
+  }
+}
+
+/* Boost: the view lifts a bit while someone hoists Tiny up. */
+#viewer-canvas {
+  transition: transform 0.6s ease;
+}
+
+#viewer.boosted #viewer-canvas {
+  transform: translateY(6%) scale(1.06);
+}

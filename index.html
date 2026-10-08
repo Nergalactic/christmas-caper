@@ -1,0 +1,66 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Cold Case</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="panorama.css" />
+
+<div id="app" class="panorama-shell">
+  <header id="app-header">
+    <div id="status-strip" hidden>
+      <span id="status-scene"></span>
+      <button id="goggles-button" aria-pressed="false" hidden>Goggles: off</button>
+      <button id="mute-button" aria-pressed="false">Sound: on</button>
+      <button id="menu-button" aria-label="Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <div id="viewer">
+    <canvas id="viewer-canvas"></canvas>
+    <div id="hotspot-layer"></div>
+  </div>
+
+  <p id="viewer-hint" class="system-line" hidden>Drag to look around. Tap a marker to act.</p>
+
+  <section id="tutorial-panel" hidden>
+    <div id="tutorial-title">Getting your bearings</div>
+    <ul id="tutorial-steps"></ul>
+    <button id="tutorial-skip" class="inline-link">Skip tutorial</button>
+  </section>
+
+  <div id="subtitle-bar" hidden>
+    <p id="subtitle-speaker"></p>
+    <p id="subtitle-line"></p>
+    <span id="subtitle-hint">Tap to skip &#9656;</span>
+  </div>
+
+  <div id="caption-bar" hidden>
+    <div id="caption-text"></div>
+    <div id="caption-buttons"></div>
+    <span id="caption-hint" hidden>Tap to continue &#9656;</span>
+  </div>
+
+  <div id="pause-menu-backdrop" hidden></div>
+  <div id="pause-menu" hidden>
+    <h2>Menu</h2>
+    <button id="pause-mute">Sound: on</button>
+    <button id="pause-subtitles">Subtitles: on</button>
+    <button id="pause-restart">Start over</button>
+    <button id="pause-resume" class="primary">Resume</button>
+  </div>
+
+  <div id="credits-screen" hidden>
+    <div id="credits-track"></div>
+    <button id="credits-skip">Skip &#9656;</button>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+<script type="module" src="src/panorama-ui.js"></script>

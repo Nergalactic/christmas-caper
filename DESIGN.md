@@ -102,7 +102,9 @@ One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook, 
 
 ## Engine
 
-Start from a copy of the Skua Island panorama viewer (Three.js equirectangular spheres, OrbitControls, clickable hotspots, narration wiring) with Skua's content stripped out. Replace the lens system with the tinsel goggles toggle and add the boost interaction.
+The viewer, audio, narration, title screen, tutorial, credits, hotspot editor, and voice pipeline are copied from the Skua Island panorama build (tussac-3d), with no Skua content. The story engine is new: `src/game.js` is a small, strictly linear scene runner with the tinsel goggles and the boost interaction built in. The title screen works the same way Skua's did: a pannable title panorama with loading music, then a pulsing "Tap to continue."
+
+The content format is documented in `content/README.md`. `npm run check` validates references and simulates a playthrough. The current `content/intro.json` is placeholder content for exercising the engine, to be replaced by the real script.
 
 ## Schedule (to Nov 5)
 

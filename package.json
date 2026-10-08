@@ -1,0 +1,17 @@
+{
+  "name": "cold-case",
+  "version": "0.1.0",
+  "description": "Cold Case: a panorama noir mystery for the 2026 tacky website contest (theme: Reindeer Squad)",
+  "type": "module",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "serve": "npx --yes serve -l 8080 .",
+    "check": "node scripts/check-content.mjs",
+    "narration:scaffold": "node scripts/scaffold-narration.mjs",
+    "narration:dry-run": "node scripts/generate-narration.mjs narration-script/script.md"
+  }
+}

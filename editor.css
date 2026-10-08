@@ -1,0 +1,97 @@
+/* Additive to styles.css + panorama.css -- editor-only chrome (pickers,
+   the pending-pin form, the pin list, and the JSON export box). */
+
+#picker-row {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--dim);
+}
+
+#picker-row select {
+  margin-left: 6px;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* Existing/placed pins render as plain markers (not action buttons, unlike
+   panorama.css's .hotspot) -- clicking one removes it, there's nothing to
+   "act" on here. */
+.editor-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: rgba(77, 208, 225, 0.35);
+  cursor: pointer;
+}
+
+#pending-pin,
+#export-panel {
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+#pending-pin label,
+#export-panel label {
+  display: block;
+  margin: 6px 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--dim);
+}
+
+#pending-pin select,
+#pending-label {
+  width: 100%;
+  margin-top: 4px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#pin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 0;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+.pin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.pin-row button {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+#export-text {
+  width: 100%;
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}

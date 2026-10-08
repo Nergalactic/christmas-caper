@@ -1,0 +1,14 @@
+{
+  "_readme": "Speaker key (lowercase, matching content speakers and the [SPEAKER] tags in narration-script/script.md) -> ElevenLabs voice. Fill in voice_id once a voice is picked or designed. stability/similarity_boost are optional (defaults 0.5/0.75). A null voice_id is reported by the dry run and hard-errors on --generate.",
+  "tiny": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "granny": { "voice_id": null, "stability": 0.35, "similarity_boost": 0.75 },
+  "comet": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "vixen": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "prancer": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "easter_bunny": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "dancer": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "donner": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "blitzen": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "cupid": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 },
+  "dasher": { "voice_id": null, "stability": 0.5, "similarity_boost": 0.75 }
+}

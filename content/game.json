@@ -1,0 +1,20 @@
+{
+  "title": "Cold Case",
+  "start": "office",
+  "speakers": {
+    "tiny": "Tiny Hightower",
+    "granny": "Granny Slush",
+    "comet": "Comet",
+    "vixen": "Vixen",
+    "prancer": "Prancer",
+    "easter_bunny": "Easter Bunny",
+    "dancer": "Dancer",
+    "donner": "Donner",
+    "blitzen": "Blitzen",
+    "cupid": "Cupid",
+    "dasher": "Dasher"
+  },
+  "chapters": [
+    { "id": "intro", "title": "Cold Case", "file": "intro.json" }
+  ]
+}

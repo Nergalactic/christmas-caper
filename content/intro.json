@@ -1,0 +1,81 @@
+{
+  "_note": "PLACEHOLDER content to exercise the engine (scene moves, goggles, a boost, the ending). Replace with the real intro script.",
+  "scenes": {
+    "office": {
+      "name": "Tiny's Office",
+      "panorama": null,
+      "startYaw": 0,
+      "startPitch": -10,
+      "on_enter": "office_enter",
+      "hotspots": [
+        { "id": "granny", "label": "Granny Slush", "yaw": 0, "pitch": 5, "beat": "office_granny", "sets": ["took_case"] },
+        { "id": "goggles", "label": "Desk drawer", "yaw": 70, "pitch": -15, "beat": "office_goggles", "grants": "goggles", "requires": ["took_case"] },
+        { "id": "door", "label": "Door", "yaw": 180, "pitch": 0, "go": "alley", "requires": ["has_goggles"] }
+      ]
+    },
+    "alley": {
+      "name": "The Alley Behind the Mistletoe Lounge",
+      "panorama": null,
+      "startYaw": 0,
+      "startPitch": -15,
+      "on_enter": "alley_enter",
+      "hotspots": [
+        { "id": "puddle", "label": "Puddle", "yaw": 0, "pitch": -35, "beat": "alley_puddle", "sets": ["saw_puddle"] },
+        { "id": "scorch", "label": "Scorch marks", "yaw": -40, "pitch": -20, "goggles": true, "beat": "alley_scorch", "requires": ["saw_puddle"], "sets": ["saw_scorch"] },
+        {
+          "id": "kiss",
+          "label": "Smoking lipstick kiss",
+          "yaw": 45,
+          "pitch": 30,
+          "requires": ["saw_scorch"],
+          "boost": { "by": "granny", "beat": "alley_boost" },
+          "beat": "alley_kiss",
+          "end": true
+        }
+      ]
+    }
+  },
+  "beats": {
+    "office_enter": {
+      "lines": [
+        { "speaker": "tiny", "text": "Christmas Eve. The kind of cold that gets into your boots and files a change of address." }
+      ]
+    },
+    "office_granny": {
+      "lines": [
+        { "speaker": "granny", "text": "Are you the detective? Down here? Oh my. My Jimmy is missing." },
+        { "speaker": "tiny", "text": "I weighed my options. Take the case. Or take the case. I took the case." }
+      ]
+    },
+    "office_goggles": {
+      "lines": [
+        { "speaker": "tiny", "text": "My tinsel goggles. Sophisticated forensic instruments. Also festive." }
+      ]
+    },
+    "alley_enter": {
+      "lines": [
+        { "speaker": "tiny", "text": "The alley smelled like jazz and wet carrots." }
+      ]
+    },
+    "alley_puddle": {
+      "lines": [
+        { "speaker": "tiny", "text": "A puddle. A top hat. A scarf. Could mean anything." }
+      ]
+    },
+    "alley_scorch": {
+      "lines": [
+        { "speaker": "tiny", "text": "Scorch marks, shaped exactly like hooves. Probably nothing." }
+      ]
+    },
+    "alley_boost": {
+      "lines": [
+        { "speaker": "granny", "text": "Up you go, dear. Oof. You had a snowball's chance in hell of reaching that." }
+      ]
+    },
+    "alley_kiss": {
+      "lines": [
+        { "speaker": "tiny", "text": "A lipstick kiss. Still smoking. The plot thickens. Like slush." }
+      ]
+    }
+  }
+}

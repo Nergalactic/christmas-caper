@@ -1,0 +1,227 @@
+:root {
+  --bg: #12161a;
+  --panel: #1a2027;
+  --text: #e6e6e6;
+  --dim: #9aa5ab;
+  --accent: #4dd0e1; /* echoes the terminal build's Ansi.CYAN */
+  --border: #2a323a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+#app {
+  max-width: 640px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
+}
+
+#app-header {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1;
+}
+
+#app-header h1 {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+#status-strip {
+  margin-top: 6px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--dim);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#status-strip span {
+  flex: 1;
+}
+
+.inline-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#save-button,
+#mute-button {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+#back-button {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  margin: 8px 0 0;
+}
+
+#log {
+  flex: 1;
+  padding: 16px 0;
+}
+
+#log p {
+  margin: 0 0 1em;
+}
+
+/* Matches game/engine.py's divider() -- a colored marker line at each
+   "new part" boundary (a prologue beat advancing, a room entry), so it's
+   visually obvious where fresh content starts without losing scrollback. */
+#log .divider {
+  border: none;
+  border-top: 2px solid var(--accent);
+  opacity: 0.5;
+  margin: 1.5em 0 1em;
+}
+
+#log .room-title {
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  margin: 0 0 0.5em;
+}
+
+/* Zone 6's ending banner -- the one heading meant to read as a stopping
+   point, not a waypoint, so it's deliberately larger/bolder than
+   .room-title rather than reusing it. */
+#log .ending-title {
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  margin: 0 0 0.75em;
+}
+
+#log .system-line {
+  color: var(--dim);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+
+#actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+#actions .action-group-label {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dim);
+  margin: 6px 0 -2px;
+}
+
+button {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+button:active {
+  background: var(--border);
+}
+
+button.locked {
+  color: var(--dim);
+}
+
+button.primary {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#name-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px 0;
+}
+
+/* Author-origin rules beat the UA stylesheet's [hidden]{display:none}
+   regardless of specificity, so any element with an explicit `display`
+   rule needs its own [hidden] override or the hidden attribute is
+   silently ignored. Applies to every panel toggled via .hidden = true. */
+[hidden] {
+  display: none !important;
+}
+
+#name-input,
+#journal-text {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  flex: 1;
+}
+
+#journal-panel {
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+  font-family: system-ui, sans-serif;
+}
+
+#journal-panel summary {
+  cursor: pointer;
+  color: var(--dim);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+#journal-text {
+  width: 100%;
+  margin: 8px 0;
+  resize: vertical;
+}
+
+.journal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
