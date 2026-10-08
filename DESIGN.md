@@ -124,4 +124,4 @@ The content format is documented in `content/README.md`. `npm run check` validat
 
 ## Open questions
 
-- Jimmy's song: title, style, and lyrics, to be generated as an original AI track.
+- Jimmy's song, "I Don't Mind the Heat": lyrics and style prompt are in `music/i-dont-mind-the-heat.md`. Still to do: generate the track.
