@@ -1,0 +1,121 @@
+# Cold Case
+
+A panorama noir mystery for the 2026 tacky website/webapp contest (theme: **Reindeer Squad**).
+Deadline: **November 5, 2026**.
+
+## Pitch
+
+Christmas Eve at the North Pole. Jimmy Mittens, lounge-singing snowman, has been found as a puddle in the alley behind the Mistletoe Lounge. His mother, Granny Slush, hires the only private eye who'll take the case: **Tiny Hightower**, an elf detective who is extremely, extremely short.
+
+The killer is obvious from the very first scene. Her name is **Comet**. She is, literally, a comet. Jimmy had a hot date. Tiny will need three chapters, seven reindeer suspects, an Easter Bunny, and a boost onto a high shelf to figure it out.
+
+## Pillars
+
+1. **The floor is the camera.** Every panorama is shot from Tiny's eye level, roughly knee height. Players mostly see shins, hooves, table undersides, gum stuck under bar stools, and the bottoms of things. This is the main visual joke and it never lets up.
+2. **Escalating absurdity.** The intro plays noir almost straight. Each chapter gets dumber. The finale is unhinged.
+3. **The answer is obvious from the start.** Steam, scorch marks, a smoking lipstick kiss, puddles following Comet everywhere. Tiny ignores all of it.
+4. **One way forward, overcomplicated.** The game is strictly linear: there is only ever one thing to do next. Tiny never seems to realize this. He narrates every single step as though weighing dozens of options, builds elaborate theories, and makes plans with contingencies for a path that has no branches.
+5. **Clean viewer.** No tacky frame or 90s chrome. The presentation is the same clean panorama viewer as Skua Island. All the stupidity lives in the writing, the characters, the voices, and the camera height.
+
+## Cast
+
+| Character | Who they are | Voice direction |
+|---|---|---|
+| **Tiny Hightower** | Elf P.I. Hardboiled narration, gravel voice, very short. Overthinks everything. | Deep, dramatic noir narrator. Completely serious about everything, including jumping. |
+| **Granny Slush** | Jimmy's mother. Old snowman lady, already partly melted from age. Catchphrase: "a snowball's chance in hell," used about everything except the obvious. | A deliberately terrible old-lady voice. Warbly, slow, overacted. |
+| **Jimmy Mittens** (victim) | Lounge singer at the Mistletoe Lounge. Born Jimmy Slush; changed his name for show business. Granny never forgave him. Now a puddle. | No lines (he's a puddle). Possibly a recorded lounge song playing in Chapter 1. |
+| **Comet** | Reindeer. Literally a comet: blazing, steaming, trailing fire. Knows she melted Jimmy. It's a pattern; she has a trail of melted exes. Tiny never suspects her. | Sultry, smoky, a little too calm. |
+| **Vixen** | Rival lounge singer, bumped from her slot for Jimmy. | Classic femme fatale, wasted on a red herring. |
+| **Prancer** | Jimmy's vain manager, took 40%. Always seen with the Easter Bunny, since they both hop everywhere. | Fast-talking agent. |
+| **Easter Bunny** | Prancer's constant companion. Out of season and shifty about it. | Nervous, defensive about being at the North Pole in December. |
+| **Dancer** | Choreographed Jimmy's act; hated how he moved. | Theatrical, exasperated. |
+| **Donner & Blitzen** | Brothers mid-feud. Each accuses the other. | Loud, overlapping, constantly interrupting. |
+| **Cupid** | Says Jimmy owed him carrots. | Petty, keeps an itemized ledger. |
+| **Dasher** | Either too fast to have done it, or exactly fast enough. | Talks very quickly, finishes Tiny's sentences wrong. |
+
+The Reindeer Squad are the suspect pool. Several appear per chapter to keep the game moving.
+
+## Mechanics
+
+### Navigation
+Same model as Skua Island: equirectangular panoramas, drag to look around, clickable hotspots to move between panoramas or trigger scenes. Strictly linear progression: at any moment there is exactly one meaningful next hotspot.
+
+### Tinsel goggles
+Tiny's clue-revealing tool, replacing Skua's lens system. Toggle them on and the scene sparkles; clue hotspots appear. Everything glitters, including things that are obviously just steam and scorch marks. Tiny treats the goggles as a sophisticated forensic instrument.
+
+### Asking for a boost
+Some hotspots are visibly too high: on shelves, bar tops, mantels, the top of a filing cabinet. Tiny can't reach them alone. He has to ask a nearby character for a boost, and each one complains in a voiced line. The final clue of the game is the ultimate boost.
+
+### Interrogations (fixed scenes)
+Clicking a suspect plays their full voiced scene: Tiny's question, their answer, Tiny's overwrought conclusion. No topic menus, no branching. Fast to play, and every scene is a self-contained joke.
+
+### Granny Slush
+Appears at least once per chapter to check in on the case, says "a snowball's chance in hell" about something, and never connects it to her son.
+
+## Structure
+
+### Intro (full Skua scale)
+
+**Tiny's office.** A broom-closet office above a toy repair shop. Granny Slush shuffles in to report that "my Jimmy" is gone. Explorable: the office, the hallway, the stairwell down to the street.
+
+**The crime scene.** The alley behind the Mistletoe Lounge. All that's left of Jimmy: a puddle, a top hat, a scarf, a carrot, two lumps of coal, and a lipstick kiss on the brick wall that is still smoking. The goggles reveal scorch marks everywhere. Tiny concludes it was a professional job.
+
+Target: roughly 7 to 9 panoramas.
+
+### Chapter 1: The Mistletoe Lounge
+Jimmy's last gig. Suspects: **Vixen**, **Prancer** (with the **Easter Bunny**), **Dancer**. Comet sits at the bar, steaming; Tiny asks her to hold his drink, and it boils.
+
+Target: 2 to 3 panoramas.
+
+### Chapter 2: The Reindeer Games
+The squad's training grounds. Suspects: **Donner and Blitzen**, **Cupid**, **Dasher**. Comet is running laps and leaving a trail of puddles behind her.
+
+Target: 2 to 3 panoramas.
+
+### Chapter 3: Comet's Apartment
+Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."
+
+The final clue, Comet's scrapbook of melted exes, sits on a high shelf. The game ends when Tiny finally gets a boost and reaches it.
+
+Target: 2 to 3 panoramas.
+
+### Ending
+One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook, finally solves the case, and delivers a long, self-satisfied closing monologue.
+
+**Total target:** roughly 13 to 18 panoramas.
+
+## Art direction
+
+- AI-generated equirectangular panoramas, same pipeline as Skua Island.
+- **Every prompt specifies camera height at roughly 40 cm off the floor.** Furniture, characters, and fixtures should loom. Faces are often out of frame or seen from below.
+- Noir lighting: hard shadows, venetian-blind stripes, neon from the lounge sign, snow falling past windows.
+- Comet's scenes are noticeably warmer: orange light, steam, condensation on everything.
+- Character art for hotspot scenes should match the panorama style.
+
+## Audio
+
+- TTS hybrid voice pipeline, as on Skua Island.
+- Hamminess is directed through prompts and editing; Granny Slush's voice should be deliberately bad.
+- Ambience per location: radiator hiss and rain-on-snow in the office, muffled lounge jazz in the alley, crowd noise at the Reindeer Games, a bubbling hot tub at Comet's.
+- A noir saxophone sting for Tiny's big "realizations."
+
+## Engine
+
+Start from a copy of the Skua Island panorama viewer (Three.js equirectangular spheres, OrbitControls, clickable hotspots, narration wiring) with Skua's content stripped out. Replace the lens system with the tinsel goggles toggle and add the boost interaction.
+
+## Schedule (to Nov 5)
+
+| Week | Focus |
+|---|---|
+| Oct 8 to 14 | Design doc, full script for intro and all chapters |
+| Oct 15 to 21 | Port the viewer, generate intro panoramas, wire intro |
+| Oct 22 to 28 | Chapter panoramas, voice generation for all scenes |
+| Oct 29 to Nov 3 | Ambience, polish, playtesting |
+| Nov 4 to 5 | Buffer and submission |
+
+## Open questions
+
+- How does the contest want entries submitted (hosted URL, repo, file upload)? Any size limits?
+- Contest rules on AI-generated art and voice?
+- Does Comet get a confrontation scene at the end, or does the scrapbook speak for itself?
+- What lounge song does Jimmy sing in Chapter 1 (must be original or public domain)?
