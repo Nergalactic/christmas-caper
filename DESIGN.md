@@ -7,7 +7,7 @@ Deadline: **November 5, 2026**.
 
 Christmas Eve at the North Pole. Jimmy Mittens, lounge-singing snowman, has been found as a puddle in the alley behind the Mistletoe Lounge. His mother, Granny Slush, hires the only private eye who'll take the case: **Tiny Hightower**, an elf detective who is extremely, extremely short.
 
-The killer is obvious from the very first scene. Her name is **Comet**. She is, literally, a comet. Jimmy had a hot date. Tiny will need three chapters, seven reindeer suspects, an Easter Bunny, and a boost onto a high shelf to figure it out.
+The killer is obvious from the very first scene. Her name is **Comet**, and her hooves are always on fire, like a comet's tail. Jimmy had a hot date. Tiny will need three chapters, seven reindeer suspects, an Easter Bunny, and a boost onto a high shelf to figure it out.
 
 ## Pillars
 
@@ -24,7 +24,7 @@ The killer is obvious from the very first scene. Her name is **Comet**. She is, 
 | **Tiny Hightower** | Elf P.I. Hardboiled narration, gravel voice, very short. Overthinks everything. | Deep, dramatic noir narrator. Completely serious about everything, including jumping. |
 | **Granny Slush** | Jimmy's mother. Old snowman lady, already partly melted from age. Catchphrase: "a snowball's chance in hell," used about everything except the obvious. | A deliberately terrible old-lady voice. Warbly, slow, overacted. |
 | **Jimmy Mittens** (victim) | Lounge singer at the Mistletoe Lounge. Born Jimmy Slush; changed his name for show business. Granny never forgave him. Now a puddle. | No lines (he's a puddle). Possibly a recorded lounge song playing in Chapter 1. |
-| **Comet** | Reindeer. Literally a comet: blazing, steaming, trailing fire. Knows she melted Jimmy. It's a pattern; she has a trail of melted exes. Tiny never suspects her. | Sultry, smoky, a little too calm. |
+| **Comet** | Reindeer whose hooves are always on fire, like a comet. Leaves scorched hoofprints and puddles wherever she goes. Knows she melted Jimmy. It's a pattern; she has a trail of melted exes. Tiny never suspects her. | Sultry, smoky, a little too calm. |
 | **Vixen** | Rival lounge singer, bumped from her slot for Jimmy. | Classic femme fatale, wasted on a red herring. |
 | **Prancer** | Jimmy's vain manager, took 40%. Always seen with the Easter Bunny, since they both hop everywhere. | Fast-talking agent. |
 | **Easter Bunny** | Prancer's constant companion. Out of season and shifty about it. | Nervous, defensive about being at the North Pole in December. |
@@ -68,7 +68,7 @@ Jimmy's last gig. Suspects: **Vixen**, **Prancer** (with the **Easter Bunny**), 
 Target: 2 to 3 panoramas.
 
 ### Chapter 2: The Reindeer Games
-The squad's training grounds. Suspects: **Donner and Blitzen**, **Cupid**, **Dasher**. Comet is running laps and leaving a trail of puddles behind her.
+The squad's training grounds. Suspects: **Donner and Blitzen**, **Cupid**, **Dasher**. Comet is running laps, leaving a ring of scorched hoofprints in the snow.
 
 Target: 2 to 3 panoramas.
 
@@ -90,6 +90,7 @@ One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook, 
 - **Every prompt specifies camera height at roughly 40 cm off the floor.** Furniture, characters, and fixtures should loom. Faces are often out of frame or seen from below.
 - Noir lighting: hard shadows, venetian-blind stripes, neon from the lounge sign, snow falling past windows.
 - Comet's scenes are noticeably warmer: orange light, steam, condensation on everything.
+- At Tiny's eye level, Comet's flaming hooves are the part of her he sees most. They should be front and center in every shot she's in, and he should still never notice.
 - Character art for hotspot scenes should match the panorama style.
 
 ## Audio
