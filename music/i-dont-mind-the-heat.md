@@ -71,10 +71,13 @@ The heat
 | End credits | Full mix, plays once; the credits crawl times itself to its length (`content/audio/credits.mp3`) |
 | Intro alley crime scene | Muffled through the lounge wall, as the alley ambience bed (`content/audio/alley.mp3`) |
 
-The muffled alley version can be made from the full mix with a low-pass filter and some reverb, for example:
+The generator's original download is kept at `music/a-snowmans-meltdown-original.mp3` (2:00) so the edits can be redone. The game versions were made with:
 
 ```
-ffmpeg -i full.mp3 -af "lowpass=f=700,aecho=0.8:0.6:60:0.3,volume=0.6" content/audio/alley.mp3
+# title screen (loops): short fade in, fade out so the restart isn't a hard cut
+ffmpeg -i music/a-snowmans-meltdown-original.mp3 -af "afade=t=in:d=1.5,afade=t=out:st=116:d=4" -b:a 160k content/audio/loading.mp3
+# credits (plays once)
+ffmpeg -i music/a-snowmans-meltdown-original.mp3 -af "afade=t=out:st=115:d=5" -b:a 160k content/audio/credits.mp3
+# alley: mono, heard through the lounge wall, soft loop seam
+ffmpeg -i music/a-snowmans-meltdown-original.mp3 -af "pan=mono|c0=0.5*c0+0.5*c1,lowpass=f=700,lowpass=f=700,aecho=0.8:0.6:60:0.3,volume=0.7,afade=t=in:d=3,afade=t=out:st=117:d=3" -b:a 96k content/audio/alley.mp3
 ```
-
-Save the generator's original download alongside these so the edits can be redone.
