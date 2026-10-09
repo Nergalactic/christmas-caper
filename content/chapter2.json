@@ -1,0 +1,635 @@
+{
+  "_note": "Chapter 2 script, first draft. Hotspot yaw/pitch values are rough guesses; place them with editor.html once the panoramas exist.",
+  "scenes": {
+    "track": {
+      "name": "The Training Grounds",
+      "panorama": "content/panoramas/track.jpg",
+      "startYaw": 0,
+      "startPitch": 5,
+      "on_enter": "track_enter",
+      "hotspots": [
+        {
+          "id": "granny",
+          "label": "Granny Slush, in the bleachers",
+          "yaw": -40,
+          "pitch": 20,
+          "beat": "track_granny",
+          "sets": [
+            "heckled"
+          ]
+        },
+        {
+          "id": "comet",
+          "label": "Comet",
+          "yaw": 30,
+          "pitch": 5,
+          "beat": "track_comet",
+          "requires": [
+            "heckled"
+          ],
+          "sets": [
+            "saw_comet2"
+          ]
+        },
+        {
+          "id": "dasher",
+          "label": "Dasher",
+          "yaw": 70,
+          "pitch": 10,
+          "beat": "track_dasher",
+          "requires": [
+            "saw_comet2"
+          ],
+          "sets": [
+            "met_dasher"
+          ]
+        },
+        {
+          "id": "block",
+          "label": "Scorched starting block",
+          "yaw": 10,
+          "pitch": -35,
+          "goggles": true,
+          "beat": "track_block",
+          "requires": [
+            "met_dasher"
+          ],
+          "sets": [
+            "saw_block"
+          ]
+        },
+        {
+          "id": "to_runway",
+          "label": "Launch runway",
+          "yaw": 120,
+          "pitch": 0,
+          "beat": "track_to_runway",
+          "go": "runway",
+          "requires": [
+            "saw_block"
+          ],
+          "unless": [
+            "theory2"
+          ]
+        },
+        {
+          "id": "granny2",
+          "label": "Granny Slush",
+          "yaw": -40,
+          "pitch": 20,
+          "beat": "track_granny2",
+          "requires": [
+            "theory2"
+          ],
+          "sets": [
+            "heckled2"
+          ]
+        },
+        {
+          "id": "bag",
+          "label": "Gym bag on the scoreboard",
+          "yaw": -5,
+          "pitch": 40,
+          "boost": {
+            "by": "dasher",
+            "beat": "track_boost"
+          },
+          "beat": "track_bag",
+          "requires": [
+            "heckled2"
+          ],
+          "sets": [
+            "got_bag"
+          ]
+        },
+        {
+          "id": "leave",
+          "label": "Return the gym bag",
+          "yaw": 150,
+          "pitch": 0,
+          "beat": "track_leave",
+          "requires": [
+            "got_bag"
+          ],
+          "end": true,
+          "end_title": "To be continued..."
+        }
+      ]
+    },
+    "runway": {
+      "name": "The Launch Runway",
+      "panorama": "content/panoramas/runway.jpg",
+      "startYaw": 0,
+      "startPitch": 10,
+      "on_enter": "runway_enter",
+      "hotspots": [
+        {
+          "id": "feud",
+          "label": "Donner and Blitzen",
+          "yaw": 0,
+          "pitch": 20,
+          "beat": "runway_feud",
+          "sets": [
+            "met_feud"
+          ]
+        },
+        {
+          "id": "harness",
+          "label": "The harness",
+          "yaw": 25,
+          "pitch": -15,
+          "beat": "runway_harness",
+          "requires": [
+            "met_feud"
+          ],
+          "sets": [
+            "theory1"
+          ]
+        },
+        {
+          "id": "to_stand",
+          "label": "Snack stand",
+          "yaw": -120,
+          "pitch": 0,
+          "beat": "runway_to_stand",
+          "go": "snack_stand",
+          "requires": [
+            "theory1"
+          ]
+        }
+      ]
+    },
+    "snack_stand": {
+      "name": "The Snack Stand",
+      "panorama": "content/panoramas/snack_stand.jpg",
+      "startYaw": 0,
+      "startPitch": 10,
+      "on_enter": "stand_enter",
+      "hotspots": [
+        {
+          "id": "cupid",
+          "label": "Cupid",
+          "yaw": 10,
+          "pitch": 20,
+          "beat": "stand_cupid",
+          "sets": [
+            "met_cupid2"
+          ]
+        },
+        {
+          "id": "ledger",
+          "label": "Carrot ledger",
+          "yaw": -20,
+          "pitch": 10,
+          "beat": "stand_ledger",
+          "requires": [
+            "met_cupid2"
+          ],
+          "sets": [
+            "theory2"
+          ]
+        },
+        {
+          "id": "to_track",
+          "label": "Back to the track",
+          "yaw": 160,
+          "pitch": 0,
+          "beat": "stand_to_track",
+          "go": "track",
+          "requires": [
+            "theory2"
+          ]
+        }
+      ]
+    }
+  },
+  "beats": {
+    "track_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The North Pole Reindeer Training Grounds. Where the Squad comes to sweat, stretch, and settle scores.",
+          "spoken": "The North Pole Reindeer Training Grounds. --- Where the Squad comes to sweat, stretch, and settle scores."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Floodlights. Fresh snow. A running track that went around and around, like this case.",
+          "spoken": "Floodlights. -- Fresh snow. ---- A running track that went around and around, like this case."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And up in the bleachers, a familiar puddle with a familiar voice.",
+          "spoken": "And up in the bleachers, a familiar puddle with a familiar voice."
+        },
+        {
+          "speaker": "granny",
+          "text": "Yoo-hoo! Detective! Down here! Well, up here. You're down there.",
+          "spoken": "Yoo-hoo! - Detective! - Down here! - Well, up here. --- You're down there."
+        }
+      ]
+    },
+    "track_granny": {
+      "lines": [
+        {
+          "speaker": "granny",
+          "text": "I brought a thermos and a seat cushion. I'll be watching you work, dear. Closely.",
+          "spoken": "I brought a thermos and a seat cushion. - I'll be watching you work, dear. --- Closely."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Great. A heckler. Every detective needs one. Mine came with a thermos.",
+          "spoken": "Great. -- A heckler. -- Every detective needs one. ---- Mine came with a thermos."
+        },
+        {
+          "speaker": "granny",
+          "text": "Ask better questions! Use your legs! Oh, well. Use what you've got!",
+          "spoken": "Ask better questions! - Use your legs! - Oh, well. --- Use what you've got!"
+        }
+      ]
+    },
+    "track_comet": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Out on the track, Comet was running laps. Every time her hooves hit the snow, the snow said 'tsss.'",
+          "spoken": "Out on the track, Comet was running laps. --- Every time her hooves hit the snow, the snow said 'tsss.'"
+        },
+        {
+          "speaker": "comet",
+          "text": "Well, look who it is. You following me, sugar?",
+          "spoken": "Well, look who it is. - You following me, sugar?"
+        },
+        {
+          "speaker": "tiny",
+          "text": "Just doing my rounds. Same as you.",
+          "spoken": "Just doing my rounds. --- Same as you."
+        },
+        {
+          "speaker": "comet",
+          "text": "Can't stop, little man. Gotta keep my heart rate up. And my temperature.",
+          "spoken": "Can't stop, little man. - Gotta keep my heart rate up. --- And my temperature."
+        },
+        {
+          "speaker": "tiny",
+          "text": "She jogged off in a cloud of steam. A dedicated athlete. You don't see that much anymore.",
+          "spoken": "She jogged off in a cloud of steam. -- A dedicated athlete. ---- You don't see that much anymore."
+        }
+      ]
+    },
+    "track_dasher": {
+      "lines": [
+        {
+          "speaker": "dasher",
+          "text": "Dasher, fastest in the Squad, and you must be the detective who's here about...",
+          "spoken": "Dasher, fastest in the Squad, and you must be the detective who's here about ---"
+        },
+        {
+          "speaker": "tiny",
+          "text": "Jimmy Mitt...",
+          "spoken": "Jimmy Mitt ---"
+        },
+        {
+          "speaker": "dasher",
+          "text": "Jimmy Mittens's taxes, sure, sure, I heard. Terrible business. Numbers. Never liked 'em.",
+          "spoken": "Jimmy Mittens's taxes, sure, sure, I heard. - Terrible business. - Numbers. --- Never liked 'em."
+        },
+        {
+          "speaker": "tiny",
+          "text": "No. Jimmy Mittens melted. Where were you last night, between...",
+          "spoken": "No. -- Jimmy Mittens melted. ---- Where were you last night, between ---"
+        },
+        {
+          "speaker": "dasher",
+          "text": "Between laps? Right here. Running. Ask anyone. Ask the track. The track knows me.",
+          "spoken": "Between laps? - Right here. - Running. - Ask anyone. - Ask the track. --- The track knows me."
+        },
+        {
+          "speaker": "tiny",
+          "text": "He finished every sentence before I did, and got every one of them wrong. Either he was hiding something, or he just really liked running.",
+          "spoken": "He finished every sentence before I did, and got every one of them wrong. --- Either he was hiding something, or he just really liked running."
+        }
+      ]
+    },
+    "track_block": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Through the tinsel goggles, one of the starting blocks lit up. Burnt black. Still smoking a little.",
+          "spoken": "Through the tinsel goggles, one of the starting blocks lit up. -- Burnt black. ---- Still smoking a little."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Somebody had set fire to it. On purpose? By accident? With their feet?",
+          "spoken": "Somebody had set fire to it. -- On purpose? -- By accident? ---- With their feet?"
+        },
+        {
+          "speaker": "tiny",
+          "text": "No. Arson. Professional arson. The kind of fire you only get from two brothers with a grudge.",
+          "spoken": "No. -- Arson. -- Professional arson. ---- The kind of fire you only get from two brothers with a grudge."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And I knew just where to find them.",
+          "spoken": "And I knew just where to find them."
+        }
+      ]
+    },
+    "track_to_runway": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The launch runway was on the far side of the grounds. I could hear the shouting from here.",
+          "spoken": "The launch runway was on the far side of the grounds. --- I could hear the shouting from here."
+        }
+      ]
+    },
+    "runway_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The launch runway. A long, icy ramp pointing straight at the sky. Reindeer practice their takeoffs here. Some of them land.",
+          "spoken": "The launch runway. -- A long, icy ramp pointing straight at the sky. -- Reindeer practice their takeoffs here. ---- Some of them land."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Halfway up the ramp, two reindeer stood nose to nose, yelling about a harness.",
+          "spoken": "Halfway up the ramp, two reindeer stood nose to nose, yelling about a harness."
+        }
+      ]
+    },
+    "runway_feud": {
+      "lines": [
+        {
+          "speaker": "donner",
+          "text": "That's MY spot! Front left! It's been my spot since 1823!",
+          "spoken": "That's MY spot! - Front left! --- It's been my spot since 1823!"
+        },
+        {
+          "speaker": "blitzen",
+          "text": "It was never your spot! You stole it! You stole it the night of the poem!",
+          "spoken": "It was never your spot! - You stole it! --- You stole it the night of the poem!"
+        },
+        {
+          "speaker": "donner",
+          "text": "The poem says Donner! It's right there in the poem!",
+          "spoken": "The poem says Donner! - It's right there in the poem!"
+        },
+        {
+          "speaker": "blitzen",
+          "text": "Some versions say Donder! Who even is Donder?",
+          "spoken": "Some versions say Donder! - Who even is Donder?"
+        },
+        {
+          "speaker": "tiny",
+          "text": "Gentlemen. Where were you last night?",
+          "spoken": "Gentlemen. --- Where were you last night?"
+        },
+        {
+          "speaker": "donner",
+          "text": "Arguing with him.",
+          "spoken": "Arguing with him."
+        },
+        {
+          "speaker": "blitzen",
+          "text": "Arguing with him.",
+          "spoken": "Arguing with him."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Same alibi. Word for word. Very suspicious.",
+          "spoken": "Same alibi. -- Word for word. ---- Very suspicious."
+        }
+      ]
+    },
+    "runway_harness": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The harness. Front left. The most fought-over strip of leather at the North Pole.",
+          "spoken": "The harness. -- Front left. ---- The most fought-over strip of leather at the North Pole."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And then it hit me. Like a sleigh hitting a chimney.",
+          "spoken": "And then it hit me. --- Like a sleigh hitting a chimney."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Donner and Blitzen did it. Together. They melted Jimmy as a team-building exercise.",
+          "spoken": "Donner and Blitzen did it. -- Together. ---- They melted Jimmy as a team-building exercise."
+        },
+        {
+          "speaker": "tiny",
+          "text": "No. Wait. They did it separately. Each one melted half of Jimmy, so the other one couldn't take the credit. Or the harness.",
+          "spoken": "No. -- Wait. -- They did it separately. -- Each one melted half of Jimmy, so the other one couldn't take the credit. ---- Or the harness."
+        },
+        {
+          "speaker": "tiny",
+          "text": "It was brilliant. It was diabolical. It didn't make any sense. That's how I knew I was onto something.",
+          "spoken": "It was brilliant. -- It was diabolical. -- It didn't make any sense. ---- That's how I knew I was onto something."
+        },
+        {
+          "speaker": "donner",
+          "text": "Is he okay?",
+          "spoken": "Is he okay?"
+        },
+        {
+          "speaker": "blitzen",
+          "text": "He's been talking to the harness for a while.",
+          "spoken": "He's been talking to the harness for a while."
+        }
+      ]
+    },
+    "runway_to_stand": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "A good theory needs fuel. I followed the smell of roasted carrots.",
+          "spoken": "A good theory needs fuel. --- I followed the smell of roasted carrots."
+        }
+      ]
+    },
+    "stand_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The snack stand. Hot cocoa, roasted carrots, and a menu board I'd need a ladder to read.",
+          "spoken": "The snack stand. --- Hot cocoa, roasted carrots, and a menu board I'd need a ladder to read."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Leaning on the counter, smooth as butter, was Cupid. Off duty from the lounge. Still smooth.",
+          "spoken": "Leaning on the counter, smooth as butter, was Cupid. -- Off duty from the lounge. ---- Still smooth."
+        }
+      ]
+    },
+    "stand_cupid": {
+      "lines": [
+        {
+          "speaker": "cupid",
+          "text": "Well, if it isn't the little detective. Can I buy you a carrot? Everyone else owes me one.",
+          "spoken": "Well, if it isn't the little detective. - Can I buy you a carrot? --- Everyone else owes me one."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Everyone?",
+          "spoken": "Everyone?"
+        },
+        {
+          "speaker": "cupid",
+          "text": "Let me check my ledger. Dasher, two carrots. Donner, seven. Blitzen, seven, but he says it's six.",
+          "spoken": "Let me check my ledger. - Dasher, two carrots. - Donner, seven. --- Blitzen, seven, but he says it's six."
+        },
+        {
+          "speaker": "cupid",
+          "text": "And Jimmy Mittens. Fourteen carrots. Never paid.",
+          "spoken": "And Jimmy Mittens. - Fourteen carrots. --- Never paid."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Fourteen carrots. That's a lot of motive.",
+          "spoken": "Fourteen carrots. --- That's a lot of motive."
+        },
+        {
+          "speaker": "cupid",
+          "text": "That's a lot of carrots. And now I'll never see them. Unless the one in that puddle was mine.",
+          "spoken": "That's a lot of carrots. - And now I'll never see them. --- Unless the one in that puddle was mine."
+        }
+      ]
+    },
+    "stand_ledger": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "I studied that ledger the way a detective studies a ledger. Squinting. Nodding. Occasionally turning it upside down.",
+          "spoken": "I studied that ledger the way a detective studies a ledger. -- Squinting. -- Nodding. ---- Occasionally turning it upside down."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And the pieces came together. Big pieces. Pieces the size of reindeer.",
+          "spoken": "And the pieces came together. -- Big pieces. ---- Pieces the size of reindeer."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Everybody owed Cupid carrots. Dasher. Donner. Blitzen. Jimmy. Somebody had to pay. And somebody paid in snowman.",
+          "spoken": "Everybody owed Cupid carrots. -- Dasher. -- Donner. -- Blitzen. -- Jimmy. -- Somebody had to pay. ---- And somebody paid in snowman."
+        },
+        {
+          "speaker": "tiny",
+          "text": "This wasn't a murder. It was a carrot cartel. A frozen-vegetable syndicate, run out of a snack stand, with tentacles reaching all the way to the lounge. And possibly the Easter Bunny.",
+          "spoken": "This wasn't a murder. -- It was a carrot cartel. -- A frozen-vegetable syndicate, run out of a snack stand, with tentacles reaching all the way to the lounge. ---- And possibly the Easter Bunny."
+        },
+        {
+          "speaker": "cupid",
+          "text": "Do you want the carrot or not?",
+          "spoken": "Do you want the carrot or not?"
+        },
+        {
+          "speaker": "tiny",
+          "text": "I took the carrot. For evidence.",
+          "spoken": "I took the carrot. --- For evidence."
+        }
+      ]
+    },
+    "stand_to_track": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Something was nagging at me. Something I'd seen back at the track. Something up high. Something I couldn't reach.",
+          "spoken": "Something was nagging at me. -- Something I'd seen back at the track. -- Something up high. ---- Something I couldn't reach."
+        }
+      ]
+    },
+    "track_granny2": {
+      "lines": [
+        {
+          "speaker": "granny",
+          "text": "You've been gone an hour! Did you solve it?",
+          "spoken": "You've been gone an hour! - Did you solve it?"
+        },
+        {
+          "speaker": "tiny",
+          "text": "I've uncovered a carrot cartel, ma'am.",
+          "spoken": "I've uncovered a carrot cartel, ma'am."
+        },
+        {
+          "speaker": "granny",
+          "text": "Oh, honey. You had a snowball's chance in hell of getting that right.",
+          "spoken": "Oh, honey. - You had a snowball's chance in hell of getting that right."
+        }
+      ]
+    },
+    "track_boost": {
+      "lines": [
+        {
+          "speaker": "dasher",
+          "text": "You need a lift? I'll give you a lift. Up you go. One, two...",
+          "spoken": "You need a lift? - I'll give you a lift. - Up you go. --- One, two ---"
+        },
+        {
+          "speaker": "tiny",
+          "text": "Three?",
+          "spoken": "Three?"
+        },
+        {
+          "speaker": "dasher",
+          "text": "Four! I always skip three. It slows me down!",
+          "spoken": "Four! - I always skip three. --- It slows me down!"
+        },
+        {
+          "speaker": "tiny",
+          "text": "He didn't lift me. He threw me. I went up past the scoreboard, saw the whole North Pole, and came down on the scoreboard. Close enough.",
+          "spoken": "He didn't lift me. -- He threw me. -- I went up past the scoreboard, saw the whole North Pole, and came down on the scoreboard. ---- Close enough."
+        }
+      ]
+    },
+    "track_bag": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Hanging from the scoreboard, a gym bag. Scorched along the bottom. It smelled like a campfire wearing perfume.",
+          "spoken": "Hanging from the scoreboard, a gym bag. -- Scorched along the bottom. ---- It smelled like a campfire wearing perfume."
+        },
+        {
+          "speaker": "tiny",
+          "text": "There was a tag on the handle. 'If found, please return to C. The Ember Arms, Apartment Nine.'",
+          "spoken": "There was a tag on the handle. -- 'If found, please return to C. ---- The Ember Arms, Apartment Nine.'"
+        },
+        {
+          "speaker": "tiny",
+          "text": "C. That letter again. Following me around like a bad penny. A burning penny.",
+          "spoken": "C. -- That letter again. -- Following me around like a bad penny. ---- A burning penny."
+        }
+      ]
+    },
+    "track_leave": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Somewhere out there, somebody named C. was missing their gym bag. Their spare leg warmers. Maybe their dignity.",
+          "spoken": "Somewhere out there, somebody named C. was missing their gym bag. -- Their spare leg warmers. ---- Maybe their dignity."
+        },
+        {
+          "speaker": "tiny",
+          "text": "A lesser detective would turn it in to lost and found. I'm not a lesser detective. I'm a shorter one.",
+          "spoken": "A lesser detective would turn it in to lost and found. -- I'm not a lesser detective. ---- I'm a shorter one."
+        },
+        {
+          "speaker": "tiny",
+          "text": "I'd return it personally. The Ember Arms. Apartment Nine. Purely professional.",
+          "spoken": "I'd return it personally. -- The Ember Arms. -- Apartment Nine. ---- Purely professional."
+        },
+        {
+          "speaker": "granny",
+          "text": "Wear a hat, dear! It's cold out!",
+          "spoken": "Wear a hat, dear! - It's cold out!"
+        },
+        {
+          "speaker": "tiny",
+          "text": "It was. For now.",
+          "spoken": "It was. --- For now."
+        }
+      ]
+    }
+  }
+}

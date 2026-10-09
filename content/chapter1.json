@@ -144,8 +144,7 @@
           "requires": [
             "talked_comet"
           ],
-          "end": true,
-          "end_title": "To be continued..."
+          "go": "track"
         }
       ],
       "ambience_continue": true,

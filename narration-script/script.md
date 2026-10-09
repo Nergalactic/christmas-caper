@@ -232,3 +232,134 @@ it's listed in content/audio/narration/manifest.json.
 [TINY] The training grounds. Where the whole Reindeer Squad goes to sweat. Every one of them with a motive, and every one of them pointing the same direction.
 [TINY] I knew what I had to do. I had to go to the training grounds and tail every reindeer in that squad. Except one. She'd been through enough.
 
+<!-- section:chapter2 -->
+# chapter2
+
+Generated from `content/chapter2.json` by `scripts/scaffold-narration.mjs`.
+Review before voicing. Nothing here has been generated as audio unless
+it's listed in content/audio/narration/manifest.json.
+
+## track_enter
+
+[TINY] The North Pole Reindeer Training Grounds. Where the Squad comes to sweat, stretch, and settle scores.
+[TINY] Floodlights. Fresh snow. A running track that went around and around, like this case.
+[TINY] And up in the bleachers, a familiar puddle with a familiar voice.
+[GRANNY] Yoo-hoo! Detective! Down here! Well, up here. You're down there.
+
+## track_granny
+
+[GRANNY] I brought a thermos and a seat cushion. I'll be watching you work, dear. Closely.
+[TINY] Great. A heckler. Every detective needs one. Mine came with a thermos.
+[GRANNY] Ask better questions! Use your legs! Oh, well. Use what you've got!
+
+## track_comet
+
+[TINY] Out on the track, Comet was running laps. Every time her hooves hit the snow, the snow said 'tsss.'
+[COMET] Well, look who it is. You following me, sugar?
+[TINY] Just doing my rounds. Same as you.
+[COMET] Can't stop, little man. Gotta keep my heart rate up. And my temperature.
+[TINY] She jogged off in a cloud of steam. A dedicated athlete. You don't see that much anymore.
+
+## track_dasher
+
+[DASHER] Dasher, fastest in the Squad, and you must be the detective who's here about...
+[TINY] Jimmy Mitt...
+[DASHER] Jimmy Mittens's taxes, sure, sure, I heard. Terrible business. Numbers. Never liked 'em.
+[TINY] No. Jimmy Mittens melted. Where were you last night, between...
+[DASHER] Between laps? Right here. Running. Ask anyone. Ask the track. The track knows me.
+[TINY] He finished every sentence before I did, and got every one of them wrong. Either he was hiding something, or he just really liked running.
+
+## track_block
+
+[TINY] Through the tinsel goggles, one of the starting blocks lit up. Burnt black. Still smoking a little.
+[TINY] Somebody had set fire to it. On purpose? By accident? With their feet?
+[TINY] No. Arson. Professional arson. The kind of fire you only get from two brothers with a grudge.
+[TINY] And I knew just where to find them.
+
+## track_to_runway
+
+[TINY] The launch runway was on the far side of the grounds. I could hear the shouting from here.
+
+## runway_enter
+
+[TINY] The launch runway. A long, icy ramp pointing straight at the sky. Reindeer practice their takeoffs here. Some of them land.
+[TINY] Halfway up the ramp, two reindeer stood nose to nose, yelling about a harness.
+
+## runway_feud
+
+[DONNER] That's MY spot! Front left! It's been my spot since 1823!
+[BLITZEN] It was never your spot! You stole it! You stole it the night of the poem!
+[DONNER] The poem says Donner! It's right there in the poem!
+[BLITZEN] Some versions say Donder! Who even is Donder?
+[TINY] Gentlemen. Where were you last night?
+[DONNER] Arguing with him.
+[BLITZEN] Arguing with him.
+[TINY] Same alibi. Word for word. Very suspicious.
+
+## runway_harness
+
+[TINY] The harness. Front left. The most fought-over strip of leather at the North Pole.
+[TINY] And then it hit me. Like a sleigh hitting a chimney.
+[TINY] Donner and Blitzen did it. Together. They melted Jimmy as a team-building exercise.
+[TINY] No. Wait. They did it separately. Each one melted half of Jimmy, so the other one couldn't take the credit. Or the harness.
+[TINY] It was brilliant. It was diabolical. It didn't make any sense. That's how I knew I was onto something.
+[DONNER] Is he okay?
+[BLITZEN] He's been talking to the harness for a while.
+
+## runway_to_stand
+
+[TINY] A good theory needs fuel. I followed the smell of roasted carrots.
+
+## stand_enter
+
+[TINY] The snack stand. Hot cocoa, roasted carrots, and a menu board I'd need a ladder to read.
+[TINY] Leaning on the counter, smooth as butter, was Cupid. Off duty from the lounge. Still smooth.
+
+## stand_cupid
+
+[CUPID] Well, if it isn't the little detective. Can I buy you a carrot? Everyone else owes me one.
+[TINY] Everyone?
+[CUPID] Let me check my ledger. Dasher, two carrots. Donner, seven. Blitzen, seven, but he says it's six.
+[CUPID] And Jimmy Mittens. Fourteen carrots. Never paid.
+[TINY] Fourteen carrots. That's a lot of motive.
+[CUPID] That's a lot of carrots. And now I'll never see them. Unless the one in that puddle was mine.
+
+## stand_ledger
+
+[TINY] I studied that ledger the way a detective studies a ledger. Squinting. Nodding. Occasionally turning it upside down.
+[TINY] And the pieces came together. Big pieces. Pieces the size of reindeer.
+[TINY] Everybody owed Cupid carrots. Dasher. Donner. Blitzen. Jimmy. Somebody had to pay. And somebody paid in snowman.
+[TINY] This wasn't a murder. It was a carrot cartel. A frozen-vegetable syndicate, run out of a snack stand, with tentacles reaching all the way to the lounge. And possibly the Easter Bunny.
+[CUPID] Do you want the carrot or not?
+[TINY] I took the carrot. For evidence.
+
+## stand_to_track
+
+[TINY] Something was nagging at me. Something I'd seen back at the track. Something up high. Something I couldn't reach.
+
+## track_granny2
+
+[GRANNY] You've been gone an hour! Did you solve it?
+[TINY] I've uncovered a carrot cartel, ma'am.
+[GRANNY] Oh, honey. You had a snowball's chance in hell of getting that right.
+
+## track_boost
+
+[DASHER] You need a lift? I'll give you a lift. Up you go. One, two...
+[TINY] Three?
+[DASHER] Four! I always skip three. It slows me down!
+[TINY] He didn't lift me. He threw me. I went up past the scoreboard, saw the whole North Pole, and came down on the scoreboard. Close enough.
+
+## track_bag
+
+[TINY] Hanging from the scoreboard, a gym bag. Scorched along the bottom. It smelled like a campfire wearing perfume.
+[TINY] There was a tag on the handle. 'If found, please return to C. The Ember Arms, Apartment Nine.'
+[TINY] C. That letter again. Following me around like a bad penny. A burning penny.
+
+## track_leave
+
+[TINY] Somewhere out there, somebody named C. was missing their gym bag. Their spare leg warmers. Maybe their dignity.
+[TINY] A lesser detective would turn it in to lost and found. I'm not a lesser detective. I'm a shorter one.
+[TINY] I'd return it personally. The Ember Arms. Apartment Nine. Purely professional.
+[GRANNY] Wear a hat, dear! It's cold out!
+[TINY] It was. For now.

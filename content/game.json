@@ -27,6 +27,11 @@
       "id": "chapter1",
       "title": "Chapter 1: The Mistletoe Lounge",
       "file": "chapter1.json"
+    },
+    {
+      "id": "chapter2",
+      "title": "Chapter 2: The Reindeer Games",
+      "file": "chapter2.json"
     }
   ]
 }

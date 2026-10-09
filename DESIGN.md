@@ -70,9 +70,14 @@ At the bar, **Silverbough**, a tall, ancient-woodland elf who has tended bar for
 Panoramas: the main floor and the bar.
 
 ### Chapter 2: The Reindeer Games
-The squad's training grounds. Suspects: **Donner and Blitzen**, **Cupid**, **Dasher**. Comet is running laps, leaving a ring of scorched hoofprints in the snow.
+Comet leaves the lounge for practice, and Tiny follows to the training grounds. Absurdity goes up through Tiny's theories, each bigger and dumber than the last.
 
-Target: 2 to 3 panoramas.
+- **The track:** Granny heckles from the bleachers. Comet runs laps, the snow hissing under her hooves. **Dasher** finishes every one of Tiny's sentences, always wrongly. The goggles reveal a scorched starting block, which Tiny pins on two brothers with a grudge.
+- **The launch runway:** **Donner and Blitzen** are mid-feud over the front-left harness spot, which goes back to the night of the 1823 poem ("Who even is Donder?"). Tiny's theory: they melted Jimmy together as team-building. No, separately, half each.
+- **The snack stand:** **Cupid** (now speaking) keeps a carrot ledger. Jimmy owed fourteen carrots. Tiny's theory: a carrot cartel, a frozen-vegetable syndicate with tentacles reaching to the lounge and possibly the Easter Bunny.
+- **Back to the track:** Granny: "You had a snowball's chance in hell of getting that right." Dasher boosts Tiny by throwing him (he skips three when counting) onto the scoreboard, where a scorched gym bag hangs. Its tag: "If found, please return to C. The Ember Arms, Apartment Nine." Tiny resolves to return it personally. Purely professional.
+
+Panoramas: the track, the launch runway, the snack stand.
 
 ### Chapter 3: Comet's Apartment
 Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."

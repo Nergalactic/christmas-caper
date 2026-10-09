@@ -63,3 +63,24 @@ Version 2 (re-roll): the kiss sits lower, at a snowman's head height, and Comet'
 ```
 
 The title card has no text on purpose: the game draws "COLD CASE" over it, since generators tend to garble lettering.
+
+## Chapter 2: The Reindeer Games
+
+### 8. The training grounds: `content/panoramas/track.jpg` (992 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Low camera, 70 cm high; everything looks too big. Snowy oval running track at night under floodlights. Center: a tall wooden scoreboard, a scorched gym bag hanging from it. Left: wooden bleachers where Granny Slush, an old snowwoman in a knitted shawl, cat-eye glasses and holly pillbox hat, carrying a carpetbag, a meltwater puddle at her base, sits with a thermos. Right: Comet, an elegant black-nosed reindeer doe with red lipstick and pearls, her hooves wreathed in small flames, steam rising, running laps, a ring of melted slush behind her. Near the camera: Dasher, a lean reindeer buck in a tracksuit with a stopwatch, caught mid-sprint. Starting blocks in the snow, one charred black. No text.
+```
+
+### 9. The launch runway: `content/panoramas/runway.jpg` (903 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Camera 40 cm above the floor; everything looms overhead, seen from below. An icy ramp for reindeer takeoffs at night, rising steeply into a starry sky. Center, halfway up the ramp, nose to nose and shouting: Donner, a burly reindeer buck in a sweatband, and Blitzen, a wiry reindeer buck in a sweatband. A worn leather sleigh harness lies on the ramp. A wind sock snapping in the wind, blue runway lights running up the ramp, deep snowbanks, a distant floodlit oval track and bleachers, other reindeer silhouetted mid-flight against the moon, a toppled traffic cone, hoof skid marks gouged into the ice. No text.
+```
+
+### 10. The snack stand: `content/panoramas/snack_stand.jpg` (949 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Camera 40 cm above the floor; everything looms overhead, seen from below. A wooden snack stand at a snowy sports ground at night, lit by warm bulbs. Center, leaning on the counter: Cupid, a reindeer buck in a white dinner jacket and bow tie, holding a ledger. Baskets of roasted carrots, steaming hot cocoa urns, a menu board far overhead. A string of colored Christmas bulbs along the awning, a chalkboard of carrot prices, napkin dispensers and mustard bottles at the edge of the counter, a stack of paper cups, a wooden stool too tall to climb. The floodlit running track and bleachers glow in the distance behind, snow falling through the light. No text.
+```
+

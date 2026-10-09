@@ -64,12 +64,27 @@ Sample line: *And I'm just here networking. In December. At the North Pole. Tota
 
 Sample line: *I choreographed Jimmy's act. Do you know what it's like teaching a snowman to move? He had no hips. He had a bottom ball.*
 
-## Later chapters
+## Chapter 2
 
-Not needed for the intro or Chapter 1. Cupid is silent in Chapter 1 (Tiny narrates his set) and is planned to speak in Chapter 2.
+New voices for the Reindeer Games. Tiny, Granny, and Comet return too.
 
 ### Cupid
-
 > Smooth, velvety male crooner speaking voice, charming and romantic, a confident lounge singer working the room between songs. 1940s. Clean studio recording.
 
-Sample line: *Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello. This next one goes out to a very special lady. She knows who she is.*
+Sample line: *Well, if it isn't the little detective. Can I buy you a carrot? Everyone else owes me one. And Jimmy Mittens. Fourteen carrots. Never paid.*
+
+### Dasher
+> Hyperactive, fast-talking male athlete, breathless and bouncy, cheerful, talks over everyone and rushes to finish other people's sentences. Clean studio recording.
+
+Sample line: *Dasher, fastest in the Squad, and you must be the detective who's here about... Jimmy Mittens's taxes, sure, sure, I heard. Terrible business. Numbers. Never liked 'em.*
+
+### Donner
+> Deep, booming, hot-tempered middle-aged man, loud and indignant, a big guy who shouts everything like it's an outrage. Clean studio recording.
+
+Sample line: *That's MY spot! Front left! It's been my spot since 1823! The poem says Donner! It's right there in the poem! Arguing with him. That's where I was.*
+
+### Blitzen
+> Sharp, wiry, high-strung middle-aged man, fast and snappy, crackling with indignation, a little nasal, always ready to argue. Clean studio recording.
+
+Sample line: *It was never your spot! You stole it! You stole it the night of the poem! Some versions say Donder! Who even is Donder? He's been talking to the harness for a while.*
+
