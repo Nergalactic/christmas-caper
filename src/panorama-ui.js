@@ -284,8 +284,9 @@ function makePlaceholderTexture(label, subtitle = "panorama placeholder, awaitin
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   // With the sphere rotated in initViewer, image column u faces yaw
-  // (0.5 - u) * 360: the image center is straight ahead. Label every 90 degrees.
-  const uForYaw = (yaw) => (((0.5 - yaw / 360) % 1) + 1) % 1;
+  // (u - 0.5) * 360: the image center is straight ahead, the right half is
+  // positive yaw. Label every 90 degrees.
+  const uForYaw = (yaw) => (((0.5 + yaw / 360) % 1) + 1) % 1;
   const marks = [
     [uForYaw(0), "yaw 0"],
     [uForYaw(90), "yaw 90"],

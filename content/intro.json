@@ -5,7 +5,7 @@
       "name": "Tiny's Office",
       "panorama": "content/panoramas/office.jpg",
       "startYaw": 0,
-      "startPitch": -10,
+      "startPitch": 12,
       "ambience": "office",
       "dark_open": true,
       "on_enter": "office_open",
@@ -13,8 +13,8 @@
         {
           "id": "door",
           "label": "Granny Slush, in the doorway",
-          "yaw": 20,
-          "pitch": 15,
+          "yaw": -14.4,
+          "pitch": 9.0,
           "beat": "office_knock",
           "sets": [
             "met_granny"
@@ -23,8 +23,8 @@
         {
           "id": "drip",
           "label": "Puddle by the door",
-          "yaw": 15,
-          "pitch": -40,
+          "yaw": -3.6,
+          "pitch": -52.2,
           "beat": "office_drip",
           "requires": [
             "met_granny"
@@ -36,8 +36,8 @@
         {
           "id": "granny",
           "label": "Granny Slush",
-          "yaw": 10,
-          "pitch": 20,
+          "yaw": -12.6,
+          "pitch": 39.6,
           "beat": "office_granny",
           "requires": [
             "saw_drip"
@@ -49,8 +49,8 @@
         {
           "id": "drawer",
           "label": "Bottom desk drawer",
-          "yaw": -60,
-          "pitch": -25,
+          "yaw": -120.6,
+          "pitch": -10.8,
           "beat": "office_drawer",
           "grants": "goggles",
           "requires": [
@@ -60,8 +60,8 @@
         {
           "id": "hallway",
           "label": "Hallway",
-          "yaw": 30,
-          "pitch": 0,
+          "yaw": 19.8,
+          "pitch": -10.8,
           "beat": "office_leave",
           "go": "street",
           "requires": [
