@@ -12,6 +12,8 @@
     "serve": "npx --yes serve -l 8080 .",
     "check": "node scripts/check-content.mjs",
     "narration:scaffold": "node scripts/scaffold-narration.mjs",
-    "narration:dry-run": "node scripts/generate-narration.mjs narration-script/script.md"
+    "narration:dry-run": "node scripts/generate-narration.mjs narration-script/script.md",
+    "narration:sheet": "node scripts/narration-sheet.mjs sheet",
+    "narration:manifest": "node scripts/narration-sheet.mjs manifest"
   }
 }
