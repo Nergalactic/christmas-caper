@@ -14,6 +14,7 @@ import { Game, GameState, Engine } from "./game.js";
 import { Ambience, LoadingMusic, CreditsMusic } from "./audio.js";
 import { Narration } from "./narration.js";
 import { TUTORIAL_STEPS, isTutorialComplete, skipTutorial } from "./tutorial.js";
+import { Sparkles } from "./sparkles.js";
 
 const statusStripEl = document.getElementById("status-strip");
 const statusSceneEl = document.getElementById("status-scene");
@@ -544,11 +545,13 @@ function updateGogglesButton() {
   const on = unlocked && engine.state.goggles;
   gogglesButtonEl.textContent = on ? "Goggles: on" : "Goggles: off";
   gogglesButtonEl.setAttribute("aria-pressed", String(on));
-  viewerEl.classList.toggle("goggles-on", on);
+  Sparkles.setOn(on);
 }
 
 gogglesButtonEl.addEventListener("click", () => {
-  if (!engine || busy) return;
+  // Allowed mid-line too: the button appears the moment Tiny finds the
+  // goggles, and ignoring clicks on it reads as broken.
+  if (!engine) return;
   engine.setGoggles(!engine.state.goggles);
   markTutorialEvent("tutorial_used_goggles");
   updateGogglesButton();
