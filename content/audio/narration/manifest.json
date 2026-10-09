@@ -878,5 +878,299 @@
       "speaker": "tiny",
       "file": "track_leave_5.mp3"
     }
+  ],
+  "apt_enter": [
+    {
+      "speaker": "tiny",
+      "file": "apt_enter_1.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "apt_enter_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "apt_enter_3.mp3"
+    }
+  ],
+  "apt_comet": [
+    {
+      "speaker": "tiny",
+      "file": "apt_comet_1.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "apt_comet_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "apt_comet_3.mp3"
+    }
+  ],
+  "apt_puddles": [
+    {
+      "speaker": "tiny",
+      "file": "apt_puddles_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "apt_puddles_2.mp3"
+    }
+  ],
+  "apt_hottub": [
+    {
+      "speaker": "comet",
+      "file": "apt_hottub_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "apt_hottub_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "apt_hottub_3.mp3"
+    }
+  ],
+  "apt_to_shrine": [
+    {
+      "speaker": "tiny",
+      "file": "apt_to_shrine_1.mp3"
+    }
+  ],
+  "shrine_enter": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_enter_2.mp3"
+    }
+  ],
+  "shrine_hats": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_hats_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_hats_2.mp3"
+    }
+  ],
+  "shrine_sleet": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_sleet_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_sleet_2.mp3"
+    }
+  ],
+  "shrine_mirror": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_mirror_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_mirror_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_mirror_3.mp3"
+    }
+  ],
+  "shrine_boost": [
+    {
+      "speaker": "comet",
+      "file": "shrine_boost_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_boost_2.mp3"
+    }
+  ],
+  "shrine_scrapbook": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_scrapbook_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_scrapbook_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_scrapbook_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_scrapbook_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "shrine_scrapbook_5.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "shrine_scrapbook_6.mp3"
+    }
+  ],
+  "shrine_to_roof": [
+    {
+      "speaker": "tiny",
+      "file": "shrine_to_roof_1.mp3"
+    }
+  ],
+  "roof_enter": [
+    {
+      "speaker": "tiny",
+      "file": "roof_enter_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "roof_enter_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_enter_3.mp3"
+    }
+  ],
+  "roof_reveal": [
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_6.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_7.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_8.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_9.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_10.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_11.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "roof_reveal_12.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_reveal_13.mp3"
+    }
+  ],
+  "roof_granny": [
+    {
+      "speaker": "granny",
+      "file": "roof_granny_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "roof_granny_2.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "roof_granny_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "roof_granny_4.mp3"
+    }
+  ],
+  "roof_sleigh": [
+    {
+      "speaker": "tiny",
+      "file": "roof_sleigh_1.mp3"
+    }
+  ],
+  "santa_enter": [
+    {
+      "speaker": "santa",
+      "file": "santa_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "santa_enter_2.mp3"
+    },
+    {
+      "speaker": "santa",
+      "file": "santa_enter_3.mp3"
+    }
+  ],
+  "santa_knew": [
+    {
+      "speaker": "santa",
+      "file": "santa_knew_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "santa_knew_2.mp3"
+    },
+    {
+      "speaker": "santa",
+      "file": "santa_knew_3.mp3"
+    },
+    {
+      "speaker": "santa",
+      "file": "santa_knew_4.mp3"
+    },
+    {
+      "speaker": "santa",
+      "file": "santa_knew_5.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "santa_knew_6.mp3"
+    }
+  ],
+  "santa_final": [
+    {
+      "speaker": "tiny",
+      "file": "santa_final_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "santa_final_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "santa_final_3.mp3"
+    },
+    {
+      "speaker": "santa",
+      "file": "santa_final_4.mp3"
+    }
   ]
 }
