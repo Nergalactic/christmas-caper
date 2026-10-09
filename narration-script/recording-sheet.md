@@ -6,7 +6,7 @@ Dashes are pauses for ElevenLabs: `-` short, `--` medium, `---` longer, `----` l
 
 For each line: paste the text into ElevenLabs with that character's voice, download the mp3, and save it in `content/audio/narration/` with the filename shown. Then run `node scripts/narration-sheet.mjs manifest` so the game picks it up.
 
-**Progress:** 121 of 124 lines recorded.
+**Progress:** 124 of 124 lines recorded.
 
 | Character | Lines | Characters |
 |---|---|---|
@@ -399,13 +399,13 @@ For each line: paste the text into ElevenLabs with that character's voice, downl
 
 *Chapter 1: The Mistletoe Lounge*
 
-- [ ] `lounge_prancer_2.mp3`
+- [x] `lounge_prancer_2.mp3`
   > And I'm just here networking. - In December. - At the North Pole. --- Totally normal.
 
-- [ ] `lounge_prancer_4.mp3`
+- [x] `lounge_prancer_4.mp3`
   > I have an alibi. - Here. - This egg. --- It's hard-boiled.
 
-- [ ] `lounge_prancer_7.mp3`
+- [x] `lounge_prancer_7.mp3`
   > Comet. - Definitely Comet. --- We'd both swear on the egg.
 
 ## Dancer
