@@ -20,6 +20,11 @@
     "stability": 0.5,
     "similarity_boost": 0.75
   },
+  "silverbough": {
+    "voice_id": null,
+    "stability": 0.5,
+    "similarity_boost": 0.75
+  },
   "comet": {
     "voice_id": null,
     "stability": 0.5,

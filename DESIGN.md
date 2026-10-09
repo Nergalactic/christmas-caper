@@ -63,9 +63,11 @@ Appears at least once per chapter to check in on the case, says "a snowball's ch
 Target: roughly 7 to 9 panoramas.
 
 ### Chapter 1: The Mistletoe Lounge
-Jimmy's last gig. Suspects: **Vixen**, **Prancer** (with the **Easter Bunny**), **Dancer**. Comet sits at the bar, steaming; Tiny asks her to hold his drink, and it boils.
+Granny rings the doorbell Tiny can't reach, then waits outside. Cupid has taken Jimmy's spotlight, smooth as butter, and mentions in his tribute that Jimmy owed him carrots. Suspects: **Vixen** (lost her slot twice), **Prancer** (40%) with the **Easter Bunny** (whose alibi is a hard-boiled egg), and **Dancer** (hated Jimmy's moves). Every one of them points straight at Comet, so Tiny concludes they're covering for each other.
 
-Target: 2 to 3 panoramas.
+At the bar, **Silverbough**, a tall, ancient-woodland elf who has tended bar for four hundred winters, gives Tiny his boosts. The goggles show a scorched stool ("spilled coffee"). A reserved card reads "J. Mittens, plus C," with the C scorched; Tiny runs through the alphabet twice. Comet holds his drink and it boils. She leaves for practice at the training grounds, and Tiny resolves to tail every reindeer except her.
+
+Panoramas: the main floor and the bar.
 
 ### Chapter 2: The Reindeer Games
 The squad's training grounds. Suspects: **Donner and Blitzen**, **Cupid**, **Dasher**. Comet is running laps, leaving a ring of scorched hoofprints in the snow.

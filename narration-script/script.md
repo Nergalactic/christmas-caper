@@ -129,3 +129,106 @@ it's listed in content/audio/narration/manifest.json.
 [TINY] I have several leads, ma'am. All of them point inside that lounge. One of them points at the dumpster.
 [GRANNY] Find who did this. Or I'll find a detective who can reach the doorbell.
 [TINY] I looked up at the Mistletoe Lounge. Way, way up. Somewhere in there was a killer. And hopefully a step stool.
+
+<!-- section:chapter1 -->
+# chapter1
+
+Generated from `content/chapter1.json` by `scripts/scaffold-narration.mjs`.
+Review before voicing. Nothing here has been generated as audio unless
+it's listed in content/audio/narration/manifest.json.
+
+## lounge_enter
+
+[TINY] The front door of the Mistletoe Lounge. The doorbell was up where the tall people keep their secrets.
+[GRANNY] Oh, for goodness' sake. I'll ring it. I'll wait out here, dear. Jazz gives me the drips.
+[TINY] Inside, the place was dark and warm and full of people pretending they weren't watching the door. Nobody watched me. Nobody ever does. It's my edge.
+[TINY] Up on stage, somebody new was singing in Jimmy's spotlight. The body wasn't even cold. Well. The body wasn't even a body.
+
+## lounge_cupid
+
+[CUPID] Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello.
+[TINY] Cupid. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth.
+[CUPID] This next one goes out to Jimmy Mittens. Rest easy, pal. And if you can hear me, you still owe me carrots.
+[TINY] A tribute and a debt in the same breath. That's show business. I filed it under suspicious, then under touching, then under suspicious again.
+
+## lounge_vixen
+
+[VIXEN] Well, well. A detective. And such a compact one.
+[TINY] Vixen. Lounge singer. She'd had this slot for years, until Jimmy took it. A dame with a motive and a beauty mark that moved around depending on the light.
+[VIXEN] You think I did it? Darling, I lost my slot to Jimmy, and tonight I lost it to Cupid. Clearly I'm not getting what I want.
+[VIXEN] If I were you, I'd ask the girl at the bar. The one whose hooves are on fire.
+[TINY] Pointing me at someone else. Classic. Only a guilty person would try to help me solve a crime.
+
+## lounge_prancer
+
+[PRANCER] Prancer. Jimmy's manager. Forty percent. Fifty on holidays. He was my boy, my client, my brand.
+[EASTER_BUNNY] And I'm just here networking. In December. At the North Pole. Totally normal.
+[TINY] The Easter Bunny. Out of season and out of his depth. I asked him where he was last night.
+[EASTER_BUNNY] I have an alibi. Here. This egg. It's hard-boiled.
+[TINY] A hard-boiled egg. I respected that. A fellow hard-boiled type. I let it slide.
+[PRANCER] Look, pal, if you want my professional opinion, Jimmy left with Comet. Tall, hot, steaming. You can't miss her.
+[EASTER_BUNNY] Comet. Definitely Comet. We'd both swear on the egg.
+[TINY] They'd rehearsed it. Same name, same story. Somebody was coaching these two. I just didn't know who. Yet.
+
+## lounge_dancer
+
+[DANCER] I choreographed Jimmy's act. Do you know what it's like teaching a snowman to move? He had no hips. He had a bottom ball.
+[TINY] Dancer. Hated the man's moves. Hated them enough to kill? I watched her closely. She did a little spin. I couldn't tell if it was a confession or a habit.
+[DANCER] Listen. Last week, Comet tapped a little rhythm on this stage and set it on fire. Literally. We had to call the fire department.
+[DANCER] Jimmy watched the whole thing and said, 'That's my kind of girl.'
+[TINY] Three suspects. Three stories. All pointing in the same direction. You know what that tells me? It tells me they're covering for each other.
+[TINY] The question was who they were covering for. I needed a drink. Something cold. With a straw. A long straw.
+
+## lounge_to_bar
+
+[TINY] Between me and the bar stood fourteen tables, a hat stand, and a reindeer doing the cha-cha. I plotted a route. Then I plotted a backup route. Then I walked in a straight line.
+
+## bar_enter
+
+[TINY] The bar. From down here, it was a polished wooden cliff with a brass foot rail I could use as a bench.
+[TINY] At the far end, a lady reindeer with her hooves on fire was sipping something that had stopped being a drink and started being steam.
+
+## bar_silverbough
+
+[SILVERBOUGH] Greetings, small traveler. I am Silverbough. I have tended this bar for four hundred winters. What shall it be?
+[TINY] An elf. One of the tall ones. Not the toy-making kind. The kind with flowing hair and a harp somewhere. We don't talk about each other at reunions.
+[TINY] A hot cocoa, Stretch. And whatever you know about Jimmy Mittens.
+[SILVERBOUGH] In my homeland, we have no word for 'short.' We never needed one.
+[TINY] Cute. In mine, we have no word for 'quit.' We also have no word for 'ladder,' which is its own problem.
+[SILVERBOUGH] Jimmy sat here last night, as he did every night. He was not alone. The stool beside him has not been the same since.
+
+## bar_stool
+
+[TINY] Through the tinsel goggles, the stool next to Jimmy's lit up like the Fourth of July. It was scorched black. Right through the cushion.
+[TINY] Somebody'd spilled a coffee here. A hot one. A very hot one. Possibly several hot coffees, over a period of years.
+[SILVERBOUGH] That was not coffee.
+[TINY] I'll be the judge of what's coffee, Stretch.
+
+## bar_boost
+
+[SILVERBOUGH] Allow me. Ascend, little one, as the eagle ascends.
+[TINY] He set me on the bar like a drink order. I've been lifted by better. Not many.
+
+## bar_card
+
+[TINY] A reserved card, standing on the bar where Jimmy sat. Table for two. It read: 'J. Mittens, plus C.'
+[TINY] The C was scorched around the edges. Still warm.
+[TINY] C. Could be anyone. Cupid. Carl. Carol. Some guy named Clive. A mysterious stranger simply known as 'the Letter C.'
+[TINY] I ran through the alphabet twice. I kept coming back to C. Which, if you think about it, was very suspicious of C.
+
+## bar_comet
+
+[COMET] Well, if it isn't my favorite little detective. Again.
+[TINY] Comet. The dame from the alley. Every suspect in this joint had said her name. That's how I knew she was the one person I could trust.
+[TINY] Hold my drink, would you, sweetheart?
+[COMET] Sure thing, sugar.
+[TINY] She held it. It boiled. The glass whistled like a kettle and the ice cubes left the building. Must've been a warm room.
+[COMET] Poor Jimmy. We sat right here last night. He said I made him feel like a new man. Then he said he felt a little light-headed. Then he said a lot of things. Then he was quiet.
+[TINY] A grieving acquaintance. Sitting right where it happened. Some dames just can't let go.
+
+## bar_comet_leaves
+
+[COMET] Well, I'd love to stay, sugar, but I've got practice at the training grounds. Laps. A girl's gotta stay warm.
+[TINY] She swished out the door. The welcome mat caught fire. Nobody said anything. It's that kind of place.
+[TINY] The training grounds. Where the whole Reindeer Squad goes to sweat. Every one of them with a motive, and every one of them pointing the same direction.
+[TINY] I knew what I had to do. I had to go to the training grounds and tail every reindeer in that squad. Except one. She'd been through enough.
