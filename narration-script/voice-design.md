@@ -41,14 +41,6 @@ Sample line: *H-hi. I'm Lil' Sleet. Big fan of Jimmy's. Is it hot out here, or i
 
 Sample line: *Greetings, small traveler. I am Silverbough. I have tended this bar for four hundred winters. What shall it be?*
 
-### Cupid
-
-*Not needed yet: Cupid is silent in Chapter 1 (Tiny narrates his set). He's planned to speak in Chapter 2.*
-
-> Smooth, velvety male crooner speaking voice, charming and romantic, a confident lounge singer working the room between songs. 1940s. Clean studio recording.
-
-Sample line: *Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello. This next one goes out to a very special lady. She knows who she is.*
-
 ### Vixen
 > Glamorous female lounge singer diva, theatrical and haughty, dramatic, mid-Atlantic accent, 1940s. Clean studio recording.
 
@@ -68,3 +60,13 @@ Sample line: *And I'm just here networking. In December. At the North Pole. Tota
 > Theatrical, exasperated female choreographer, crisp diction, dramatic sighs, fed up with everyone. Clean studio recording.
 
 Sample line: *I choreographed Jimmy's act. Do you know what it's like teaching a snowman to move? He had no hips. He had a bottom ball.*
+
+## Later chapters
+
+Not needed for the intro or Chapter 1. Cupid is silent in Chapter 1 (Tiny narrates his set) and is planned to speak in Chapter 2.
+
+### Cupid
+
+> Smooth, velvety male crooner speaking voice, charming and romantic, a confident lounge singer working the room between songs. 1940s. Clean studio recording.
+
+Sample line: *Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello. This next one goes out to a very special lady. She knows who she is.*
