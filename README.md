@@ -76,3 +76,7 @@ Any line without audio falls back to a timed subtitle, so the game always plays 
 - Voices and music: AI-generated with ElevenLabs
 - Panorama viewer, audio, narration, tutorial, editor, and voice pipeline: adapted from The Mystery of Skua Island's panorama build. The story engine is new.
 - Three.js, vendored under its MIT license
+
+## License
+
+Copyright (c) 2026 Nergalactic. All rights reserved. The game is public to play and view, but no part of it may be copied or reused without permission. See [LICENSE](LICENSE). Three.js keeps its own MIT license ([vendor/three/LICENSE](vendor/three/LICENSE)).
