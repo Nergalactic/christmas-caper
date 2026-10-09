@@ -143,8 +143,8 @@
         {
           "id": "comet",
           "label": "Comet",
-          "yaw": 32.4,
-          "pitch": -3.6,
+          "yaw": 77.4,
+          "pitch": 0,
           "beat": "roof_reveal",
           "sets": [
             "revealed"
@@ -153,8 +153,8 @@
         {
           "id": "granny",
           "label": "Granny Slush",
-          "yaw": -122.4,
-          "pitch": -3.6,
+          "yaw": -115.2,
+          "pitch": -10.8,
           "beat": "roof_granny",
           "requires": [
             "revealed"
@@ -166,8 +166,8 @@
         {
           "id": "sky",
           "label": "Something in the sky",
-          "yaw": 108,
-          "pitch": 36,
+          "yaw": -14.4,
+          "pitch": 45,
           "beat": "roof_sleigh",
           "go": "rooftop_santa",
           "requires": [
@@ -207,7 +207,8 @@
           "end_title": "Case closed."
         }
       ],
-      "ambience": "rooftop"
+      "ambience": "rooftop",
+      "crossfade": 2500
     }
   },
   "beats": {

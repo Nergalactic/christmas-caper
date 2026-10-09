@@ -17,6 +17,7 @@
 ```
 
 - `panorama`: equirectangular image. Leave `null` (or point at a missing file) to get the gray grid placeholder.
+- `crossfade`: milliseconds. For a panorama that matches the previous one (same place, something new in it): the new image fades in over the old one while the view eases to `startYaw`/`startPitch`, instead of a hard cut.
 - `startYaw` / `startPitch`: where the camera faces on entry. Yaw 0 is straight ahead, positive yaw turns right, negative pitch looks down (toward the floor, where Tiny lives).
 - `ambience`: audio id, played from `content/audio/<id>.mp3` with an optional `<id>_detail.mp3` layer. Defaults to the scene id.
 - `ambience_volume`: multiplies the ambience volume for this scene (default 1).

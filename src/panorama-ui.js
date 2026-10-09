@@ -402,11 +402,17 @@ function resizeViewer() {
   camera.updateProjectionMatrix();
 }
 
-async function setScene(path, label, startYaw = 0, startPitch = 0, { fov = 75, subtitle } = {}) {
+async function setScene(path, label, startYaw = 0, startPitch = 0, { fov = 75, subtitle, crossfade = 0 } = {}) {
   const key = path || `placeholder:${label}`;
   if (key === lastPanoramaPath) return;
   lastPanoramaPath = key;
   const texture = await loadPanoramaTexture(path, label, subtitle);
+  if (crossfade > 0) {
+    // Matched panoramas (same place, something new in it): fade the new
+    // image in over the old one and keep the player's current view.
+    await crossfadeTo(texture, crossfade, yawPitchToVector3(startYaw, startPitch, 1).normalize());
+    return;
+  }
   const old = sphere.material.map;
   sphere.material.map = texture;
   sphere.material.needsUpdate = true;
@@ -414,6 +420,40 @@ async function setScene(path, label, startYaw = 0, startPitch = 0, { fov = 75, s
   camera.fov = fov;
   camera.updateProjectionMatrix();
   centerCameraOn(startYaw, startPitch);
+}
+
+function crossfadeTo(texture, ms, lookTo) {
+  const lookFrom = camera.position.clone().negate().normalize();
+  const geometry = sphere.geometry.clone();
+  geometry.scale(0.98, 0.98, 0.98); // just inside the main sphere
+  const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0, depthWrite: false });
+  const overlay = new THREE.Mesh(geometry, material);
+  overlay.rotation.y = sphere.rotation.y;
+  overlay.renderOrder = 1;
+  scene3d.add(overlay);
+  return new Promise((resolve) => {
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - start) / ms);
+      const e = t * t * (3 - 2 * t);
+      material.opacity = e;
+      // Ease the view toward the new scene's start direction as it fades in.
+      const dir = lookFrom.clone().lerp(lookTo, e).normalize();
+      camera.position.copy(dir).multiplyScalar(-0.01);
+      camera.lookAt(0, 0, 0);
+      controls.update();
+      if (t < 1) return requestAnimationFrame(step);
+      const old = sphere.material.map;
+      sphere.material.map = texture;
+      sphere.material.needsUpdate = true;
+      if (old) old.dispose();
+      scene3d.remove(overlay);
+      geometry.dispose();
+      material.dispose();
+      resolve();
+    }
+    requestAnimationFrame(step);
+  });
 }
 
 function centerCameraOn(yaw, pitch) {
@@ -542,7 +582,7 @@ async function enterScene(id) {
   viewerEl.classList.toggle("dark", dark);
   if (dark) tutorialPanelEl.hidden = true;
   else updateTutorialPanel();
-  await setScene(scene.panorama, scene.name, scene.startYaw, scene.startPitch, { fov: scene.fov || 75 });
+  await setScene(scene.panorama, scene.name, scene.startYaw, scene.startPitch, { fov: scene.fov || 75, crossfade: scene.crossfade || 0 });
   if (!dark) flashLookAroundHint();
   if (beat) {
     setBusy(true);
