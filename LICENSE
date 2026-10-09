@@ -1,12 +1,27 @@
 Copyright (c) 2026 Nergalactic. All rights reserved.
 
-Cold Case, including its source code, story, characters, dialogue, artwork,
-panoramas, voice recordings, and music, is published here so it can be played
-and viewed. No permission is granted to copy, modify, distribute, or reuse any
-part of it, in whole or in part, without prior written permission from the
-copyright holder.
+OWNERSHIP
 
-Third-party software included in this repository keeps its own license:
+Nergalactic owns Cold Case and everything created for it, including:
+
+- all images: panoramas, title card, cover art, and promotional art
+- all sounds and ambience
+- all voiceovers and recorded dialogue
+- all music, including "I Don't Mind the Heat," the Cold Case theme, and
+  Santa's theme
+- all code, except the third-party software listed below
+- the story, characters, script, and dialogue
+
+PERMISSIONS
+
+This game is published so it can be played and viewed. No permission is
+granted to copy, modify, distribute, sell, or reuse any part of it, in whole
+or in part, without prior written permission from Nergalactic.
+
+THIRD-PARTY SOFTWARE
+
+Third-party software included in this repository is not owned by Nergalactic
+and keeps its own license:
 
 - Three.js (vendor/three/) is licensed under the MIT License. See
   vendor/three/LICENSE.
