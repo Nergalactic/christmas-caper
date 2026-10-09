@@ -45,6 +45,8 @@ const pauseResumeEl = document.getElementById("pause-resume");
 const creditsScreenEl = document.getElementById("credits-screen");
 const creditsTrackEl = document.getElementById("credits-track");
 const creditsSkipEl = document.getElementById("credits-skip");
+const creditsCoverEl = document.getElementById("credits-cover");
+const CREDITS_COVER = "promo/cover_art.jpg";
 
 const TITLE_PANORAMA = "content/panoramas/title_card.jpg";
 
@@ -813,6 +815,12 @@ const CREDITS_SPEED_MULTIPLIER = 2;
 
 async function showCredits() {
   await buildCreditsTrack();
+  // Start loading the cover art now so it's ready when the crawl ends.
+  let coverReady = false;
+  creditsCoverEl.onload = () => (coverReady = true);
+  creditsCoverEl.src = CREDITS_COVER;
+  creditsCoverEl.classList.remove("visible");
+  creditsCoverEl.hidden = false;
   creditsScreenEl.hidden = false;
   CreditsMusic.play();
   const duration = await new Promise((resolve) => {
@@ -833,7 +841,14 @@ async function showCredits() {
   });
   const scrollSeconds = (duration + 6) / CREDITS_SPEED_MULTIPLIER;
   creditsTrackEl.style.animationDuration = `${scrollSeconds}s`;
-  creditsCloseTimer = setTimeout(closeCredits, scrollSeconds * 1000);
+  // When the crawl finishes, fade into the cover art and hold it for the
+  // rest of the song. With no cover art, close as soon as the crawl ends.
+  creditsCloseTimer = setTimeout(() => {
+    if (!coverReady) return closeCredits();
+    creditsCoverEl.classList.add("visible");
+    const remaining = Math.max(8, duration - scrollSeconds);
+    creditsCloseTimer = setTimeout(closeCredits, remaining * 1000);
+  }, scrollSeconds * 1000);
   await new Promise((resolve) => {
     resolveCreditsClosed = resolve;
   });
@@ -843,6 +858,8 @@ function closeCredits() {
   clearTimeout(creditsCloseTimer);
   CreditsMusic.stop();
   creditsScreenEl.hidden = true;
+  creditsCoverEl.classList.remove("visible");
+  creditsCoverEl.hidden = true;
   if (resolveCreditsClosed) {
     resolveCreditsClosed();
     resolveCreditsClosed = null;
