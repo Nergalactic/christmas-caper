@@ -166,14 +166,27 @@ class OneShotMusicPlayer {
     this.id = id;
   }
 
+  // Resolves true if playback started. Safe to call repeatedly: it only
+  // loads the track once, and does nothing if it's already playing.
   play() {
-    this.el.src = trackUrl(this.id);
-    this.el.play().catch((err) => {
-      console.warn(`[audio] could not play ${this.id} music:`, err.message);
-    });
+    this.stopped = false;
+    if (!this.el.paused) return Promise.resolve(true);
+    if (!this.el.src) this.el.src = trackUrl(this.id);
+    return this.el.play().then(
+      () => {
+        // A stop() can land while play() was still pending.
+        if (this.stopped) this.el.pause();
+        return true;
+      },
+      (err) => {
+        console.warn(`[audio] could not play ${this.id} music:`, err.message);
+        return false;
+      }
+    );
   }
 
   stop() {
+    this.stopped = true;
     this.el.pause();
     this.el.currentTime = 0;
   }

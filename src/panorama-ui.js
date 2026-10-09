@@ -60,16 +60,34 @@ let resolveFirstInteraction;
 const firstInteraction = new Promise((resolve) => {
   resolveFirstInteraction = resolve;
 });
-document.addEventListener(
-  "pointerdown",
-  () => {
-    Ambience.unlock();
-    Narration.unlock();
-    LoadingMusic.play();
-    resolveFirstInteraction();
-  },
-  { once: true }
-);
+// Phones only treat a touch as permission to play audio when the finger
+// lifts (pointerup/touchend/click), while a mouse counts on pointerdown. So
+// the title music is retried on each of those events until it actually
+// starts, rather than trying once on the first pointerdown.
+let titleMusicWanted = true;
+let titleMusicStarted = false;
+const AUDIO_GESTURES = ["pointerdown", "pointerup", "touchend", "click", "keydown"];
+
+function onAudioGesture() {
+  Ambience.unlock();
+  Narration.unlock();
+  resolveFirstInteraction();
+  if (!titleMusicWanted || titleMusicStarted) {
+    removeAudioGestureListeners();
+    return;
+  }
+  LoadingMusic.play().then((ok) => {
+    if (!ok) return;
+    titleMusicStarted = true;
+    removeAudioGestureListeners();
+  });
+}
+
+function removeAudioGestureListeners() {
+  for (const type of AUDIO_GESTURES) document.removeEventListener(type, onAudioGesture, true);
+}
+
+for (const type of AUDIO_GESTURES) document.addEventListener(type, onAudioGesture, true);
 
 // Tutorial "look around" step: a real drag, measured by how far the
 // camera's azimuth moved, so a hotspot tap doesn't also count.
@@ -798,6 +816,7 @@ window.__showCredits = showCredits;
 window.__goto = (sceneId) => engine && enterScene(sceneId);
 window.__look = (yaw, pitch) => centerCameraOn(yaw, pitch);
 window.__ambience = Ambience;
+window.__loadingMusic = LoadingMusic;
 window.__setFlag = (flag) => {
   if (!engine) return;
   engine.state.setFlag(flag);
@@ -827,6 +846,7 @@ async function showLoadingScreen() {
   clearCaption();
   titleOverlayEl.hidden = true;
   viewerHintEl.hidden = true;
+  titleMusicWanted = false;
   LoadingMusic.stop();
 }
 
