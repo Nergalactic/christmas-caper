@@ -146,11 +146,9 @@ it's listed in content/audio/narration/manifest.json.
 
 ## lounge_cupid
 
-[CUPID] Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello.
-[TINY] Cupid. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth.
-[CUPID] This next one goes out to a very special lady. She knows who she is.
-[TINY] Every dame in the room sat up a little straighter. So did a couple of the fellas. Could've been any one of them.
-[TINY] I decided not to find out. A man only has room for so many mysteries, and I was already full up.
+[TINY] Up on stage, Cupid was crooning into Jimmy's microphone. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth.
+[TINY] Between numbers, he dedicated the next song to a very special lady. She knew who she was. Every dame in the room sat up a little straighter. So did a couple of the fellas.
+[TINY] Could've been any one of them. I decided not to find out. A man only has room for so many mysteries, and I was already full up.
 
 ## lounge_vixen
 

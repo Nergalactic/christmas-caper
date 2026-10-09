@@ -176,24 +176,16 @@
     "lounge_cupid": {
       "lines": [
         {
-          "speaker": "cupid",
-          "text": "Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello."
+          "speaker": "tiny",
+          "text": "Up on stage, Cupid was crooning into Jimmy's microphone. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth."
         },
         {
           "speaker": "tiny",
-          "text": "Cupid. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth."
-        },
-        {
-          "speaker": "cupid",
-          "text": "This next one goes out to a very special lady. She knows who she is."
+          "text": "Between numbers, he dedicated the next song to a very special lady. She knew who she was. Every dame in the room sat up a little straighter. So did a couple of the fellas."
         },
         {
           "speaker": "tiny",
-          "text": "Every dame in the room sat up a little straighter. So did a couple of the fellas. Could've been any one of them."
-        },
-        {
-          "speaker": "tiny",
-          "text": "I decided not to find out. A man only has room for so many mysteries, and I was already full up."
+          "text": "Could've been any one of them. I decided not to find out. A man only has room for so many mysteries, and I was already full up."
         }
       ]
     },

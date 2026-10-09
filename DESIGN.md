@@ -63,7 +63,7 @@ Appears at least once per chapter to check in on the case, says "a snowball's ch
 Target: roughly 7 to 9 panoramas.
 
 ### Chapter 1: The Mistletoe Lounge
-Granny rings the doorbell Tiny can't reach, then waits outside. Cupid has taken Jimmy's spotlight, smooth as butter, and dedicates his song to a very special lady; who she is is left to the player's imagination. (Cupid's claim that Jimmy owed him carrots is saved for Chapter 2.) Suspects: **Vixen** (lost her slot twice), **Prancer** (40%) with the **Easter Bunny** (whose alibi is a hard-boiled egg), and **Dancer** (hated Jimmy's moves). Every one of them points straight at Comet, so Tiny concludes they're covering for each other.
+Granny rings the doorbell Tiny can't reach, then waits outside. Cupid has taken Jimmy's spotlight, smooth as butter. He never speaks; Tiny narrates his set, including a dedication to a very special lady whose identity is left to the player's imagination. (Cupid's claim that Jimmy owed him carrots is saved for Chapter 2.) Suspects: **Vixen** (lost her slot twice), **Prancer** (40%) with the **Easter Bunny** (whose alibi is a hard-boiled egg), and **Dancer** (hated Jimmy's moves). Every one of them points straight at Comet, so Tiny concludes they're covering for each other.
 
 At the bar, **Silverbough**, a tall, ancient-woodland elf who has tended bar for four hundred winters, gives Tiny his boosts. The goggles show a scorched stool ("spilled coffee"). A reserved card reads "J. Mittens, plus C," with the C scorched; Tiny runs through the alphabet twice. Comet holds his drink and it boils. She leaves for practice at the training grounds, and Tiny resolves to tail every reindeer except her.
 
