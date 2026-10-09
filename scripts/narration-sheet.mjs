@@ -37,8 +37,12 @@ async function loadBeats() {
   return { game, lines: beats };
 }
 
-async function writeSheet() {
-  const { game, lines } = await loadBeats();
+async function writeSheet({ todo = false } = {}) {
+  const loaded = await loadBeats();
+  const game = loaded.game;
+  const lines = todo
+    ? loaded.lines.filter((l) => !existsSync(path.join(NARRATION_DIR, l.file)))
+    : loaded.lines;
   const bySpeaker = new Map();
   for (const l of lines) {
     if (!bySpeaker.has(l.speaker)) bySpeaker.set(l.speaker, []);
@@ -76,7 +80,8 @@ async function writeSheet() {
       out.push(`- [${done(l) ? "x" : " "}] \`${l.file}\``, `  > ${l.spoken || l.text}`, "");
     }
   }
-  const dest = path.join(ROOT, "narration-script", "recording-sheet.md");
+  if (todo) out.splice(0, 3, "# Still to record", "", "Only lines without audio yet. Regenerate with `npm run narration:todo`.");
+  const dest = path.join(ROOT, "narration-script", todo ? "recording-todo.md" : "recording-sheet.md");
   await writeFile(dest, out.join("\n"));
   console.log(`Wrote ${path.relative(ROOT, dest)}: ${recorded}/${total} lines recorded, ${chars(lines)} characters total.`);
 }
@@ -103,8 +108,9 @@ async function writeManifest() {
 
 const cmd = process.argv[2];
 if (cmd === "sheet") await writeSheet();
+else if (cmd === "todo") await writeSheet({ todo: true });
 else if (cmd === "manifest") await writeManifest();
 else {
-  console.error("Usage: node scripts/narration-sheet.mjs sheet|manifest");
+  console.error("Usage: node scripts/narration-sheet.mjs sheet|todo|manifest");
   process.exit(1);
 }
