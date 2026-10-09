@@ -2,6 +2,8 @@
 
 Descriptions to paste into ElevenLabs Voice Design, one per character. After creating a voice, generate that character's lines from `recording-sheet.md`.
 
+**Voices needed after Chapter 2:** only Tiny, Granny, and Comet. Chapter 3's speaking cast is locked to those three, so any other voice can be deleted once its lines are recorded.
+
 Tips:
 - Generate a few previews and pick the one that sounds funniest played straight. These characters are all completely serious; the comedy comes from the material.
 - Voice Design needs a preview text of at least 100 characters. Each sample below is the character's own lines from the script (at least 100 characters), so the preview shows how the voice handles the real material. Lil' Sleet only has one short line, so his sample adds one extra sentence just for the preview.

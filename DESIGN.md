@@ -80,6 +80,8 @@ Comet leaves the lounge for practice, and Tiny follows to the training grounds. 
 Panoramas: the track, the launch runway, the snack stand.
 
 ### Chapter 3: Comet's Apartment
+**Speaking cast (locked): Tiny, Comet, and Granny only.** No other character speaks in Chapter 3, so every Chapter 1 and Chapter 2 voice except those three can be retired once its lines are recorded. Sgt. Snap does not return.
+
 Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."
 
 Lil' Sleet's silent callback: somewhere in the apartment, Tiny finds a second puddle wearing a flat cap and an oversized scarf. He has no lines (his voice has been retired), and Tiny still doesn't connect it to anything.
