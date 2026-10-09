@@ -74,8 +74,7 @@ function makePlaceholderTexture(label) {
   ctx.textBaseline = "middle";
   ctx.fillStyle = "rgba(230, 230, 230, 0.75)";
   ctx.font = "600 56px system-ui, sans-serif";
-  // Straight ahead (yaw 0) is image column u = 0.75 on this inside-out sphere.
-  ctx.fillText(label || "placeholder", canvas.width * 0.75, canvas.height / 2);
+  ctx.fillText(label || "placeholder", canvas.width / 2, canvas.height / 2); // image center faces yaw 0
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
   return texture;
@@ -106,6 +105,7 @@ function initViewer() {
   geometry.scale(-1, 1, 1);
   const material = new THREE.MeshBasicMaterial({ map: makePlaceholderTexture("") });
   sphere = new THREE.Mesh(geometry, material);
+  sphere.rotation.y = -Math.PI / 2; // image center faces yaw 0, same as the game
   scene.add(sphere);
 
   textureLoader = new THREE.TextureLoader();

@@ -283,15 +283,15 @@ function makePlaceholderTexture(label, subtitle = "panorama placeholder, awaitin
 
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  // With the sphere's inside-out mapping, image column u faces yaw
-  // (0.75 - u) * 360: yaw 0 (straight ahead) is u = 0.75. Label every 90 degrees.
-  const uForYaw = (yaw) => (((0.75 - yaw / 360) % 1) + 1) % 1;
+  // With the sphere rotated in initViewer, image column u faces yaw
+  // (0.5 - u) * 360: the image center is straight ahead. Label every 90 degrees.
+  const uForYaw = (yaw) => (((0.5 - yaw / 360) % 1) + 1) % 1;
   const marks = [
     [uForYaw(0), "yaw 0"],
     [uForYaw(90), "yaw 90"],
-    [1, "yaw 90"],
     [uForYaw(-90), "yaw -90"],
-    [uForYaw(180), "yaw 180"],
+    [0, "yaw 180"],
+    [1, "yaw 180"],
   ];
   ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
   ctx.font = "500 26px system-ui, sans-serif";
@@ -341,6 +341,9 @@ function initViewer() {
   geometry.scale(-1, 1, 1); // view the inside of the sphere right-reading, not mirrored
   const material = new THREE.MeshBasicMaterial({ map: makePlaceholderTexture("Cold Case") });
   sphere = new THREE.Mesh(geometry, material);
+  // Turn the sphere so the image's center column faces the default camera
+  // direction (yaw 0). Without this, image center lands at yaw -90.
+  sphere.rotation.y = -Math.PI / 2;
   scene3d.add(sphere);
 
   textureLoader = new THREE.TextureLoader();
@@ -787,7 +790,7 @@ window.__look = (yaw, pitch) => centerCameraOn(yaw, pitch);
 // player drags around before tapping through, since that drag's pointerdown
 // is what unlocks audio.
 async function showLoadingScreen() {
-  await setScene(TITLE_PANORAMA, "", 0, 0, { fov: 91, subtitle: "title card placeholder, awaiting art" });
+  await setScene(TITLE_PANORAMA, "", 0, -14, { fov: 91, subtitle: "title card placeholder, awaiting art" });
   // The title is drawn by the page rather than baked into the art, since
   // image generators tend to garble lettering.
   titleOverlayEl.hidden = false;
