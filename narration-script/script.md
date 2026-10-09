@@ -148,8 +148,9 @@ it's listed in content/audio/narration/manifest.json.
 
 [CUPID] Thank you, thank you. You're too kind. You're all too kind. Especially you in the front. Hello.
 [TINY] Cupid. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth.
-[CUPID] This next one goes out to Jimmy Mittens. Rest easy, pal. And if you can hear me, you still owe me carrots.
-[TINY] A tribute and a debt in the same breath. That's show business. I filed it under suspicious, then under touching, then under suspicious again.
+[CUPID] This next one goes out to a very special lady. She knows who she is.
+[TINY] Every dame in the room sat up a little straighter. So did a couple of the fellas. Could've been any one of them.
+[TINY] I decided not to find out. A man only has room for so many mysteries, and I was already full up.
 
 ## lounge_vixen
 
@@ -232,3 +233,4 @@ it's listed in content/audio/narration/manifest.json.
 [TINY] She swished out the door. The welcome mat caught fire. Nobody said anything. It's that kind of place.
 [TINY] The training grounds. Where the whole Reindeer Squad goes to sweat. Every one of them with a motive, and every one of them pointing the same direction.
 [TINY] I knew what I had to do. I had to go to the training grounds and tail every reindeer in that squad. Except one. She'd been through enough.
+
