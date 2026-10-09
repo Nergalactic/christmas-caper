@@ -84,3 +84,31 @@ The title card has no text on purpose: the game draws "COLD CASE" over it, since
 360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Camera 40 cm above the floor; everything looms overhead, seen from below. A wooden snack stand at a snowy sports ground at night, lit by warm bulbs. Center, leaning on the counter: Cupid, a reindeer buck in a white dinner jacket and bow tie, holding a ledger. Baskets of roasted carrots, steaming hot cocoa urns, a menu board far overhead. A string of colored Christmas bulbs along the awning, a chalkboard of carrot prices, napkin dispensers and mustard bottles at the edge of the counter, a stack of paper cups, a wooden stool too tall to climb. The floodlit running track and bleachers glow in the distance behind, snow falling through the light. No text.
 ```
 
+## Chapter 3: The Ember Arms
+
+The two rooftop panoramas are the same roof: the first with an empty sky, the second after Santa's sleigh has landed. Generate them in that order and keep the look as close as you can.
+
+### 11. Apartment Nine: `content/panoramas/apartment.jpg` (916 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Camera 40 cm above the floor; everything looms overhead, seen from below. A cramped, sweltering 1940s apartment living room at night, glowing orange like an oven. Center, in the doorway: Comet, an elegant reindeer doe with red lipstick and pearls, her hooves wreathed in small flames, steam rising. Puddles on the floor in every corner, one with a soggy mitten floating in it. Right: a bubbling, steaming hot tub with a rubber duck floating belly up. Fogged-up windows streaming with condensation, snow falling outside, a radiator glowing red, a melted armchair, a half-open door at the back with candlelight beyond. No text.
+```
+
+### 12. The back room: `content/panoramas/shrine.jpg` (995 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Camera 40 cm above the floor; everything looms overhead, seen from below. A small candlelit back room in a 1940s apartment, hot and hazy. Every wall and shelf covered with neatly arranged black top hats, knitted scarves, and carrots, like a shrine, each with a small tag. Center, high on a top shelf, out of reach: a worn leather scrapbook. Left, on the floor: a fresh puddle with a flat cap and an oversized scarf floating in it. Right: an ornate vanity mirror. Candles dripping wax onto the floorboards, steam curling in the candlelight, a small radiator glowing red, a window fogged with condensation and snow beyond, a framed photograph turned face down, warm amber and red light. No people. No text.
+```
+
+### 13. The roof: `content/panoramas/rooftop.jpg` (916 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Low camera, 70 cm high; everything looks too big. Snowy flat rooftop of an old brick apartment building at night, high above a glittering 1940s North Pole city. Center, near the roof edge: Comet, an elegant reindeer doe with red lipstick and pearls, her hooves wreathed in small flames, steam rising. Left, by the top of an iron fire escape: Granny Slush, an old snowwoman in a knitted shawl, cat-eye glasses and holly pillbox hat, carrying a carpetbag, a meltwater puddle at her base. Chimneys, a water tower, a rooftop access door, snow falling, a huge full moon, stars, distant neon below. The sky above is empty. No text.
+```
+
+### 14. The roof, with Santa: `content/panoramas/rooftop_santa.jpg` (985 characters)
+
+```
+360 equirectangular panorama. Painterly matte-painting realism, Myst-style adventure game. 1940s film noir lighting: hard shadows, wet reflections, amber lamplight, red and green neon, falling snow, deep night blues. Anthropomorphic holiday characters painted realistically, not cartoonish. Low camera, 70 cm high; everything looks too big. Snowy brick rooftop at night above a glittering 1940s city. Center, before a great red sleigh just landed on the roof: Santa Claus as a 1940s noir crime boss: red double-breasted suit, fur-trimmed overcoat on his shoulders, white beard, red fedora, glinting eyes, a candy cane held like a cigar. Right: Comet, an elegant reindeer doe with red lipstick and pearls, her hooves wreathed in small flames, being hitched to the sleigh. Left: Granny Slush, an old snowwoman in a knitted shawl, cat-eye glasses and holly pillbox hat, carrying a carpetbag, a meltwater puddle at her base. Reindeer harnessed beyond, chimneys, a full moon, snow. No text.
+```
+
