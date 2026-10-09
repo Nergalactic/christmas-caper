@@ -32,6 +32,9 @@ Sample line: *Poor Jimmy. We sat right here last night. He said I made him feel 
 Sample line: *Look, pal, it's open and shut. Snowman goes out, snowman doesn't come back. Happens every spring. Don't push me, pal. I'm already crumbling under the pressure. Literally. That was my elbow.*
 
 ### Lil' Sleet
+
+*All lines recorded; voice deleted to free a slot. His Chapter 3 callback is silent.*
+
 > Young, nervous man with a slightly high voice, anxious and stammering, eager and a little out of breath. Clean studio recording.
 
 Sample line: *H-hi. I'm Lil' Sleet. Big fan of Jimmy's. Is it hot out here, or is it just me? I-I think I need to go stand somewhere colder for a minute.*

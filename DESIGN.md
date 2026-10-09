@@ -77,6 +77,8 @@ Target: 2 to 3 panoramas.
 ### Chapter 3: Comet's Apartment
 Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."
 
+Lil' Sleet's silent callback: somewhere in the apartment, Tiny finds a second puddle wearing a flat cap and an oversized scarf. He has no lines (his voice has been retired), and Tiny still doesn't connect it to anything.
+
 The final clue, Comet's scrapbook of melted exes, sits on a high shelf. The game ends when Tiny finally gets a boost and reaches it.
 
 Target: 2 to 3 panoramas.
