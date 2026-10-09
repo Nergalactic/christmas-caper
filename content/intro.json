@@ -73,16 +73,16 @@
     "street": {
       "name": "The Street",
       "panorama": "content/panoramas/street.jpg",
-      "startYaw": 0,
-      "startPitch": -5,
+      "startYaw": 10,
+      "startPitch": 0,
       "ambience": "street",
       "on_enter": "street_enter",
       "hotspots": [
         {
           "id": "granny",
           "label": "Granny Slush",
-          "yaw": -25,
-          "pitch": 15,
+          "yaw": 19.8,
+          "pitch": 5.4,
           "beat": "street_granny",
           "sets": [
             "granny_coming"
@@ -91,8 +91,8 @@
         {
           "id": "bus_stop",
           "label": "Bus stop",
-          "yaw": 40,
-          "pitch": 0,
+          "yaw": 147.6,
+          "pitch": 5.4,
           "beat": "street_choice",
           "go": "bus_stop",
           "requires": [
