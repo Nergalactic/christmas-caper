@@ -1,5 +1,5 @@
 {
-  "_note": "Chapter 3 script, first draft. Hotspot yaw/pitch values are rough guesses; place them with editor.html once the panoramas exist.",
+  "_note": "Chapter 3. Hotspots placed from the panorama art; fine-tune in editor.html if needed.",
   "scenes": {
     "apartment": {
       "name": "The Ember Arms, Apartment Nine",
@@ -11,8 +11,8 @@
         {
           "id": "comet",
           "label": "Comet",
-          "yaw": 0,
-          "pitch": 20,
+          "yaw": -4.5,
+          "pitch": 21.6,
           "beat": "apt_comet",
           "sets": [
             "bag_returned"
@@ -21,8 +21,8 @@
         {
           "id": "puddles",
           "label": "Puddles",
-          "yaw": -50,
-          "pitch": -35,
+          "yaw": -135,
+          "pitch": -44.1,
           "beat": "apt_puddles",
           "requires": [
             "bag_returned"
@@ -34,8 +34,8 @@
         {
           "id": "hottub",
           "label": "The 'decorative' hot tub",
-          "yaw": 60,
-          "pitch": -10,
+          "yaw": 126,
+          "pitch": -3.6,
           "beat": "apt_hottub",
           "requires": [
             "saw_puddles"
@@ -47,8 +47,8 @@
         {
           "id": "to_shrine",
           "label": "Back room",
-          "yaw": 130,
-          "pitch": 5,
+          "yaw": 64.8,
+          "pitch": 14.4,
           "beat": "apt_to_shrine",
           "go": "shrine",
           "requires": [
@@ -69,7 +69,7 @@
           "id": "hats",
           "label": "Top hats and scarves",
           "yaw": 0,
-          "pitch": 15,
+          "pitch": 30.6,
           "beat": "shrine_hats",
           "sets": [
             "saw_hats"
@@ -78,8 +78,8 @@
         {
           "id": "sleet",
           "label": "A puddle in a flat cap",
-          "yaw": -60,
-          "pitch": -35,
+          "yaw": -99,
+          "pitch": -25.2,
           "beat": "shrine_sleet",
           "requires": [
             "saw_hats"
@@ -91,8 +91,8 @@
         {
           "id": "mirror",
           "label": "Scorched mirror",
-          "yaw": 55,
-          "pitch": 10,
+          "yaw": 142.2,
+          "pitch": 32.4,
           "goggles": true,
           "beat": "shrine_mirror",
           "requires": [
@@ -105,8 +105,8 @@
         {
           "id": "scrapbook",
           "label": "Scrapbook on the top shelf",
-          "yaw": -20,
-          "pitch": 40,
+          "yaw": 14.4,
+          "pitch": 61.2,
           "boost": {
             "by": "comet",
             "beat": "shrine_boost"
@@ -122,8 +122,8 @@
         {
           "id": "to_roof",
           "label": "Fire escape",
-          "yaw": 150,
-          "pitch": 10,
+          "yaw": 90,
+          "pitch": 41.4,
           "beat": "shrine_to_roof",
           "go": "rooftop",
           "requires": [
@@ -136,15 +136,15 @@
     "rooftop": {
       "name": "The Roof",
       "panorama": "content/panoramas/rooftop.jpg",
-      "startYaw": 0,
-      "startPitch": 10,
+      "startYaw": -20,
+      "startPitch": 5,
       "on_enter": "roof_enter",
       "hotspots": [
         {
           "id": "comet",
           "label": "Comet",
-          "yaw": 0,
-          "pitch": 15,
+          "yaw": 32.4,
+          "pitch": -3.6,
           "beat": "roof_reveal",
           "sets": [
             "revealed"
@@ -153,8 +153,8 @@
         {
           "id": "granny",
           "label": "Granny Slush",
-          "yaw": -50,
-          "pitch": 10,
+          "yaw": -122.4,
+          "pitch": -3.6,
           "beat": "roof_granny",
           "requires": [
             "revealed"
@@ -166,8 +166,8 @@
         {
           "id": "sky",
           "label": "Something in the sky",
-          "yaw": 20,
-          "pitch": 45,
+          "yaw": 108,
+          "pitch": 36,
           "beat": "roof_sleigh",
           "go": "rooftop_santa",
           "requires": [
@@ -180,15 +180,15 @@
     "rooftop_santa": {
       "name": "The Roof",
       "panorama": "content/panoramas/rooftop_santa.jpg",
-      "startYaw": 0,
-      "startPitch": 15,
+      "startYaw": -10,
+      "startPitch": 10,
       "on_enter": "santa_enter",
       "hotspots": [
         {
           "id": "santa",
           "label": "Santa",
-          "yaw": 0,
-          "pitch": 20,
+          "yaw": -14.4,
+          "pitch": 14.4,
           "beat": "santa_knew",
           "sets": [
             "santa_spoke"
@@ -197,8 +197,8 @@
         {
           "id": "sleigh",
           "label": "The sleigh",
-          "yaw": 25,
-          "pitch": 10,
+          "yaw": 126,
+          "pitch": -7.2,
           "beat": "santa_final",
           "requires": [
             "santa_spoke"
