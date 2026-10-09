@@ -69,5 +69,10 @@
     "voice_id": null,
     "stability": 0.5,
     "similarity_boost": 0.75
+  },
+  "santa": {
+    "voice_id": null,
+    "stability": 0.5,
+    "similarity_boost": 0.75
   }
 }

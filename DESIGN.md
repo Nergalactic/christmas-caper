@@ -80,7 +80,9 @@ Comet leaves the lounge for practice, and Tiny follows to the training grounds. 
 Panoramas: the track, the launch runway, the snack stand.
 
 ### Chapter 3: Comet's Apartment
-**Speaking cast (locked): Tiny, Comet, and Granny only.** No other character speaks in Chapter 3, so every Chapter 1 and Chapter 2 voice except those three can be retired once its lines are recorded. Sgt. Snap does not return.
+**Speaking cast (locked): Tiny, Comet, Granny, and Santa.** No other character speaks in Chapter 3, so every Chapter 1 and Chapter 2 voice except Tiny, Comet, and Granny can be retired once its lines are recorded. Sgt. Snap does not return.
+
+**Santa, surprise guest:** appears after the case closes. Played as a dead-serious, all-knowing mastermind. He knew it was Comet all along (he sees you when you're sleeping, he knows when you're awake) and simply never said anything. Ominous, a little too much for a jolly old elf.
 
 Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."
 

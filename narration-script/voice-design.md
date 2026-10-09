@@ -2,7 +2,7 @@
 
 Descriptions to paste into ElevenLabs Voice Design, one per character. After creating a voice, generate that character's lines from `recording-sheet.md`.
 
-**Voices needed after Chapter 2:** only Tiny, Granny, and Comet. Chapter 3's speaking cast is locked to those three, so any other voice can be deleted once its lines are recorded.
+**Voices needed after Chapter 2:** Tiny, Granny, Comet, and Santa. Chapter 3's speaking cast is locked to those four, so any other voice can be deleted once its lines are recorded.
 
 Tips:
 - Generate a few previews and pick the one that sounds funniest played straight. These characters are all completely serious; the comedy comes from the material.
@@ -90,3 +90,8 @@ Sample line: *That's MY spot! Front left! It's been my spot since 1823! The poem
 
 Sample line: *It was never your spot! You stole it! You stole it the night of the poem! Some versions say Donder! Who even is Donder? He's been talking to the harness for a while.*
 
+## Chapter 3
+
+### Santa
+
+*Voice already created. Surprise guest after the case closes, played as a dead-serious, all-knowing mastermind who knew it was Comet all along.*
