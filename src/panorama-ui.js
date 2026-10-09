@@ -46,6 +46,8 @@ const creditsScreenEl = document.getElementById("credits-screen");
 const creditsTrackEl = document.getElementById("credits-track");
 const creditsSkipEl = document.getElementById("credits-skip");
 const creditsCoverEl = document.getElementById("credits-cover");
+const creditsCoverImgEl = document.getElementById("credits-cover-img");
+let stampTimer = null;
 const CREDITS_COVER = "promo/cover_art.jpg";
 
 const TITLE_PANORAMA = "content/panoramas/title_card.jpg";
@@ -817,9 +819,9 @@ async function showCredits() {
   await buildCreditsTrack();
   // Start loading the cover art now so it's ready when the crawl ends.
   let coverReady = false;
-  creditsCoverEl.onload = () => (coverReady = true);
-  creditsCoverEl.src = CREDITS_COVER;
-  creditsCoverEl.classList.remove("visible");
+  creditsCoverImgEl.onload = () => (coverReady = true);
+  creditsCoverImgEl.src = CREDITS_COVER;
+  creditsCoverEl.classList.remove("visible", "stamped");
   creditsCoverEl.hidden = false;
   creditsScreenEl.hidden = false;
   // The credits music plays alone: fade out the scene's music and ambience.
@@ -849,6 +851,8 @@ async function showCredits() {
   creditsCloseTimer = setTimeout(() => {
     if (!coverReady) return closeCredits();
     creditsCoverEl.classList.add("visible");
+    // Case closed: the stamp slams down once the cover has mostly faded in.
+    stampTimer = setTimeout(() => creditsCoverEl.classList.add("stamped"), 2600);
     const remaining = Math.max(8, duration - scrollSeconds);
     creditsCloseTimer = setTimeout(closeCredits, remaining * 1000);
   }, scrollSeconds * 1000);
@@ -861,7 +865,8 @@ function closeCredits() {
   clearTimeout(creditsCloseTimer);
   CreditsMusic.stop();
   creditsScreenEl.hidden = true;
-  creditsCoverEl.classList.remove("visible");
+  clearTimeout(stampTimer);
+  creditsCoverEl.classList.remove("visible", "stamped");
   creditsCoverEl.hidden = true;
   if (resolveCreditsClosed) {
     resolveCreditsClosed();

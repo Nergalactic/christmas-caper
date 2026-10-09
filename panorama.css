@@ -851,13 +851,14 @@ body.beat-playing .hotspot {
   animation: title-fade-in 3s ease-out both;
 }
 
-/* Cover art the credits fade into once the crawl has scrolled past. */
+/* Cover art the credits fade into once the crawl has scrolled past, then
+   a red rubber stamp slams down on it: CLOSED. */
 #credits-cover {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #000;
   opacity: 0;
   transition: opacity 3s ease;
@@ -866,4 +867,69 @@ body.beat-playing .hotspot {
 
 #credits-cover.visible {
   opacity: 1;
+}
+
+#credits-cover .cover-frame {
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+  container-type: inline-size;
+}
+
+#credits-cover-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#credits-cover .case-stamp {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  padding: 0.04em 0.28em 0.02em;
+  font-family: Impact, "Arial Black", "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 15cqw;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: #ff1a22;
+  border: 0.07em solid currentColor;
+  border-radius: 0.08em;
+  box-shadow: inset 0 0 0 0.03em transparent, 0 0 0.12em rgba(227, 18, 27, 0.35);
+  filter: url(#stamp-grunge);
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-14deg) scale(2.6);
+}
+
+#credits-cover.stamped .case-stamp {
+  animation: stamp-slam 0.32s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+}
+
+#credits-cover.stamped .cover-frame {
+  animation: stamp-thud 0.35s ease-out 0.3s;
+}
+
+@keyframes stamp-slam {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-14deg) scale(2.6); }
+  100% { opacity: 0.96; transform: translate(-50%, -50%) rotate(-14deg) scale(1); }
+}
+
+@keyframes stamp-thud {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-0.6%, 0.9%); }
+  50% { transform: translate(0.5%, -0.5%); }
+  75% { transform: translate(-0.2%, 0.3%); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #credits-cover.stamped .case-stamp {
+    animation: none;
+    opacity: 0.96;
+    transform: translate(-50%, -50%) rotate(-14deg);
+  }
+  #credits-cover.stamped .cover-frame {
+    animation: none;
+  }
 }

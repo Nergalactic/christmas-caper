@@ -55,7 +55,21 @@
 
   <div id="credits-screen" hidden>
     <div id="credits-track"></div>
-    <img id="credits-cover" alt="Cold Case" hidden />
+    <div id="credits-cover" hidden>
+      <div class="cover-frame">
+        <img id="credits-cover-img" alt="Cold Case" />
+        <div class="case-stamp" aria-hidden="true">CLOSED</div>
+      </div>
+      <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+        <filter id="stamp-grunge" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="warp" />
+          <feDisplacementMap in="SourceGraphic" in2="warp" scale="4" result="rough" />
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="grain" />
+          <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.75" result="holes" />
+          <feComposite in="rough" in2="holes" operator="in" />
+        </filter>
+      </svg>
+    </div>
     <button id="credits-skip">Skip &#9656;</button>
   </div>
 </div>
