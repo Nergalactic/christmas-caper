@@ -14,7 +14,8 @@ It's Christmas Eve at the North Pole, and lounge-singing snowman Jimmy Mittens h
 - Tap a marker to look at something, question someone, or move on. There is only ever one way forward, though Tiny never realizes it.
 - Once Tiny finds his tinsel goggles, toggle them to reveal hidden clues.
 - Some clues are too high to reach. Tiny will ask someone for a boost.
-- The pause menu has sound, subtitles, and start over.
+- The menu button pauses the game, including any line being spoken, and has sound, subtitles, and start over.
+- Progress saves automatically, down to the conversation you were in and the way you were facing. Close the browser anytime; when you come back, choose "Continue the case" to pick up where you left off.
 
 The game is an intro and three chapters across 13 scenes, with 259 fully voiced lines.
 

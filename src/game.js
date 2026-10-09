@@ -69,6 +69,11 @@ export class GameState {
     this.done = new Set(data.done || []); // "<sceneId>/<hotspotId>"
     this.seenBeats = new Set(data.seenBeats || []);
     this.goggles = !!data.goggles;
+    // A hotspot whose scene is still playing: { hotspot: id }. Lets a game
+    // closed mid-conversation resume at the start of that conversation.
+    this.pending = data.pending || null;
+    // Where the camera was facing, so a resumed game looks the same way.
+    this.view = data.view || null;
   }
 
   flag(name) {
@@ -86,6 +91,8 @@ export class GameState {
       done: [...this.done],
       seenBeats: [...this.seenBeats],
       goggles: this.goggles,
+      pending: this.pending,
+      view: this.view,
     };
   }
 
@@ -151,15 +158,22 @@ export class Engine {
   enterScene(id) {
     const previous = this.state.scene ? this.game.scene(this.state.scene) : null;
     const scene = this.game.scene(id);
+    if (this.state.scene !== id) this.state.view = null;
     this.state.scene = id;
     const chapterChanged = !previous || previous.chapter !== scene.chapter;
     let beat = null;
+    // The opening beat only counts as seen once it has finished playing
+    // (markBeatSeen), so a game closed partway through it replays it.
     if (scene.on_enter && !this.state.seenBeats.has(scene.on_enter)) {
       beat = this.game.beat(scene.on_enter);
-      this.state.seenBeats.add(scene.on_enter);
     }
     this.state.save();
     return { scene, beat, chapter: chapterChanged ? this.game.chapter(scene.chapter) : null };
+  }
+
+  markBeatSeen(beatId) {
+    this.state.seenBeats.add(beatId);
+    this.state.save();
   }
 
   isOnce(h) {
@@ -188,7 +202,28 @@ export class Engine {
     for (const f of h.sets || []) this.state.setFlag(f);
     if (h.grants === "goggles") this.state.setFlag("has_goggles");
     if (h.beat) this.state.seenBeats.add(h.beat);
+    this.state.pending = { hotspot: h.id };
     this.state.save();
+    return this.result(h);
+  }
+
+  // The interrupted hotspot from a saved game, to play again on resume.
+  resumePending() {
+    const id = this.state.pending && this.state.pending.hotspot;
+    const h = id && this.scene.hotspots.find((x) => x.id === id);
+    if (!h) {
+      this.clearPending();
+      return null;
+    }
+    return this.result(h);
+  }
+
+  clearPending() {
+    this.state.pending = null;
+    this.state.save();
+  }
+
+  result(h) {
     return {
       hotspot: h,
       boostBeat: h.boost ? this.game.beat(h.boost.beat) : null,

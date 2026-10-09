@@ -135,6 +135,17 @@ class AmbiencePlayer {
     }, 30);
   }
 
+  // Hold the music while the game is paused, then pick up where it was.
+  pause() {
+    this.heldLayers = [this.bed, this.detail].filter((l) => !l.el.paused);
+    for (const l of this.heldLayers) l.el.pause();
+  }
+
+  resume() {
+    for (const l of this.heldLayers || []) l.el.play().catch(() => {});
+    this.heldLayers = null;
+  }
+
   // Fade everything out and stop, e.g. so the credits music plays alone.
   // A later setZone() starts fresh.
   stop(ms = 800) {

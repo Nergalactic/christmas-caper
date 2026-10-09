@@ -60,6 +60,41 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// -- Pause -------------------------------------------------------------------
+// Opening the menu really pauses: the current voice line, the music, and
+// timed subtitles all hold until the menu closes.
+let paused = false;
+let currentLineAudio = null;
+
+function setPaused(on) {
+  if (paused === on) return;
+  paused = on;
+  if (on) {
+    if (currentLineAudio) currentLineAudio.pause();
+    Ambience.pause();
+  } else {
+    if (currentLineAudio) currentLineAudio.play().catch(() => {});
+    Ambience.resume();
+  }
+}
+
+// Like sleep(), but time spent paused doesn't count.
+function pausableSleep(ms) {
+  return new Promise((resolve) => {
+    let left = ms;
+    let last = performance.now();
+    const tick = setInterval(() => {
+      const now = performance.now();
+      if (!paused) left -= now - last;
+      last = now;
+      if (left <= 0) {
+        clearInterval(tick);
+        resolve();
+      }
+    }, 50);
+  });
+}
+
 let resolveFirstInteraction;
 const firstInteraction = new Promise((resolve) => {
   resolveFirstInteraction = resolve;
@@ -226,18 +261,22 @@ async function playLine(beatId, index, line) {
     if (seg) {
       audio = new Audio(`content/audio/narration/${seg.file}`);
       audio.muted = Ambience.muted;
+      currentLineAudio = audio;
       audio.addEventListener("ended", resolve, { once: true });
-      audio.addEventListener("error", () => sleep(estimatedMs).then(resolve), { once: true });
-      audio.play().catch((err) => {
-        console.warn(`[narration] could not play "${seg.file}":`, err.message);
-        sleep(estimatedMs).then(resolve);
-      });
+      audio.addEventListener("error", () => pausableSleep(estimatedMs).then(resolve), { once: true });
+      if (!paused) {
+        audio.play().catch((err) => {
+          console.warn(`[narration] could not play "${seg.file}":`, err.message);
+          pausableSleep(estimatedMs).then(resolve);
+        });
+      }
     } else {
-      sleep(estimatedMs).then(resolve);
+      pausableSleep(estimatedMs).then(resolve);
     }
   });
   await done;
   skipCurrentLine = null;
+  currentLineAudio = null;
   if (audio) audio.pause();
 }
 
@@ -532,6 +571,12 @@ async function onHotspotClick(h) {
   centerCameraOn(h.yaw, h.pitch);
   const result = engine.activate(h.id);
   if (!result) return;
+  await runHotspotResult(result);
+}
+
+// Plays a clicked hotspot's beats and follows where it leads. Also used to
+// replay a hotspot that was interrupted when the game was closed.
+async function runHotspotResult(result) {
   setBusy(true);
   refreshHotspots();
   updateGogglesButton();
@@ -548,9 +593,12 @@ async function onHotspotClick(h) {
   setBusy(false);
 
   if (result.end) {
+    // Stays pending until the credits finish, so closing during the ending
+    // brings the player back to it.
     await runEnding(result.hotspot.end_title);
     return;
   }
+  engine.clearPending();
   if (result.go) {
     await enterScene(result.go);
     return;
@@ -569,7 +617,7 @@ async function showChapterCard(chapter) {
   clearCaption();
 }
 
-async function enterScene(id) {
+async function enterScene(id, { view = null } = {}) {
   const { scene, beat, chapter } = engine.enterScene(id);
   clearHotspots();
   if (chapter) await showChapterCard(chapter);
@@ -586,11 +634,16 @@ async function enterScene(id) {
   viewerEl.classList.toggle("dark", dark);
   if (dark) tutorialPanelEl.hidden = true;
   else updateTutorialPanel();
-  await setScene(scene.panorama, scene.name, scene.startYaw, scene.startPitch, { fov: scene.fov || 75, crossfade: scene.crossfade || 0 });
+  // A resumed game faces the way the player was looking, with no crossfade.
+  await setScene(scene.panorama, scene.name, view ? view.yaw : scene.startYaw, view ? view.pitch : scene.startPitch, {
+    fov: scene.fov || 75,
+    crossfade: view ? 0 : scene.crossfade || 0,
+  });
   if (!dark) flashLookAroundHint();
   if (beat) {
     setBusy(true);
     await playBeat(beat);
+    engine.markBeatSeen(beat.id);
     setBusy(false);
   }
   if (dark) {
@@ -674,12 +727,15 @@ updateSubtitlesButton();
 // -- Pause menu ------------------------------------------------------------
 
 function openPauseMenu() {
+  setPaused(true);
+  saveView();
   pauseMenuEl.hidden = false;
   pauseMenuBackdropEl.hidden = false;
   markTutorialEvent("tutorial_opened_menu");
 }
 
 function closePauseMenu() {
+  setPaused(false);
   pauseMenuEl.hidden = true;
   pauseMenuBackdropEl.hidden = true;
 }
@@ -915,14 +971,41 @@ async function showLoadingScreen() {
   LoadingMusic.stop();
 }
 
+// -- Saving ------------------------------------------------------------------
+// Progress saves on every scene change and every click (see game.js). The
+// camera direction is saved too, whenever the player stops dragging, opens
+// the menu, or leaves the page.
+function currentView() {
+  const dir = camera.position.clone().negate().normalize();
+  return {
+    yaw: +THREE.MathUtils.radToDeg(Math.atan2(dir.x, -dir.z)).toFixed(1),
+    pitch: +THREE.MathUtils.radToDeg(Math.asin(Math.max(-1, Math.min(1, dir.y)))).toFixed(1),
+  };
+}
+
+function saveView() {
+  if (!engine || !engine.state.scene) return;
+  engine.state.view = currentView();
+  engine.state.save();
+}
+
+window.addEventListener("pagehide", saveView);
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") saveView();
+});
+
 async function main() {
   initViewer();
   game = await Game.load();
   await showLoadingScreen();
 
+  controls.addEventListener("end", saveView);
+
   let state = GameState.load();
+  if (state && state.scene && !game.scenes.has(state.scene)) state = null; // save from an older version
   if (state && state.scene) {
-    appendCaption("A case file in progress was found.");
+    const where = game.scene(state.scene).name;
+    appendCaption(where ? `A case file in progress was found: ${where}.` : "A case file in progress was found.");
     const choice = await chooseInCaption([
       { label: "Continue the case", value: "continue", primary: true },
       { label: "Start over", value: "new" },
@@ -937,8 +1020,13 @@ async function main() {
   if (state && state.scene) {
     engine = new Engine(game, state);
     const sceneId = state.scene;
+    const view = state.view;
     state.scene = null; // so enterScene shows the chapter card again on resume
-    await enterScene(sceneId);
+    await enterScene(sceneId, { view });
+    state.view = view;
+    // Closed mid-conversation: replay that conversation from its start.
+    const pending = engine.resumePending();
+    if (pending) await runHotspotResult(pending);
     return;
   }
   engine = new Engine(game, new GameState());
