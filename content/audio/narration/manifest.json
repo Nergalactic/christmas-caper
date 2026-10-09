@@ -558,5 +558,325 @@
       "speaker": "tiny",
       "file": "bar_comet_leaves_4.mp3"
     }
+  ],
+  "track_enter": [
+    {
+      "speaker": "tiny",
+      "file": "track_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_enter_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_enter_3.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "track_enter_4.mp3"
+    }
+  ],
+  "track_granny": [
+    {
+      "speaker": "granny",
+      "file": "track_granny_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_granny_2.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "track_granny_3.mp3"
+    }
+  ],
+  "track_comet": [
+    {
+      "speaker": "tiny",
+      "file": "track_comet_1.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "track_comet_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_comet_3.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "track_comet_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_comet_5.mp3"
+    }
+  ],
+  "track_dasher": [
+    {
+      "speaker": "dasher",
+      "file": "track_dasher_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_dasher_2.mp3"
+    },
+    {
+      "speaker": "dasher",
+      "file": "track_dasher_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_dasher_4.mp3"
+    },
+    {
+      "speaker": "dasher",
+      "file": "track_dasher_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_dasher_6.mp3"
+    }
+  ],
+  "track_block": [
+    {
+      "speaker": "tiny",
+      "file": "track_block_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_block_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_block_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_block_4.mp3"
+    }
+  ],
+  "track_to_runway": [
+    {
+      "speaker": "tiny",
+      "file": "track_to_runway_1.mp3"
+    }
+  ],
+  "runway_enter": [
+    {
+      "speaker": "tiny",
+      "file": "runway_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_enter_2.mp3"
+    }
+  ],
+  "runway_feud": [
+    {
+      "speaker": "donner",
+      "file": "runway_feud_1.mp3"
+    },
+    {
+      "speaker": "blitzen",
+      "file": "runway_feud_2.mp3"
+    },
+    {
+      "speaker": "donner",
+      "file": "runway_feud_3.mp3"
+    },
+    {
+      "speaker": "blitzen",
+      "file": "runway_feud_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_feud_5.mp3"
+    },
+    {
+      "speaker": "donner",
+      "file": "runway_feud_6.mp3"
+    },
+    {
+      "speaker": "blitzen",
+      "file": "runway_feud_7.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_feud_8.mp3"
+    }
+  ],
+  "runway_harness": [
+    {
+      "speaker": "tiny",
+      "file": "runway_harness_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_harness_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_harness_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_harness_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "runway_harness_5.mp3"
+    },
+    {
+      "speaker": "donner",
+      "file": "runway_harness_6.mp3"
+    },
+    {
+      "speaker": "blitzen",
+      "file": "runway_harness_7.mp3"
+    }
+  ],
+  "runway_to_stand": [
+    {
+      "speaker": "tiny",
+      "file": "runway_to_stand_1.mp3"
+    }
+  ],
+  "stand_enter": [
+    {
+      "speaker": "tiny",
+      "file": "stand_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_enter_2.mp3"
+    }
+  ],
+  "stand_cupid": [
+    {
+      "speaker": "cupid",
+      "file": "stand_cupid_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_cupid_2.mp3"
+    },
+    {
+      "speaker": "cupid",
+      "file": "stand_cupid_3.mp3"
+    },
+    {
+      "speaker": "cupid",
+      "file": "stand_cupid_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_cupid_5.mp3"
+    },
+    {
+      "speaker": "cupid",
+      "file": "stand_cupid_6.mp3"
+    }
+  ],
+  "stand_ledger": [
+    {
+      "speaker": "tiny",
+      "file": "stand_ledger_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_ledger_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_ledger_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_ledger_4.mp3"
+    },
+    {
+      "speaker": "cupid",
+      "file": "stand_ledger_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "stand_ledger_6.mp3"
+    }
+  ],
+  "stand_to_track": [
+    {
+      "speaker": "tiny",
+      "file": "stand_to_track_1.mp3"
+    }
+  ],
+  "track_granny2": [
+    {
+      "speaker": "granny",
+      "file": "track_granny2_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_granny2_2.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "track_granny2_3.mp3"
+    }
+  ],
+  "track_boost": [
+    {
+      "speaker": "dasher",
+      "file": "track_boost_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_boost_2.mp3"
+    },
+    {
+      "speaker": "dasher",
+      "file": "track_boost_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_boost_4.mp3"
+    }
+  ],
+  "track_bag": [
+    {
+      "speaker": "tiny",
+      "file": "track_bag_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_bag_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_bag_3.mp3"
+    }
+  ],
+  "track_leave": [
+    {
+      "speaker": "tiny",
+      "file": "track_leave_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_leave_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_leave_3.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "track_leave_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "track_leave_5.mp3"
+    }
   ]
 }
