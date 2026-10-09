@@ -1,5 +1,9 @@
 # Cold Case
 
+![Cold Case cover art](promo/cover_art.jpg)
+
+**Play it:** https://nergalactic.github.io/christmas-caper/
+
 A panorama noir mystery for the 2026 tacky website contest (theme: Reindeer Squad). Tiny Hightower, a very short elf detective, investigates the melting of lounge-singing snowman Jimmy Mittens.
 
 See [DESIGN.md](DESIGN.md) for the story, cast, and schedule, and [content/README.md](content/README.md) for the content format.
