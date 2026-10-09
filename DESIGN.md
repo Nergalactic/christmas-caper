@@ -114,7 +114,7 @@ One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook a
 
 The viewer, audio, narration, title screen, tutorial, credits, hotspot editor, and voice pipeline are copied from the Skua Island panorama build (tussac-3d), with no Skua content. The story engine is new: `src/game.js` is a small, strictly linear scene runner with the tinsel goggles and the boost interaction built in. The title screen works the same way Skua's did: a pannable title panorama with loading music, then a pulsing "Tap to continue."
 
-The content format is documented in `content/README.md`. `npm run check` validates references and simulates a playthrough. The current `content/intro.json` is placeholder content for exercising the engine, to be replaced by the real script.
+The content format is documented in `content/README.md`. `npm run check` validates references and simulates a playthrough.
 
 ## Schedule (to Nov 5)
 
@@ -132,6 +132,6 @@ The content format is documented in `content/README.md`. `npm run check` validat
 - No hard size limit; keep it within reason (compressed panoramas, mp3 audio).
 - AI-generated art, voice, and music are all allowed.
 
-## Open questions
+## Status
 
-- Jimmy's song, "I Don't Mind the Heat": lyrics and style prompt are in `music/i-dont-mind-the-heat.md`. Still to do: generate the track.
+Complete. All 13 scenes have final art, all 259 lines are voiced, and the game plays from the office to the credits. Music: Jimmy's song "I Don't Mind the Heat" (alley and lounge), the Cold Case noir theme (title screen and credits), and Santa's theme (the final rooftop).

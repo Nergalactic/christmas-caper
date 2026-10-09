@@ -72,6 +72,8 @@ The heat
 | Intro alley crime scene | Muffled through the lounge wall, as the alley ambience bed (`content/audio/alley.mp3`) |
 | Chapter 1 lounge and bar | Full mix, louder, picking up where the alley version left off (`content/audio/lounge.mp3`) |
 
+Note: the title screen (`loading.mp3`) and credits (`credits.mp3`) have since been replaced by the separate Cold Case noir theme. Jimmy's song now plays only in the alley and the lounge.
+
 The generator's original download is kept at `music/a-snowmans-meltdown-original.mp3` (2:00) so the edits can be redone. The game versions were made with:
 
 ```
