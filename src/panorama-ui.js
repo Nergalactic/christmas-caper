@@ -219,10 +219,18 @@ async function playLine(beatId, index, line) {
   if (audio) audio.pause();
 }
 
+// How far the music dips while someone is talking (1 = no dip).
+const DIALOGUE_DUCK = 0.35;
+
 async function playBeat(beat) {
   if (!beat) return;
-  for (let i = 0; i < beat.lines.length; i++) {
-    await playLine(beat.id, i, beat.lines[i]);
+  Ambience.setDuck(DIALOGUE_DUCK);
+  try {
+    for (let i = 0; i < beat.lines.length; i++) {
+      await playLine(beat.id, i, beat.lines[i]);
+    }
+  } finally {
+    Ambience.setDuck(1, 900);
   }
   hideSubtitles();
 }

@@ -37,7 +37,8 @@ class AmbienceLayer {
   // the beginning, for scenes that hear the same song (Jimmy's song in the
   // alley, then inside the lounge).
   load(id, { startAt = 0, volume = 1 } = {}) {
-    this.el.volume = Math.min(1, this.baseVolume * volume);
+    this.trackVolume = volume;
+    this.applyVolume();
     this.el.src = trackUrl(id);
     if (startAt > 0) {
       this.el.addEventListener(
@@ -55,6 +56,11 @@ class AmbienceLayer {
     this.el.play().catch((err) => {
       console.warn(`[audio] could not play "${id}":`, err.message);
     });
+  }
+
+  // Final volume = layer base x this track's scene volume x ducking.
+  applyVolume() {
+    this.el.volume = Math.min(1, this.baseVolume * (this.trackVolume ?? 1) * (this.duck ?? 1));
   }
 
   set muted(value) {
@@ -92,7 +98,8 @@ class AmbiencePlayer {
   // track; `volume` scales the bed volume for this track (1 = default).
   setZone(id, { continuePosition = false, volume = 1 } = {}) {
     if (id === this.currentId) {
-      this.bed.el.volume = Math.min(1, BED_VOLUME * volume);
+      this.bed.trackVolume = volume;
+      this.bed.applyVolume();
       return;
     }
     this.pendingId = id;
@@ -107,6 +114,24 @@ class AmbiencePlayer {
     // No separate "does a detail file exist" check -- same fail-silently
     // path as the bed track handles a panorama with no detail layer.
     this.detail.load(`${id}_detail`);
+  }
+
+  // Ducking: dip the ambience while dialogue plays, then glide back up.
+  // `factor` is the target multiplier (1 = full); the change eases over
+  // `ms` so it never jumps.
+  setDuck(factor, ms = 350) {
+    clearInterval(this.duckTimer);
+    const layers = [this.bed, this.detail];
+    const start = layers.map((l) => l.duck ?? 1);
+    const t0 = performance.now();
+    this.duckTimer = setInterval(() => {
+      const k = Math.min(1, (performance.now() - t0) / ms);
+      layers.forEach((l, i) => {
+        l.duck = start[i] + (factor - start[i]) * k;
+        l.applyVolume();
+      });
+      if (k >= 1) clearInterval(this.duckTimer);
+    }, 30);
   }
 
   toggleMute() {

@@ -71,7 +71,7 @@
         }
       ],
       "ambience_continue": true,
-      "ambience_volume": 1.8
+      "ambience_volume": 1.0
     },
     "lounge_bar": {
       "name": "The Bar",
@@ -149,7 +149,7 @@
         }
       ],
       "ambience_continue": true,
-      "ambience_volume": 1.5
+      "ambience_volume": 0.85
     }
   },
   "beats": {
