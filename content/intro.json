@@ -123,15 +123,15 @@
       "name": "The Alley Behind the Mistletoe Lounge",
       "panorama": "content/panoramas/alley.jpg",
       "startYaw": 0,
-      "startPitch": -10,
+      "startPitch": -8,
       "ambience": "alley",
       "on_enter": "alley_enter",
       "hotspots": [
         {
           "id": "snap",
           "label": "Sgt. Snap",
-          "yaw": -20,
-          "pitch": 10,
+          "yaw": -66.6,
+          "pitch": 21.6,
           "beat": "alley_snap",
           "sets": [
             "met_snap"
@@ -140,8 +140,8 @@
         {
           "id": "puddle",
           "label": "Puddle",
-          "yaw": 0,
-          "pitch": -40,
+          "yaw": -12.6,
+          "pitch": -39.6,
           "beat": "alley_puddle",
           "requires": [
             "met_snap"
@@ -153,8 +153,8 @@
         {
           "id": "comet",
           "label": "Comet and Lil' Sleet",
-          "yaw": 55,
-          "pitch": 0,
+          "yaw": 115.2,
+          "pitch": 9.0,
           "beat": "alley_comet",
           "requires": [
             "saw_puddle"
@@ -166,8 +166,8 @@
         {
           "id": "scorch",
           "label": "Scorch marks",
-          "yaw": 25,
-          "pitch": -35,
+          "yaw": 95.4,
+          "pitch": -36.0,
           "goggles": true,
           "beat": "alley_scorch",
           "requires": [
@@ -180,8 +180,8 @@
         {
           "id": "kiss",
           "label": "Smoking lipstick kiss",
-          "yaw": -10,
-          "pitch": 35,
+          "yaw": 19.8,
+          "pitch": 57.6,
           "boost": {
             "by": "granny",
             "beat": "alley_boost"
@@ -197,8 +197,8 @@
         {
           "id": "granny",
           "label": "Granny Slush",
-          "yaw": -45,
-          "pitch": 15,
+          "yaw": -144.0,
+          "pitch": 27.0,
           "beat": "alley_demand",
           "requires": [
             "saw_kiss"

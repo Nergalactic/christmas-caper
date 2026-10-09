@@ -4,16 +4,16 @@
     "lounge_floor": {
       "name": "The Mistletoe Lounge",
       "panorama": "content/panoramas/lounge_floor.jpg",
-      "startYaw": 0,
-      "startPitch": -10,
+      "startYaw": -20,
+      "startPitch": 5,
       "ambience": "lounge_floor",
       "on_enter": "lounge_enter",
       "hotspots": [
         {
           "id": "cupid",
           "label": "Cupid, on stage",
-          "yaw": 0,
-          "pitch": 20,
+          "yaw": -32.4,
+          "pitch": 28.8,
           "beat": "lounge_cupid",
           "sets": [
             "heard_cupid"
@@ -22,8 +22,8 @@
         {
           "id": "vixen",
           "label": "Vixen",
-          "yaw": -50,
-          "pitch": 5,
+          "yaw": -126.0,
+          "pitch": 9.0,
           "beat": "lounge_vixen",
           "requires": [
             "heard_cupid"
@@ -35,8 +35,8 @@
         {
           "id": "prancer",
           "label": "Prancer and the Easter Bunny",
-          "yaw": 60,
-          "pitch": 5,
+          "yaw": 124.2,
+          "pitch": 5.4,
           "beat": "lounge_prancer",
           "requires": [
             "met_vixen"
@@ -48,8 +48,8 @@
         {
           "id": "dancer",
           "label": "Dancer",
-          "yaw": 110,
-          "pitch": 10,
+          "yaw": 30.6,
+          "pitch": 3.6,
           "beat": "lounge_dancer",
           "requires": [
             "met_prancer"
@@ -61,8 +61,8 @@
         {
           "id": "bar",
           "label": "The bar",
-          "yaw": 160,
-          "pitch": 0,
+          "yaw": 54.0,
+          "pitch": 12.6,
           "beat": "lounge_to_bar",
           "go": "lounge_bar",
           "requires": [
@@ -75,15 +75,15 @@
       "name": "The Bar",
       "panorama": "content/panoramas/lounge_bar.jpg",
       "startYaw": 0,
-      "startPitch": -10,
+      "startPitch": 12,
       "ambience": "lounge_bar",
       "on_enter": "bar_enter",
       "hotspots": [
         {
           "id": "silverbough",
           "label": "Silverbough",
-          "yaw": 0,
-          "pitch": 30,
+          "yaw": 0.0,
+          "pitch": 43.2,
           "beat": "bar_silverbough",
           "sets": [
             "met_silverbough"
@@ -92,8 +92,8 @@
         {
           "id": "stool",
           "label": "Scorched bar stool",
-          "yaw": 35,
-          "pitch": -15,
+          "yaw": 90.0,
+          "pitch": 5.4,
           "goggles": true,
           "beat": "bar_stool",
           "requires": [
@@ -106,8 +106,8 @@
         {
           "id": "card",
           "label": "Reserved card",
-          "yaw": -30,
-          "pitch": 25,
+          "yaw": 30.6,
+          "pitch": 32.0,
           "boost": {
             "by": "silverbough",
             "beat": "bar_boost"
@@ -123,8 +123,8 @@
         {
           "id": "comet",
           "label": "Comet",
-          "yaw": 50,
-          "pitch": 5,
+          "yaw": 140.4,
+          "pitch": 30.6,
           "beat": "bar_comet",
           "requires": [
             "saw_card"
@@ -136,8 +136,8 @@
         {
           "id": "comet_leaves",
           "label": "Comet, heading out",
-          "yaw": 80,
-          "pitch": 5,
+          "yaw": 136.8,
+          "pitch": -10.8,
           "beat": "bar_comet_leaves",
           "requires": [
             "talked_comet"

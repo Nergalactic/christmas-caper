@@ -426,6 +426,8 @@ function refreshHotspots() {
       "hotspot" + (h.go ? " exit" : "") + (h.goggles ? " goggles" : "") + (h.boost ? " boost" : "");
     el.textContent = h.label || h.id;
     if (h.boost) el.title = "Too high to reach";
+    el.dataset.yaw = h.yaw;
+    el.dataset.pitch = h.pitch;
     el.addEventListener("click", () => onHotspotClick(h));
     hotspotLayerEl.appendChild(el);
     hotspotState.push({ el, pos: yawPitchToVector3(h.yaw, h.pitch) });
@@ -784,6 +786,12 @@ creditsSkipEl.addEventListener("click", closeCredits);
 window.__showCredits = showCredits;
 window.__goto = (sceneId) => engine && enterScene(sceneId);
 window.__look = (yaw, pitch) => centerCameraOn(yaw, pitch);
+window.__setFlag = (flag) => {
+  if (!engine) return;
+  engine.state.setFlag(flag);
+  updateGogglesButton();
+  refreshHotspots();
+};
 
 // -- Title / entry point ----------------------------------------------------
 //
