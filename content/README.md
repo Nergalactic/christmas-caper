@@ -19,6 +19,8 @@
 - `panorama`: equirectangular image. Leave `null` (or point at a missing file) to get the gray grid placeholder.
 - `startYaw` / `startPitch`: where the camera faces on entry. Yaw 0 is straight ahead, positive yaw turns right, negative pitch looks down (toward the floor, where Tiny lives).
 - `ambience`: audio id, played from `content/audio/<id>.mp3` with an optional `<id>_detail.mp3` layer. Defaults to the scene id.
+- `ambience_volume`: multiplies the ambience volume for this scene (default 1).
+- `ambience_continue`: `true` picks the new track up at the previous track's playback position, for scenes that hear the same song.
 - `on_enter`: beat played the first time the scene is entered.
 
 ## Hotspots

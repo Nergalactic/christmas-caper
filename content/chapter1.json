@@ -6,7 +6,7 @@
       "panorama": "content/panoramas/lounge_floor.jpg",
       "startYaw": -20,
       "startPitch": 5,
-      "ambience": "lounge_floor",
+      "ambience": "lounge",
       "on_enter": "lounge_enter",
       "hotspots": [
         {
@@ -69,14 +69,16 @@
             "met_dancer"
           ]
         }
-      ]
+      ],
+      "ambience_continue": true,
+      "ambience_volume": 1.8
     },
     "lounge_bar": {
       "name": "The Bar",
       "panorama": "content/panoramas/lounge_bar.jpg",
       "startYaw": 0,
       "startPitch": 12,
-      "ambience": "lounge_bar",
+      "ambience": "lounge",
       "on_enter": "bar_enter",
       "hotspots": [
         {
@@ -145,7 +147,9 @@
           "end": true,
           "end_title": "To be continued..."
         }
-      ]
+      ],
+      "ambience_continue": true,
+      "ambience_volume": 1.5
     }
   },
   "beats": {

@@ -503,7 +503,10 @@ async function enterScene(id) {
   const { scene, beat, chapter } = engine.enterScene(id);
   clearHotspots();
   if (chapter) await showChapterCard(chapter);
-  Ambience.setZone(scene.ambience || scene.id);
+  Ambience.setZone(scene.ambience || scene.id, {
+    continuePosition: !!scene.ambience_continue,
+    volume: scene.ambience_volume ?? 1,
+  });
   statusStripEl.hidden = false;
   statusSceneEl.textContent = scene.name || scene.id;
   updateGogglesButton();
@@ -786,6 +789,7 @@ creditsSkipEl.addEventListener("click", closeCredits);
 window.__showCredits = showCredits;
 window.__goto = (sceneId) => engine && enterScene(sceneId);
 window.__look = (yaw, pitch) => centerCameraOn(yaw, pitch);
+window.__ambience = Ambience;
 window.__setFlag = (flag) => {
   if (!engine) return;
   engine.state.setFlag(flag);

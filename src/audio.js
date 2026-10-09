@@ -26,14 +26,29 @@ function trackUrl(id) {
 
 class AmbienceLayer {
   constructor(volume = 1) {
+    this.baseVolume = volume;
     this.el = new Audio();
     this.el.loop = true;
     this.el.volume = volume;
     this.el.muted = localStorage.getItem(MUTE_KEY) === "1";
   }
 
-  load(id) {
+  // `startAt` (seconds) resumes the new track from that point instead of
+  // the beginning, for scenes that hear the same song (Jimmy's song in the
+  // alley, then inside the lounge).
+  load(id, { startAt = 0, volume = 1 } = {}) {
+    this.el.volume = Math.min(1, this.baseVolume * volume);
     this.el.src = trackUrl(id);
+    if (startAt > 0) {
+      this.el.addEventListener(
+        "loadedmetadata",
+        () => {
+          const d = this.el.duration;
+          if (isFinite(d) && d > 0) this.el.currentTime = startAt % d;
+        },
+        { once: true }
+      );
+    }
     // Missing/not-yet-sourced track files are expected during development
     // -- fail quietly rather than throwing, same spirit as the rest of
     // the UI never crashing the session over unimplemented content.
@@ -68,20 +83,27 @@ class AmbiencePlayer {
   unlock() {
     if (this.unlocked) return;
     this.unlocked = true;
-    if (this.pendingId) this._load(this.pendingId);
+    if (this.pendingId) this._load(this.pendingId, this.pendingOpts);
   }
 
   // Safe to call before unlock() -- just records which track should start
   // once a gesture arrives. Safe to call repeatedly with the same id.
-  setZone(id) {
-    if (id === this.currentId) return;
+  // `continuePosition` carries the current playback position into the new
+  // track; `volume` scales the bed volume for this track (1 = default).
+  setZone(id, { continuePosition = false, volume = 1 } = {}) {
+    if (id === this.currentId) {
+      this.bed.el.volume = Math.min(1, BED_VOLUME * volume);
+      return;
+    }
     this.pendingId = id;
-    if (this.unlocked) this._load(id);
+    this.pendingOpts = { continuePosition, volume };
+    if (this.unlocked) this._load(id, this.pendingOpts);
   }
 
-  _load(id) {
+  _load(id, { continuePosition = false, volume = 1 } = {}) {
+    const startAt = continuePosition && this.currentId ? this.bed.el.currentTime : 0;
     this.currentId = id;
-    this.bed.load(id);
+    this.bed.load(id, { startAt, volume });
     // No separate "does a detail file exist" check -- same fail-silently
     // path as the bed track handles a panorama with no detail layer.
     this.detail.load(`${id}_detail`);
