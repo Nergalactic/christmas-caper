@@ -3,7 +3,7 @@
   "scenes": {
     "office": {
       "name": "Tiny's Office",
-      "panorama": null,
+      "panorama": "content/panoramas/office.jpg",
       "startYaw": 0,
       "startPitch": -10,
       "ambience": "office",
@@ -12,7 +12,7 @@
       "hotspots": [
         {
           "id": "door",
-          "label": "Knock at the door",
+          "label": "Granny Slush, in the doorway",
           "yaw": 20,
           "pitch": 15,
           "beat": "office_knock",
@@ -72,7 +72,7 @@
     },
     "street": {
       "name": "The Street",
-      "panorama": null,
+      "panorama": "content/panoramas/street.jpg",
       "startYaw": 0,
       "startPitch": -5,
       "ambience": "street",
@@ -103,7 +103,7 @@
     },
     "bus_stop": {
       "name": "The Bus Stop",
-      "panorama": null,
+      "panorama": "content/panoramas/bus_stop.jpg",
       "startYaw": 0,
       "startPitch": -5,
       "ambience": "bus_stop",
@@ -121,7 +121,7 @@
     },
     "alley": {
       "name": "The Alley Behind the Mistletoe Lounge",
-      "panorama": null,
+      "panorama": "content/panoramas/alley.jpg",
       "startYaw": 0,
       "startPitch": -10,
       "ambience": "alley",

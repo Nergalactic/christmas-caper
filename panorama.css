@@ -825,3 +825,34 @@ body.beat-playing .hotspot {
 #viewer-canvas {
   transition: transform 0.6s ease, opacity 2.5s ease;
 }
+
+/* Title screen lettering, drawn over the title card panorama. */
+@keyframes title-fade-in {
+  from {
+    opacity: 0;
+    letter-spacing: 0.5em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.22em;
+  }
+}
+
+#title-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 18vh;
+  z-index: 11;
+  margin: 0;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 9vw, 110px);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #f4ecd8;
+  text-shadow: 0 0 18px rgba(255, 60, 60, 0.55), 0 0 40px rgba(60, 255, 140, 0.25), 0 4px 18px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  animation: title-fade-in 3s ease-out both;
+}

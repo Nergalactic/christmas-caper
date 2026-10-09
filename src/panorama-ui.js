@@ -24,6 +24,7 @@ const viewerEl = document.getElementById("viewer");
 const canvasEl = document.getElementById("viewer-canvas");
 const hotspotLayerEl = document.getElementById("hotspot-layer");
 const viewerHintEl = document.getElementById("viewer-hint");
+const titleOverlayEl = document.getElementById("title-overlay");
 const tutorialPanelEl = document.getElementById("tutorial-panel");
 const tutorialStepsEl = document.getElementById("tutorial-steps");
 const tutorialSkipEl = document.getElementById("tutorial-skip");
@@ -299,7 +300,7 @@ function makePlaceholderTexture(label, subtitle = "panorama placeholder, awaitin
   const centerX = uForYaw(0) * canvas.width;
   ctx.fillStyle = "rgba(240, 240, 240, 0.85)";
   ctx.font = "600 56px system-ui, sans-serif";
-  ctx.fillText(label || "Cold Case", centerX, canvas.height / 2 - 60);
+  ctx.fillText(label ?? "Cold Case", centerX, canvas.height / 2 - 60);
   ctx.fillStyle = "rgba(200, 200, 200, 0.65)";
   ctx.font = "300 28px system-ui, sans-serif";
   ctx.fillText(subtitle, centerX, canvas.height / 2 - 14);
@@ -786,7 +787,10 @@ window.__look = (yaw, pitch) => centerCameraOn(yaw, pitch);
 // player drags around before tapping through, since that drag's pointerdown
 // is what unlocks audio.
 async function showLoadingScreen() {
-  await setScene(TITLE_PANORAMA, "COLD CASE", 0, 0, { fov: 91, subtitle: "title card placeholder, awaiting art" });
+  await setScene(TITLE_PANORAMA, "", 0, 0, { fov: 91, subtitle: "title card placeholder, awaiting art" });
+  // The title is drawn by the page rather than baked into the art, since
+  // image generators tend to garble lettering.
+  titleOverlayEl.hidden = false;
   viewerHintEl.hidden = false;
   await firstInteraction;
   captionBarEl.hidden = false;
@@ -794,6 +798,7 @@ async function showLoadingScreen() {
   requestAnimationFrame(() => captionBarEl.classList.add("visible"));
   await waitForCaptionTap();
   clearCaption();
+  titleOverlayEl.hidden = true;
   viewerHintEl.hidden = true;
   LoadingMusic.stop();
 }
