@@ -104,16 +104,16 @@
     "bus_stop": {
       "name": "The Bus Stop",
       "panorama": "content/panoramas/bus_stop.jpg",
-      "startYaw": 0,
-      "startPitch": -5,
+      "startYaw": -12,
+      "startPitch": 2,
       "ambience": "bus_stop",
       "on_enter": "bus_stop_enter",
       "hotspots": [
         {
           "id": "bus",
           "label": "The bus",
-          "yaw": 0,
-          "pitch": 5,
+          "yaw": -8.1,
+          "pitch": -7.2,
           "beat": "bus_ride",
           "go": "alley"
         }
