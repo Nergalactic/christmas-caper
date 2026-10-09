@@ -822,6 +822,9 @@ async function showCredits() {
   creditsCoverEl.classList.remove("visible");
   creditsCoverEl.hidden = false;
   creditsScreenEl.hidden = false;
+  // The credits music plays alone: fade out the scene's music and ambience.
+  Ambience.stop();
+  LoadingMusic.stop();
   CreditsMusic.play();
   const duration = await new Promise((resolve) => {
     const fallback = setTimeout(() => resolve(60), 1500); // no credits track yet

@@ -108,6 +108,7 @@ class AmbiencePlayer {
   }
 
   _load(id, { continuePosition = false, volume = 1 } = {}) {
+    clearTimeout(this.stopTimer);
     const startAt = continuePosition && this.currentId ? this.bed.el.currentTime : 0;
     this.currentId = id;
     this.bed.load(id, { startAt, volume });
@@ -132,6 +133,22 @@ class AmbiencePlayer {
       });
       if (k >= 1) clearInterval(this.duckTimer);
     }, 30);
+  }
+
+  // Fade everything out and stop, e.g. so the credits music plays alone.
+  // A later setZone() starts fresh.
+  stop(ms = 800) {
+    this.pendingId = null;
+    this.currentId = null;
+    this.setDuck(0, ms);
+    clearTimeout(this.stopTimer);
+    this.stopTimer = setTimeout(() => {
+      for (const layer of [this.bed, this.detail]) {
+        layer.el.pause();
+        layer.duck = 1;
+        layer.applyVolume();
+      }
+    }, ms + 50);
   }
 
   toggleMute() {
