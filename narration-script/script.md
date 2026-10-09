@@ -363,3 +363,131 @@ it's listed in content/audio/narration/manifest.json.
 [TINY] I'd return it personally. The Ember Arms. Apartment Nine. Purely professional.
 [GRANNY] Wear a hat, dear! It's cold out!
 [TINY] It was. For now.
+
+<!-- section:chapter3 -->
+# chapter3
+
+Generated from `content/chapter3.json` by `scripts/scaffold-narration.mjs`.
+Review before voicing. Nothing here has been generated as audio unless
+it's listed in content/audio/narration/manifest.json.
+
+## apt_enter
+
+[TINY] The Ember Arms. Apartment Nine. The door was warm. The doorknob was warmer. I knocked anyway.
+[COMET] Well, look who it is. Come on in, sugar. Mind the puddles.
+[TINY] It was ninety degrees in there. My mustache was sweating, and I don't have a mustache.
+
+## apt_comet
+
+[TINY] Found your gym bag, ma'am. Purely professional.
+[COMET] My hero. Make yourself at home. Take your coat off. You'll want to.
+[TINY] I kept my coat on. A detective's coat is his armor. Also it was the only thing keeping me from being a puddle.
+
+## apt_puddles
+
+[TINY] Puddles. In every corner. Under every chair. One of them was wearing a mitten.
+[TINY] Leaky radiator, probably. Old building. These things happen.
+
+## apt_hottub
+
+[COMET] Oh, don't mind that. It's decorative.
+[TINY] It was bubbling. It was steaming. A rubber duck floated in it, belly up.
+[TINY] Decorative. Sure. I've seen stranger things in a dame's living room. Not many.
+
+## apt_to_shrine
+
+[TINY] A door at the back stood half open. Behind it, something glinted. Something hat-shaped.
+
+## shrine_enter
+
+[TINY] The back room. Candles everywhere. And on every wall, every shelf, every surface: top hats. Scarves. Carrots.
+[TINY] Dozens of them. Lined up neat. Labeled with dates.
+
+## shrine_hats
+
+[TINY] A collector. Some dames collect stamps. Some collect spoons. This one collected snowman accessories.
+[TINY] Harmless hobby. Everybody needs one. Mine is solving crimes, very slowly.
+
+## shrine_sleet
+
+[TINY] In the corner, a fresh puddle. A flat cap floating in it. An oversized scarf, soaking wet.
+[TINY] Somebody had left their winter clothes in the wet. Kids today. No respect for knitwear.
+
+## shrine_mirror
+
+[TINY] Through the tinsel goggles, the mirror lit up like a pinball machine.
+[TINY] Lipstick kisses. Dozens of them. Each one scorched right into the glass.
+[TINY] She must really like mirrors. Or herself. Or both. I wasn't here to judge. I was here to return a gym bag.
+
+## shrine_boost
+
+[COMET] Need a lift, sugar? Up you go.
+[TINY] She lifted me toward the top shelf. My coat started smoking. I told myself it was a style choice.
+
+## shrine_scrapbook
+
+[TINY] A scrapbook. Leather. Warm to the touch. I opened it.
+[TINY] Page one. A snowman in a bow tie, 1938. Page two. A puddle, in a bow tie.
+[TINY] Page three. A snowman in a sailor hat. Page four. A puddle, in a sailor hat.
+[TINY] The last page. Jimmy Mittens, smiling, last night. And next to it, a blank space. Waiting.
+[TINY] And then it hit me. Not like a sleigh. Like the whole team.
+[COMET] I've got a sleigh to catch, sugar. Roof's this way.
+
+## shrine_to_roof
+
+[TINY] She went up the fire escape. I followed. It took a while. The steps were very far apart.
+
+## roof_enter
+
+[TINY] The roof of the Ember Arms. Snow coming down, stars coming out, and the whole North Pole glittering below.
+[GRANNY] Detective! Wait! I came as fast as I could! I took the bus!
+[TINY] Granny Slush. Right on time. Every great reveal needs an audience. Mine had two.
+
+## roof_reveal
+
+[TINY] Ladies. Reindeer. Gather round.
+[TINY] Jimmy Mittens didn't slip in that alley. He didn't wander off. He didn't take an early spring.
+[TINY] He was melted.
+[TINY] I know. Take a minute. I'll wait.
+[TINY] Exhibit A. A puddle. Snowmen don't just turn into puddles. Not without heat. A great deal of heat.
+[TINY] Exhibit B. Scorch marks. Shaped like hooves. Four of them. Which, if you count, is exactly how many hooves a reindeer has.
+[TINY] Exhibit C. A lipstick kiss, still smoking, at exactly snowman-head height.
+[TINY] Exhibit D. A reserved card. 'J. Mittens, plus C.' Exhibit E. A gym bag. 'Return to C.' Exhibit F. This building. Where C lives.
+[TINY] And Exhibit G. The killer's hooves. They are, and I cannot stress this enough, on fire.
+[TINY] The killer is someone hot. Someone fast. Someone whose name starts with C and ends with 'omet.'
+[TINY] The killer is you. Comet.
+[COMET] Took you long enough, sugar.
+[TINY] It took me all night, a bus ride, and a carrot cartel. But I got there.
+
+## roof_granny
+
+[GRANNY] My Jimmy? With her? Oh, I told him. I told him he had a snowball's chance in hell.
+[GRANNY] Oh. Oh, I see it now.
+[COMET] He was sweet, Granny. They're all sweet. Then they get a little soft around the edges.
+[TINY] Case closed. Or so I thought. Then a shadow fell across the roof. A very large shadow. With antlers.
+
+## roof_sleigh
+
+[TINY] A sleigh came down out of the clouds and landed on the roof like it owned the place. Which, technically, it did.
+
+## santa_enter
+
+[SANTA] Ho. Ho. Ho.
+[TINY] Santa Claus. The big man. The boss of the whole North Pole. In person, and in a very nice suit.
+[SANTA] Good work, detective. I know. I have always known.
+
+## santa_knew
+
+[SANTA] I see you when you're sleeping. I know when you're awake. I knew when Jimmy Mittens sat down beside a reindeer whose feet were on fire.
+[TINY] You knew? The whole time?
+[SANTA] I keep a list. I check it twice. Comet has been on it, in red ink, since 1938.
+[SANTA] And yet, it is Christmas Eve. And she is the warmest thing in the sky.
+[SANTA] Comet. Harness. Front left.
+[COMET] Yes, boss.
+
+## santa_final
+
+[TINY] Just like that, she was hitched to the sleigh. Front left. Somewhere, Donner and Blitzen felt a disturbance.
+[GRANNY] Well. You found him, dear. Most of him.
+[TINY] I looked up at the big man. Way, way up. It's the only direction I know.
+[SANTA] Merry Christmas, Tiny Hightower. Be good. I'll know.

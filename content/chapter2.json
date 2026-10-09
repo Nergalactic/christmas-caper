@@ -111,8 +111,7 @@
           "requires": [
             "got_bag"
           ],
-          "end": true,
-          "end_title": "To be continued..."
+          "go": "apartment"
         }
       ]
     },

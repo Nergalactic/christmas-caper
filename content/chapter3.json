@@ -1,0 +1,611 @@
+{
+  "_note": "Chapter 3 script, first draft. Hotspot yaw/pitch values are rough guesses; place them with editor.html once the panoramas exist.",
+  "scenes": {
+    "apartment": {
+      "name": "The Ember Arms, Apartment Nine",
+      "panorama": "content/panoramas/apartment.jpg",
+      "startYaw": 0,
+      "startPitch": 10,
+      "on_enter": "apt_enter",
+      "hotspots": [
+        {
+          "id": "comet",
+          "label": "Comet",
+          "yaw": 0,
+          "pitch": 20,
+          "beat": "apt_comet",
+          "sets": [
+            "bag_returned"
+          ]
+        },
+        {
+          "id": "puddles",
+          "label": "Puddles",
+          "yaw": -50,
+          "pitch": -35,
+          "beat": "apt_puddles",
+          "requires": [
+            "bag_returned"
+          ],
+          "sets": [
+            "saw_puddles"
+          ]
+        },
+        {
+          "id": "hottub",
+          "label": "The 'decorative' hot tub",
+          "yaw": 60,
+          "pitch": -10,
+          "beat": "apt_hottub",
+          "requires": [
+            "saw_puddles"
+          ],
+          "sets": [
+            "saw_tub"
+          ]
+        },
+        {
+          "id": "to_shrine",
+          "label": "Back room",
+          "yaw": 130,
+          "pitch": 5,
+          "beat": "apt_to_shrine",
+          "go": "shrine",
+          "requires": [
+            "saw_tub"
+          ]
+        }
+      ],
+      "ambience": "apartment"
+    },
+    "shrine": {
+      "name": "The Back Room",
+      "panorama": "content/panoramas/shrine.jpg",
+      "startYaw": 0,
+      "startPitch": 10,
+      "on_enter": "shrine_enter",
+      "hotspots": [
+        {
+          "id": "hats",
+          "label": "Top hats and scarves",
+          "yaw": 0,
+          "pitch": 15,
+          "beat": "shrine_hats",
+          "sets": [
+            "saw_hats"
+          ]
+        },
+        {
+          "id": "sleet",
+          "label": "A puddle in a flat cap",
+          "yaw": -60,
+          "pitch": -35,
+          "beat": "shrine_sleet",
+          "requires": [
+            "saw_hats"
+          ],
+          "sets": [
+            "saw_sleet"
+          ]
+        },
+        {
+          "id": "mirror",
+          "label": "Scorched mirror",
+          "yaw": 55,
+          "pitch": 10,
+          "goggles": true,
+          "beat": "shrine_mirror",
+          "requires": [
+            "saw_sleet"
+          ],
+          "sets": [
+            "saw_mirror"
+          ]
+        },
+        {
+          "id": "scrapbook",
+          "label": "Scrapbook on the top shelf",
+          "yaw": -20,
+          "pitch": 40,
+          "boost": {
+            "by": "comet",
+            "beat": "shrine_boost"
+          },
+          "beat": "shrine_scrapbook",
+          "requires": [
+            "saw_mirror"
+          ],
+          "sets": [
+            "read_scrapbook"
+          ]
+        },
+        {
+          "id": "to_roof",
+          "label": "Fire escape",
+          "yaw": 150,
+          "pitch": 10,
+          "beat": "shrine_to_roof",
+          "go": "rooftop",
+          "requires": [
+            "read_scrapbook"
+          ]
+        }
+      ],
+      "ambience": "shrine"
+    },
+    "rooftop": {
+      "name": "The Roof",
+      "panorama": "content/panoramas/rooftop.jpg",
+      "startYaw": 0,
+      "startPitch": 10,
+      "on_enter": "roof_enter",
+      "hotspots": [
+        {
+          "id": "comet",
+          "label": "Comet",
+          "yaw": 0,
+          "pitch": 15,
+          "beat": "roof_reveal",
+          "sets": [
+            "revealed"
+          ]
+        },
+        {
+          "id": "granny",
+          "label": "Granny Slush",
+          "yaw": -50,
+          "pitch": 10,
+          "beat": "roof_granny",
+          "requires": [
+            "revealed"
+          ],
+          "sets": [
+            "granny_knows"
+          ]
+        },
+        {
+          "id": "sky",
+          "label": "Something in the sky",
+          "yaw": 20,
+          "pitch": 45,
+          "beat": "roof_sleigh",
+          "go": "rooftop_santa",
+          "requires": [
+            "granny_knows"
+          ]
+        }
+      ],
+      "ambience": "rooftop"
+    },
+    "rooftop_santa": {
+      "name": "The Roof",
+      "panorama": "content/panoramas/rooftop_santa.jpg",
+      "startYaw": 0,
+      "startPitch": 15,
+      "on_enter": "santa_enter",
+      "hotspots": [
+        {
+          "id": "santa",
+          "label": "Santa",
+          "yaw": 0,
+          "pitch": 20,
+          "beat": "santa_knew",
+          "sets": [
+            "santa_spoke"
+          ]
+        },
+        {
+          "id": "sleigh",
+          "label": "The sleigh",
+          "yaw": 25,
+          "pitch": 10,
+          "beat": "santa_final",
+          "requires": [
+            "santa_spoke"
+          ],
+          "end": true,
+          "end_title": "Case closed."
+        }
+      ],
+      "ambience": "rooftop"
+    }
+  },
+  "beats": {
+    "apt_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The Ember Arms. Apartment Nine. The door was warm. The doorknob was warmer. I knocked anyway.",
+          "spoken": "The Ember Arms. -- Apartment Nine. -- The door was warm. -- The doorknob was warmer. ---- I knocked anyway."
+        },
+        {
+          "speaker": "comet",
+          "text": "Well, look who it is. Come on in, sugar. Mind the puddles.",
+          "spoken": "Well, look who it is. - Come on in, sugar. --- Mind the puddles."
+        },
+        {
+          "speaker": "tiny",
+          "text": "It was ninety degrees in there. My mustache was sweating, and I don't have a mustache.",
+          "spoken": "It was ninety degrees in there. --- My mustache was sweating, and I don't have a mustache."
+        }
+      ]
+    },
+    "apt_comet": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Found your gym bag, ma'am. Purely professional.",
+          "spoken": "Found your gym bag, ma'am. --- Purely professional."
+        },
+        {
+          "speaker": "comet",
+          "text": "My hero. Make yourself at home. Take your coat off. You'll want to.",
+          "spoken": "My hero. - Make yourself at home. - Take your coat off. --- You'll want to."
+        },
+        {
+          "speaker": "tiny",
+          "text": "I kept my coat on. A detective's coat is his armor. Also it was the only thing keeping me from being a puddle.",
+          "spoken": "I kept my coat on. -- A detective's coat is his armor. ---- Also it was the only thing keeping me from being a puddle."
+        }
+      ]
+    },
+    "apt_puddles": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Puddles. In every corner. Under every chair. One of them was wearing a mitten.",
+          "spoken": "Puddles. -- In every corner. -- Under every chair. ---- One of them was wearing a mitten."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Leaky radiator, probably. Old building. These things happen.",
+          "spoken": "Leaky radiator, probably. -- Old building. ---- These things happen."
+        }
+      ]
+    },
+    "apt_hottub": {
+      "lines": [
+        {
+          "speaker": "comet",
+          "text": "Oh, don't mind that. It's decorative.",
+          "spoken": "Oh, don't mind that. - It's decorative."
+        },
+        {
+          "speaker": "tiny",
+          "text": "It was bubbling. It was steaming. A rubber duck floated in it, belly up.",
+          "spoken": "It was bubbling. -- It was steaming. ---- A rubber duck floated in it, belly up."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Decorative. Sure. I've seen stranger things in a dame's living room. Not many.",
+          "spoken": "Decorative. -- Sure. -- I've seen stranger things in a dame's living room. ---- Not many."
+        }
+      ]
+    },
+    "apt_to_shrine": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "A door at the back stood half open. Behind it, something glinted. Something hat-shaped.",
+          "spoken": "A door at the back stood half open. -- Behind it, something glinted. ---- Something hat-shaped."
+        }
+      ]
+    },
+    "shrine_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The back room. Candles everywhere. And on every wall, every shelf, every surface: top hats. Scarves. Carrots.",
+          "spoken": "The back room. -- Candles everywhere. -- And on every wall, every shelf, every surface: top hats. -- Scarves. ---- Carrots."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Dozens of them. Lined up neat. Labeled with dates.",
+          "spoken": "Dozens of them. -- Lined up neat. ---- Labeled with dates."
+        }
+      ]
+    },
+    "shrine_hats": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "A collector. Some dames collect stamps. Some collect spoons. This one collected snowman accessories.",
+          "spoken": "A collector. -- Some dames collect stamps. -- Some collect spoons. ---- This one collected snowman accessories."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Harmless hobby. Everybody needs one. Mine is solving crimes, very slowly.",
+          "spoken": "Harmless hobby. -- Everybody needs one. ---- Mine is solving crimes, very slowly."
+        }
+      ]
+    },
+    "shrine_sleet": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "In the corner, a fresh puddle. A flat cap floating in it. An oversized scarf, soaking wet.",
+          "spoken": "In the corner, a fresh puddle. -- A flat cap floating in it. ---- An oversized scarf, soaking wet."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Somebody had left their winter clothes in the wet. Kids today. No respect for knitwear.",
+          "spoken": "Somebody had left their winter clothes in the wet. -- Kids today. ---- No respect for knitwear."
+        }
+      ]
+    },
+    "shrine_mirror": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Through the tinsel goggles, the mirror lit up like a pinball machine.",
+          "spoken": "Through the tinsel goggles, the mirror lit up like a pinball machine."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Lipstick kisses. Dozens of them. Each one scorched right into the glass.",
+          "spoken": "Lipstick kisses. -- Dozens of them. ---- Each one scorched right into the glass."
+        },
+        {
+          "speaker": "tiny",
+          "text": "She must really like mirrors. Or herself. Or both. I wasn't here to judge. I was here to return a gym bag.",
+          "spoken": "She must really like mirrors. -- Or herself. -- Or both. -- I wasn't here to judge. ---- I was here to return a gym bag."
+        }
+      ]
+    },
+    "shrine_boost": {
+      "lines": [
+        {
+          "speaker": "comet",
+          "text": "Need a lift, sugar? Up you go.",
+          "spoken": "Need a lift, sugar? - Up you go."
+        },
+        {
+          "speaker": "tiny",
+          "text": "She lifted me toward the top shelf. My coat started smoking. I told myself it was a style choice.",
+          "spoken": "She lifted me toward the top shelf. -- My coat started smoking. ---- I told myself it was a style choice."
+        }
+      ]
+    },
+    "shrine_scrapbook": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "A scrapbook. Leather. Warm to the touch. I opened it.",
+          "spoken": "A scrapbook. -- Leather. -- Warm to the touch. ---- I opened it."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Page one. A snowman in a bow tie, 1938. Page two. A puddle, in a bow tie.",
+          "spoken": "Page one. -- A snowman in a bow tie, 1938. -- Page two. ---- A puddle, in a bow tie."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Page three. A snowman in a sailor hat. Page four. A puddle, in a sailor hat.",
+          "spoken": "Page three. -- A snowman in a sailor hat. -- Page four. ---- A puddle, in a sailor hat."
+        },
+        {
+          "speaker": "tiny",
+          "text": "The last page. Jimmy Mittens, smiling, last night. And next to it, a blank space. Waiting.",
+          "spoken": "The last page. -- Jimmy Mittens, smiling, last night. -- And next to it, a blank space. ---- Waiting."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And then it hit me. Not like a sleigh. Like the whole team.",
+          "spoken": "And then it hit me. -- Not like a sleigh. ---- Like the whole team."
+        },
+        {
+          "speaker": "comet",
+          "text": "I've got a sleigh to catch, sugar. Roof's this way.",
+          "spoken": "I've got a sleigh to catch, sugar. - Roof's this way."
+        }
+      ]
+    },
+    "shrine_to_roof": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "She went up the fire escape. I followed. It took a while. The steps were very far apart.",
+          "spoken": "She went up the fire escape. -- I followed. -- It took a while. ---- The steps were very far apart."
+        }
+      ]
+    },
+    "roof_enter": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "The roof of the Ember Arms. Snow coming down, stars coming out, and the whole North Pole glittering below.",
+          "spoken": "The roof of the Ember Arms. --- Snow coming down, stars coming out, and the whole North Pole glittering below."
+        },
+        {
+          "speaker": "granny",
+          "text": "Detective! Wait! I came as fast as I could! I took the bus!",
+          "spoken": "Detective! - Wait! - I came as fast as I could! --- I took the bus!"
+        },
+        {
+          "speaker": "tiny",
+          "text": "Granny Slush. Right on time. Every great reveal needs an audience. Mine had two.",
+          "spoken": "Granny Slush. -- Right on time. -- Every great reveal needs an audience. ---- Mine had two."
+        }
+      ]
+    },
+    "roof_reveal": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Ladies. Reindeer. Gather round.",
+          "spoken": "Ladies. -- Reindeer. ---- Gather round."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Jimmy Mittens didn't slip in that alley. He didn't wander off. He didn't take an early spring.",
+          "spoken": "Jimmy Mittens didn't slip in that alley. -- He didn't wander off. ---- He didn't take an early spring."
+        },
+        {
+          "speaker": "tiny",
+          "text": "He was melted.",
+          "spoken": "He was melted."
+        },
+        {
+          "speaker": "tiny",
+          "text": "I know. Take a minute. I'll wait.",
+          "spoken": "I know. -- Take a minute. ---- I'll wait."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Exhibit A. A puddle. Snowmen don't just turn into puddles. Not without heat. A great deal of heat.",
+          "spoken": "Exhibit A. -- A puddle. -- Snowmen don't just turn into puddles. -- Not without heat. ---- A great deal of heat."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Exhibit B. Scorch marks. Shaped like hooves. Four of them. Which, if you count, is exactly how many hooves a reindeer has.",
+          "spoken": "Exhibit B. -- Scorch marks. -- Shaped like hooves. -- Four of them. ---- Which, if you count, is exactly how many hooves a reindeer has."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Exhibit C. A lipstick kiss, still smoking, at exactly snowman-head height.",
+          "spoken": "Exhibit C. --- A lipstick kiss, still smoking, at exactly snowman-head height."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Exhibit D. A reserved card. 'J. Mittens, plus C.' Exhibit E. A gym bag. 'Return to C.' Exhibit F. This building. Where C lives.",
+          "spoken": "Exhibit D. -- A reserved card. -- 'J. -- Mittens, plus C.' Exhibit E. -- A gym bag. -- 'Return to C.' Exhibit F. -- This building. ---- Where C lives."
+        },
+        {
+          "speaker": "tiny",
+          "text": "And Exhibit G. The killer's hooves. They are, and I cannot stress this enough, on fire.",
+          "spoken": "And Exhibit G. -- The killer's hooves. ---- They are, and I cannot stress this enough, on fire."
+        },
+        {
+          "speaker": "tiny",
+          "text": "The killer is someone hot. Someone fast. Someone whose name starts with C and ends with 'omet.'",
+          "spoken": "The killer is someone hot. -- Someone fast. ---- Someone whose name starts with C and ends with 'omet.'"
+        },
+        {
+          "speaker": "tiny",
+          "text": "The killer is you. Comet.",
+          "spoken": "The killer is you. --- Comet."
+        },
+        {
+          "speaker": "comet",
+          "text": "Took you long enough, sugar.",
+          "spoken": "Took you long enough, sugar."
+        },
+        {
+          "speaker": "tiny",
+          "text": "It took me all night, a bus ride, and a carrot cartel. But I got there.",
+          "spoken": "It took me all night, a bus ride, and a carrot cartel. --- But I got there."
+        }
+      ]
+    },
+    "roof_granny": {
+      "lines": [
+        {
+          "speaker": "granny",
+          "text": "My Jimmy? With her? Oh, I told him. I told him he had a snowball's chance in hell.",
+          "spoken": "My Jimmy? - With her? - Oh, I told him. --- I told him he had a snowball's chance in hell."
+        },
+        {
+          "speaker": "granny",
+          "text": "Oh. Oh, I see it now.",
+          "spoken": "Oh. - Oh, I see it now."
+        },
+        {
+          "speaker": "comet",
+          "text": "He was sweet, Granny. They're all sweet. Then they get a little soft around the edges.",
+          "spoken": "He was sweet, Granny. - They're all sweet. --- Then they get a little soft around the edges."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Case closed. Or so I thought. Then a shadow fell across the roof. A very large shadow. With antlers.",
+          "spoken": "Case closed. -- Or so I thought. -- Then a shadow fell across the roof. -- A very large shadow. ---- With antlers."
+        }
+      ]
+    },
+    "roof_sleigh": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "A sleigh came down out of the clouds and landed on the roof like it owned the place. Which, technically, it did.",
+          "spoken": "A sleigh came down out of the clouds and landed on the roof like it owned the place. --- Which, technically, it did."
+        }
+      ]
+    },
+    "santa_enter": {
+      "lines": [
+        {
+          "speaker": "santa",
+          "text": "Ho. Ho. Ho.",
+          "spoken": "Ho. ---- Ho. ---- Ho."
+        },
+        {
+          "speaker": "tiny",
+          "text": "Santa Claus. The big man. The boss of the whole North Pole. In person, and in a very nice suit.",
+          "spoken": "Santa Claus. -- The big man. -- The boss of the whole North Pole. ---- In person, and in a very nice suit."
+        },
+        {
+          "speaker": "santa",
+          "text": "Good work, detective. I know. I have always known.",
+          "spoken": "Good work, detective. -- I know. ---- I have always known."
+        }
+      ]
+    },
+    "santa_knew": {
+      "lines": [
+        {
+          "speaker": "santa",
+          "text": "I see you when you're sleeping. I know when you're awake. I knew when Jimmy Mittens sat down beside a reindeer whose feet were on fire.",
+          "spoken": "I see you when you're sleeping. -- I know when you're awake. ---- I knew when Jimmy Mittens sat down beside a reindeer whose feet were on fire."
+        },
+        {
+          "speaker": "tiny",
+          "text": "You knew? The whole time?",
+          "spoken": "You knew? --- The whole time?"
+        },
+        {
+          "speaker": "santa",
+          "text": "I keep a list. I check it twice. Comet has been on it, in red ink, since 1938.",
+          "spoken": "I keep a list. -- I check it twice. ---- Comet has been on it, in red ink, since 1938."
+        },
+        {
+          "speaker": "santa",
+          "text": "And yet, it is Christmas Eve. And she is the warmest thing in the sky.",
+          "spoken": "And yet, it is Christmas Eve. --- And she is the warmest thing in the sky."
+        },
+        {
+          "speaker": "santa",
+          "text": "Comet. Harness. Front left.",
+          "spoken": "Comet. -- Harness. ---- Front left."
+        },
+        {
+          "speaker": "comet",
+          "text": "Yes, boss.",
+          "spoken": "Yes, boss."
+        }
+      ]
+    },
+    "santa_final": {
+      "lines": [
+        {
+          "speaker": "tiny",
+          "text": "Just like that, she was hitched to the sleigh. Front left. Somewhere, Donner and Blitzen felt a disturbance.",
+          "spoken": "Just like that, she was hitched to the sleigh. -- Front left. ---- Somewhere, Donner and Blitzen felt a disturbance."
+        },
+        {
+          "speaker": "granny",
+          "text": "Well. You found him, dear. Most of him.",
+          "spoken": "Well. - You found him, dear. --- Most of him."
+        },
+        {
+          "speaker": "tiny",
+          "text": "I looked up at the big man. Way, way up. It's the only direction I know.",
+          "spoken": "I looked up at the big man. -- Way, way up. ---- It's the only direction I know."
+        },
+        {
+          "speaker": "santa",
+          "text": "Merry Christmas, Tiny Hightower. Be good. I'll know.",
+          "spoken": "Merry Christmas, Tiny Hightower. -- Be good. ---- I'll know."
+        }
+      ]
+    }
+  }
+}

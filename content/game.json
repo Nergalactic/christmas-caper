@@ -33,6 +33,11 @@
       "id": "chapter2",
       "title": "Chapter 2: The Reindeer Games",
       "file": "chapter2.json"
+    },
+    {
+      "id": "chapter3",
+      "title": "Chapter 3: The Ember Arms",
+      "file": "chapter3.json"
     }
   ]
 }

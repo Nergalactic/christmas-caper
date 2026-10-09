@@ -79,18 +79,15 @@ Comet leaves the lounge for practice, and Tiny follows to the training grounds. 
 
 Panoramas: the track, the launch runway, the snack stand.
 
-### Chapter 3: Comet's Apartment
-**Speaking cast (locked): Tiny, Comet, Granny, and Santa.** No other character speaks in Chapter 3, so every Chapter 1 and Chapter 2 voice except Tiny, Comet, and Granny can be retired once its lines are recorded. Sgt. Snap does not return.
+### Chapter 3: The Ember Arms
+**Speaking cast (locked): Tiny, Comet, Granny, and Santa.** Every other voice can be retired once its lines are recorded.
 
-**Santa, surprise guest:** appears after the case closes. Played as a dead-serious, all-knowing mastermind. He knew it was Comet all along (he sees you when you're sleeping, he knows when you're awake) and simply never said anything. Ominous, a little too much for a jolly old elf.
+- **Apartment Nine (living room):** Tiny returns the gym bag. Ninety degrees inside. Puddles everywhere (one wearing a mitten): "leaky radiator." The hot tub is "decorative," with a belly-up rubber duck.
+- **The back room (shrine):** walls of top hats, scarves, and carrots, labeled with dates ("a collector"). Lil' Sleet's silent callback: a fresh puddle with a flat cap and oversized scarf ("kids today, no respect for knitwear"). Goggles: dozens of lipstick kisses scorched into the mirror. Comet boosts Tiny to the scrapbook (his coat smokes): a snowman, then a puddle in the same hat, page after page, since 1938, ending with Jimmy last night and a blank space waiting. Comet leaves to catch the sleigh.
+- **The roof:** Granny bursts in ("I took the bus!"). Tiny's full Poirot monologue, Exhibits A through G, each painfully obvious clue treated as a revelation ("Four of them. Which, if you count, is exactly how many hooves a reindeer has."). Comet: "Took you long enough, sugar." Granny finally connects "a snowball's chance in hell."
+- **The roof, with Santa (second panorama):** the sleigh lands. Santa, a dead-serious noir crime boss, knew all along: Comet has been on the list in red ink since 1938. But it's Christmas Eve, and she's the warmest thing in the sky: "Comet. Harness. Front left." (Donner and Blitzen feel a disturbance.) Last line, Santa: "Merry Christmas, Tiny Hightower. Be good. I'll know." End card: "Case closed."
 
-Tiny visits Comet's place to "take a witness statement." It's 90 degrees inside. Puddles in every corner. A shrine of top hats and scarves. A hot tub she insists is "decorative."
-
-Lil' Sleet's silent callback: somewhere in the apartment, Tiny finds a second puddle wearing a flat cap and an oversized scarf. He has no lines (his voice has been retired), and Tiny still doesn't connect it to anything.
-
-The final clue, Comet's scrapbook of melted exes, sits on a high shelf. The game ends when Tiny finally gets a boost and reaches it.
-
-Target: 2 to 3 panoramas.
+Panoramas: apartment, shrine, rooftop, rooftop with Santa.
 
 ### Ending
 One true ending. No wrong accusations, no branches. Tiny reaches the scrapbook and confronts Comet in a stupidly over-the-top big reveal: he walks everyone through what happened, step by step, treating every painfully obvious clue (the flaming hooves, the scorch marks, the smoking kiss, the puddles) as a stunning revelation nobody could have seen coming.
