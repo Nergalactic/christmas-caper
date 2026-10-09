@@ -53,7 +53,7 @@ The design calls for exactly one way forward at any moment. `npm run check` warn
 }
 ```
 
-Each line is one subtitle and one voice clip. Line *i* plays clip *i* of that beat's entry in `content/audio/narration/manifest.json`.
+Each line is one subtitle and one voice clip. An optional `spoken` field holds the version to paste into ElevenLabs, with dashes as pauses (`-` short through `----` long); subtitles always show `text`. Line *i* plays clip *i* of that beat's entry in `content/audio/narration/manifest.json`.
 
 ## Voicing
 

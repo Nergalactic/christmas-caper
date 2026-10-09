@@ -242,11 +242,13 @@
         },
         {
           "speaker": "granny",
-          "text": "Oh! Oh, my. I've been talking to your coat rack."
+          "text": "Oh! Oh, my. I've been talking to your coat rack.",
+          "spoken": "Oh! - Oh, my. --- I've been talking to your coat rack."
         },
         {
           "speaker": "tiny",
-          "text": "Happens a lot. The coat rack's solved two cases."
+          "text": "Happens a lot. The coat rack's solved two cases.",
+          "spoken": "Happens a lot. --- The coat rack's solved two cases."
         }
       ]
     },
@@ -254,11 +256,13 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "She was leaving a little puddle everywhere she stood. Old snow does that."
+          "text": "She was leaving a little puddle everywhere she stood. Old snow does that.",
+          "spoken": "She was leaving a little puddle everywhere she stood. --- Old snow does that."
         },
         {
           "speaker": "tiny",
-          "text": "I made a mental note to forget it."
+          "text": "I made a mental note to forget it.",
+          "spoken": "I made a mental note to forget it."
         }
       ]
     },
@@ -266,27 +270,33 @@
       "lines": [
         {
           "speaker": "granny",
-          "text": "It's my son, Jimmy. He sings at the Mistletoe Lounge. He didn't come home last night."
+          "text": "It's my son, Jimmy. He sings at the Mistletoe Lounge. He didn't come home last night.",
+          "spoken": "It's my son, Jimmy. - He sings at the Mistletoe Lounge. --- He didn't come home last night."
         },
         {
           "speaker": "granny",
-          "text": "He calls himself Jimmy Mittens now. For show business. His real name is Jimmy Slush, like his father, may he rest in the freezer."
+          "text": "He calls himself Jimmy Mittens now. For show business. His real name is Jimmy Slush, like his father, may he rest in the freezer.",
+          "spoken": "He calls himself Jimmy Mittens now. - For show business. --- His real name is Jimmy Slush, like his father, may he rest in the freezer."
         },
         {
           "speaker": "tiny",
-          "text": "A stage name. Every crooner's got one. Every crooner's also got enemies."
+          "text": "A stage name. Every crooner's got one. Every crooner's also got enemies.",
+          "spoken": "A stage name. -- Every crooner's got one. ---- Every crooner's also got enemies."
         },
         {
           "speaker": "granny",
-          "text": "I told him he had a snowball's chance in hell in show business. He never listened."
+          "text": "I told him he had a snowball's chance in hell in show business. He never listened.",
+          "spoken": "I told him he had a snowball's chance in hell in show business. - He never listened."
         },
         {
           "speaker": "tiny",
-          "text": "I weighed my options. I could take the case. I could take the case. Or, and hear me out, I could take the case."
+          "text": "I weighed my options. I could take the case. I could take the case. Or, and hear me out, I could take the case.",
+          "spoken": "I weighed my options. -- I could take the case. -- I could take the case. ---- Or, and hear me out, I could take the case."
         },
         {
           "speaker": "tiny",
-          "text": "It was agonizing. I took the case."
+          "text": "It was agonizing. I took the case.",
+          "spoken": "It was agonizing. --- I took the case."
         }
       ]
     },
@@ -294,15 +304,18 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The bottom drawer. The only drawer I can reach. Inside, my most trusted instrument."
+          "text": "The bottom drawer. The only drawer I can reach. Inside, my most trusted instrument.",
+          "spoken": "The bottom drawer. -- The only drawer I can reach. ---- Inside, my most trusted instrument."
         },
         {
           "speaker": "tiny",
-          "text": "Tinsel goggles. Military grade. Okay, party grade. But they see things the naked eye can't."
+          "text": "Tinsel goggles. Military grade. Okay, party grade. But they see things the naked eye can't.",
+          "spoken": "Tinsel goggles. -- Military grade. -- Okay, party grade. ---- But they see things the naked eye can't."
         },
         {
           "speaker": "tiny",
-          "text": "Mostly sparkles. But also things."
+          "text": "Mostly sparkles. But also things.",
+          "spoken": "Mostly sparkles. --- But also things."
         }
       ]
     },
@@ -310,11 +323,13 @@
       "lines": [
         {
           "speaker": "granny",
-          "text": "Do you need a lift, dear? Or a ride? Or a step stool?"
+          "text": "Do you need a lift, dear? Or a ride? Or a step stool?",
+          "spoken": "Do you need a lift, dear? - Or a ride? --- Or a step stool?"
         },
         {
           "speaker": "tiny",
-          "text": "I'll take the stairs, ma'am. All forty of them. Each one up to my chin."
+          "text": "I'll take the stairs, ma'am. All forty of them. Each one up to my chin.",
+          "spoken": "I'll take the stairs, ma'am. -- All forty of them. ---- Each one up to my chin."
         }
       ]
     },
@@ -322,11 +337,13 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Outside, the snow was falling sideways, like it was trying to leave town too."
+          "text": "Outside, the snow was falling sideways, like it was trying to leave town too.",
+          "spoken": "Outside, the snow was falling sideways, like it was trying to leave town too."
         },
         {
           "speaker": "tiny",
-          "text": "The Mistletoe Lounge was six blocks away. For a regular guy, that's a stroll. For me, that's a pilgrimage."
+          "text": "The Mistletoe Lounge was six blocks away. For a regular guy, that's a stroll. For me, that's a pilgrimage.",
+          "spoken": "The Mistletoe Lounge was six blocks away. -- For a regular guy, that's a stroll. ---- For me, that's a pilgrimage."
         }
       ]
     },
@@ -334,15 +351,18 @@
       "lines": [
         {
           "speaker": "granny",
-          "text": "I'm coming with you. Jimmy's my boy."
+          "text": "I'm coming with you. Jimmy's my boy.",
+          "spoken": "I'm coming with you. - Jimmy's my boy."
         },
         {
           "speaker": "tiny",
-          "text": "It could get dangerous, ma'am."
+          "text": "It could get dangerous, ma'am.",
+          "spoken": "It could get dangerous, ma'am."
         },
         {
           "speaker": "granny",
-          "text": "Dear, I'm eighty-seven and made of snow. Everything is dangerous."
+          "text": "Dear, I'm eighty-seven and made of snow. Everything is dangerous.",
+          "spoken": "Dear, I'm eighty-seven and made of snow. - Everything is dangerous."
         }
       ]
     },
@@ -350,15 +370,18 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Two paths lay before me. Walk six blocks. Or take the bus."
+          "text": "Two paths lay before me. Walk six blocks. Or take the bus.",
+          "spoken": "Two paths lay before me. -- Walk six blocks. ---- Or take the bus."
         },
         {
           "speaker": "tiny",
-          "text": "Walking meant freedom. The bus meant a seat. I ran the numbers. Then I ran them again. Then I lost count."
+          "text": "Walking meant freedom. The bus meant a seat. I ran the numbers. Then I ran them again. Then I lost count.",
+          "spoken": "Walking meant freedom. -- The bus meant a seat. -- I ran the numbers. -- Then I ran them again. ---- Then I lost count."
         },
         {
           "speaker": "tiny",
-          "text": "I took the bus. A man's gotta know his limits. Mine are about three feet."
+          "text": "I took the bus. A man's gotta know his limits. Mine are about three feet.",
+          "spoken": "I took the bus. -- A man's gotta know his limits. ---- Mine are about three feet."
         }
       ]
     },
@@ -366,7 +389,8 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The bus stop. Where this city's lost souls wait for the eleven fifteen that always shows up at eleven forty."
+          "text": "The bus stop. Where this city's lost souls wait for the eleven fifteen that always shows up at eleven forty.",
+          "spoken": "The bus stop. --- Where this city's lost souls wait for the eleven fifteen that always shows up at eleven forty."
         }
       ]
     },
@@ -374,23 +398,28 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The bus pulled up. The first step came up to my eyebrows."
+          "text": "The bus pulled up. The first step came up to my eyebrows.",
+          "spoken": "The bus pulled up. --- The first step came up to my eyebrows."
         },
         {
           "speaker": "granny",
-          "text": "Up you go, dear. My, you had a snowball's chance in hell with that step."
+          "text": "Up you go, dear. My, you had a snowball's chance in hell with that step.",
+          "spoken": "Up you go, dear. - My, you had a snowball's chance in hell with that step."
         },
         {
           "speaker": "tiny",
-          "text": "We rode in silence. The city slid past the window. Six blocks. The longest six blocks of my life."
+          "text": "We rode in silence. The city slid past the window. Six blocks. The longest six blocks of my life.",
+          "spoken": "We rode in silence. -- The city slid past the window. -- Six blocks. ---- The longest six blocks of my life."
         },
         {
           "speaker": "tiny",
-          "text": "Around block three, I questioned everything. By block four, I had answers. By block five, I'd forgotten them."
+          "text": "Around block three, I questioned everything. By block four, I had answers. By block five, I'd forgotten them.",
+          "spoken": "Around block three, I questioned everything. -- By block four, I had answers. ---- By block five, I'd forgotten them."
         },
         {
           "speaker": "tiny",
-          "text": "Block six. Our stop. Granny pulled the cord. I pointed at it with authority."
+          "text": "Block six. Our stop. Granny pulled the cord. I pointed at it with authority.",
+          "spoken": "Block six. -- Our stop. -- Granny pulled the cord. ---- I pointed at it with authority."
         }
       ]
     },
@@ -398,15 +427,18 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The alley behind the Mistletoe Lounge. The band was still playing Jimmy's song through the wall, like nothing happened."
+          "text": "The alley behind the Mistletoe Lounge. The band was still playing Jimmy's song through the wall, like nothing happened.",
+          "spoken": "The alley behind the Mistletoe Lounge. --- The band was still playing Jimmy's song through the wall, like nothing happened."
         },
         {
           "speaker": "tiny",
-          "text": "Police tape. A gingerbread cop. And a lady reindeer, warm as a July sidewalk, chatting up a snowman by the dumpster."
+          "text": "Police tape. A gingerbread cop. And a lady reindeer, warm as a July sidewalk, chatting up a snowman by the dumpster.",
+          "spoken": "Police tape. -- A gingerbread cop. ---- And a lady reindeer, warm as a July sidewalk, chatting up a snowman by the dumpster."
         },
         {
           "speaker": "tiny",
-          "text": "Just another night in the big icy."
+          "text": "Just another night in the big icy.",
+          "spoken": "Just another night in the big icy."
         }
       ]
     },
@@ -414,27 +446,33 @@
       "lines": [
         {
           "speaker": "sgt_snap",
-          "text": "Whoa, whoa. Crime scene. No civilians. Sergeant Snap, North Pole PD."
+          "text": "Whoa, whoa. Crime scene. No civilians. Sergeant Snap, North Pole PD.",
+          "spoken": "Whoa, whoa. - Crime scene. - No civilians. --- Sergeant Snap, North Pole PD."
         },
         {
           "speaker": "tiny",
-          "text": "Tiny Hightower. Private."
+          "text": "Tiny Hightower. Private.",
+          "spoken": "Tiny Hightower. --- Private."
         },
         {
           "speaker": "sgt_snap",
-          "text": "Private what? Where are you even... oh. Down there."
+          "text": "Private what? Where are you even... oh. Down there.",
+          "spoken": "Private what? - Where are you even --- oh. --- Down there."
         },
         {
           "speaker": "sgt_snap",
-          "text": "Look, pal, it's open and shut. Snowman goes out, snowman doesn't come back. Happens every spring."
+          "text": "Look, pal, it's open and shut. Snowman goes out, snowman doesn't come back. Happens every spring.",
+          "spoken": "Look, pal, it's open and shut. - Snowman goes out, snowman doesn't come back. --- Happens every spring."
         },
         {
           "speaker": "tiny",
-          "text": "It's December, sergeant."
+          "text": "It's December, sergeant.",
+          "spoken": "It's December, sergeant."
         },
         {
           "speaker": "sgt_snap",
-          "text": "Don't push me, pal. I'm already crumbling under the pressure. Literally. That was my elbow."
+          "text": "Don't push me, pal. I'm already crumbling under the pressure. Literally. That was my elbow.",
+          "spoken": "Don't push me, pal. - I'm already crumbling under the pressure. - Literally. --- That was my elbow."
         }
       ]
     },
@@ -442,19 +480,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "There he was. Or there he wasn't. A top hat. A scarf. A carrot. Two lumps of coal, staring up at me."
+          "text": "There he was. Or there he wasn't. A top hat. A scarf. A carrot. Two lumps of coal, staring up at me.",
+          "spoken": "There he was. -- Or there he wasn't. -- A top hat. -- A scarf. -- A carrot. ---- Two lumps of coal, staring up at me."
         },
         {
           "speaker": "granny",
-          "text": "Oh, Jimmy. My poor baby. You always did spread yourself too thin."
+          "text": "Oh, Jimmy. My poor baby. You always did spread yourself too thin.",
+          "spoken": "Oh, Jimmy. - My poor baby. --- You always did spread yourself too thin."
         },
         {
           "speaker": "tiny",
-          "text": "A puddle. Could mean anything. Rain. A spilled drink. A very sad cloud."
+          "text": "A puddle. Could mean anything. Rain. A spilled drink. A very sad cloud.",
+          "spoken": "A puddle. -- Could mean anything. -- Rain. -- A spilled drink. ---- A very sad cloud."
         },
         {
           "speaker": "tiny",
-          "text": "I wasn't ruling anything out. Except the obvious. I always rule out the obvious. It's too obvious."
+          "text": "I wasn't ruling anything out. Except the obvious. I always rule out the obvious. It's too obvious.",
+          "spoken": "I wasn't ruling anything out. -- Except the obvious. -- I always rule out the obvious. ---- It's too obvious."
         }
       ]
     },
@@ -462,31 +504,38 @@
       "lines": [
         {
           "speaker": "comet",
-          "text": "Well, hello there, little man. Somebody call a detective?"
+          "text": "Well, hello there, little man. Somebody call a detective?",
+          "spoken": "Well, hello there, little man. - Somebody call a detective?"
         },
         {
           "speaker": "tiny",
-          "text": "From down here, all I could see of her were her hooves. They were on fire. Probably a fashion thing."
+          "text": "From down here, all I could see of her were her hooves. They were on fire. Probably a fashion thing.",
+          "spoken": "From down here, all I could see of her were her hooves. -- They were on fire. ---- Probably a fashion thing."
         },
         {
           "speaker": "comet",
-          "text": "I'm Comet. Poor Jimmy. We were... acquainted. He was a real cool guy. Before."
+          "text": "I'm Comet. Poor Jimmy. We were... acquainted. He was a real cool guy. Before.",
+          "spoken": "I'm Comet. - Poor Jimmy. - We were --- acquainted. - He was a real cool guy. --- Before."
         },
         {
           "speaker": "lil_sleet",
-          "text": "H-hi. I'm Lil' Sleet. Big fan of Jimmy's. Is it hot out here, or is it just me?"
+          "text": "H-hi. I'm Lil' Sleet. Big fan of Jimmy's. Is it hot out here, or is it just me?",
+          "spoken": "H-hi. - I'm Lil' Sleet. - Big fan of Jimmy's. --- Is it hot out here, or is it just me?"
         },
         {
           "speaker": "comet",
-          "text": "It's just you, sugar."
+          "text": "It's just you, sugar.",
+          "spoken": "It's just you, sugar."
         },
         {
           "speaker": "tiny",
-          "text": "The kid was sweating bullets. Big, wet, drippy bullets. Nerves, probably. Murder does that to people."
+          "text": "The kid was sweating bullets. Big, wet, drippy bullets. Nerves, probably. Murder does that to people.",
+          "spoken": "The kid was sweating bullets. -- Big, wet, drippy bullets. -- Nerves, probably. ---- Murder does that to people."
         },
         {
           "speaker": "tiny",
-          "text": "Something about this alley didn't add up. Time for the goggles."
+          "text": "Something about this alley didn't add up. Time for the goggles.",
+          "spoken": "Something about this alley didn't add up. --- Time for the goggles."
         }
       ]
     },
@@ -494,19 +543,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "With the tinsel goggles on, the alley lit up like a department store window."
+          "text": "With the tinsel goggles on, the alley lit up like a department store window.",
+          "spoken": "With the tinsel goggles on, the alley lit up like a department store window."
         },
         {
           "speaker": "tiny",
-          "text": "Scorch marks. Shaped like hooves. A trail of them, leading up to the puddle, and then over to the dumpster."
+          "text": "Scorch marks. Shaped like hooves. A trail of them, leading up to the puddle, and then over to the dumpster.",
+          "spoken": "Scorch marks. -- Shaped like hooves. ---- A trail of them, leading up to the puddle, and then over to the dumpster."
         },
         {
           "speaker": "tiny",
-          "text": "Somebody'd been having a barbecue back here. In a blizzard. The plot thickened, like gravy."
+          "text": "Somebody'd been having a barbecue back here. In a blizzard. The plot thickened, like gravy.",
+          "spoken": "Somebody'd been having a barbecue back here. -- In a blizzard. ---- The plot thickened, like gravy."
         },
         {
           "speaker": "tiny",
-          "text": "And up on the wall, way out of reach, something was smoking."
+          "text": "And up on the wall, way out of reach, something was smoking.",
+          "spoken": "And up on the wall, way out of reach, something was smoking."
         }
       ]
     },
@@ -514,7 +567,8 @@
       "lines": [
         {
           "speaker": "granny",
-          "text": "Hold still, dear. Up we go. Oof. You had a snowball's chance in hell of reaching that on your own."
+          "text": "Hold still, dear. Up we go. Oof. You had a snowball's chance in hell of reaching that on your own.",
+          "spoken": "Hold still, dear. - Up we go. - Oof. --- You had a snowball's chance in hell of reaching that on your own."
         }
       ]
     },
@@ -522,19 +576,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Up close, I saw it. A lipstick kiss on the brick, right about where a snowman's face would be. Still smoking."
+          "text": "Up close, I saw it. A lipstick kiss on the brick, right about where a snowman's face would be. Still smoking.",
+          "spoken": "Up close, I saw it. -- A lipstick kiss on the brick, right about where a snowman's face would be. ---- Still smoking."
         },
         {
           "speaker": "tiny",
-          "text": "Warm to the touch. Very warm. Ow."
+          "text": "Warm to the touch. Very warm. Ow.",
+          "spoken": "Warm to the touch. -- Very warm. ---- Ow."
         },
         {
           "speaker": "tiny",
-          "text": "Whoever kissed Jimmy last left their mark. And then they left him a puddle."
+          "text": "Whoever kissed Jimmy last left their mark. And then they left him a puddle.",
+          "spoken": "Whoever kissed Jimmy last left their mark. --- And then they left him a puddle."
         },
         {
           "speaker": "tiny",
-          "text": "I had a theory. A big one. I'd tell you, but I'm saving it."
+          "text": "I had a theory. A big one. I'd tell you, but I'm saving it.",
+          "spoken": "I had a theory. -- A big one. ---- I'd tell you, but I'm saving it."
         }
       ]
     },
@@ -542,19 +600,23 @@
       "lines": [
         {
           "speaker": "granny",
-          "text": "Well? Do you know who did this to my Jimmy?"
+          "text": "Well? Do you know who did this to my Jimmy?",
+          "spoken": "Well? - Do you know who did this to my Jimmy?"
         },
         {
           "speaker": "tiny",
-          "text": "I have several leads, ma'am. All of them point inside that lounge. One of them points at the dumpster."
+          "text": "I have several leads, ma'am. All of them point inside that lounge. One of them points at the dumpster.",
+          "spoken": "I have several leads, ma'am. -- All of them point inside that lounge. ---- One of them points at the dumpster."
         },
         {
           "speaker": "granny",
-          "text": "Find who did this. Or I'll find a detective who can reach the doorbell."
+          "text": "Find who did this. Or I'll find a detective who can reach the doorbell.",
+          "spoken": "Find who did this. - Or I'll find a detective who can reach the doorbell."
         },
         {
           "speaker": "tiny",
-          "text": "I looked up at the Mistletoe Lounge. Way, way up. Somewhere in there was a killer. And hopefully a step stool."
+          "text": "I looked up at the Mistletoe Lounge. Way, way up. Somewhere in there was a killer. And hopefully a step stool.",
+          "spoken": "I looked up at the Mistletoe Lounge. -- Way, way up. -- Somewhere in there was a killer. ---- And hopefully a step stool."
         }
       ]
     }

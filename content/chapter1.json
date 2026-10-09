@@ -157,19 +157,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The front door of the Mistletoe Lounge. The doorbell was up where the tall people keep their secrets."
+          "text": "The front door of the Mistletoe Lounge. The doorbell was up where the tall people keep their secrets.",
+          "spoken": "The front door of the Mistletoe Lounge. --- The doorbell was up where the tall people keep their secrets."
         },
         {
           "speaker": "granny",
-          "text": "Oh, for goodness' sake. I'll ring it. I'll wait out here, dear. Jazz gives me the drips."
+          "text": "Oh, for goodness' sake. I'll ring it. I'll wait out here, dear. Jazz gives me the drips.",
+          "spoken": "Oh, for goodness' sake. - I'll ring it. - I'll wait out here, dear. --- Jazz gives me the drips."
         },
         {
           "speaker": "tiny",
-          "text": "Inside, the place was dark and warm and full of people pretending they weren't watching the door. Nobody watched me. Nobody ever does. It's my edge."
+          "text": "Inside, the place was dark and warm and full of people pretending they weren't watching the door. Nobody watched me. Nobody ever does. It's my edge.",
+          "spoken": "Inside, the place was dark and warm and full of people pretending they weren't watching the door. -- Nobody watched me. -- Nobody ever does. ---- It's my edge."
         },
         {
           "speaker": "tiny",
-          "text": "Up on stage, somebody new was singing in Jimmy's spotlight. The body wasn't even cold. Well. The body wasn't even a body."
+          "text": "Up on stage, somebody new was singing in Jimmy's spotlight. The body wasn't even cold. Well. The body wasn't even a body.",
+          "spoken": "Up on stage, somebody new was singing in Jimmy's spotlight. -- The body wasn't even cold. -- Well. ---- The body wasn't even a body."
         }
       ]
     },
@@ -177,15 +181,18 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Up on stage, Cupid was crooning into Jimmy's microphone. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth."
+          "text": "Up on stage, Cupid was crooning into Jimmy's microphone. Smooth as butter and just as alluring. Every eye in the room was on him. Every eye but mine. Mine were on his ankles. They were also very smooth.",
+          "spoken": "Up on stage, Cupid was crooning into Jimmy's microphone. -- Smooth as butter and just as alluring. -- Every eye in the room was on him. -- Every eye but mine. -- Mine were on his ankles. ---- They were also very smooth."
         },
         {
           "speaker": "tiny",
-          "text": "Between numbers, he dedicated the next song to a very special lady. She knew who she was. Every dame in the room sat up a little straighter. So did a couple of the fellas."
+          "text": "Between numbers, he dedicated the next song to a very special lady. She knew who she was. Every dame in the room sat up a little straighter. So did a couple of the fellas.",
+          "spoken": "Between numbers, he dedicated the next song to a very special lady. -- She knew who she was. -- Every dame in the room sat up a little straighter. ---- So did a couple of the fellas."
         },
         {
           "speaker": "tiny",
-          "text": "Could've been any one of them. I decided not to find out. A man only has room for so many mysteries, and I was already full up."
+          "text": "Could've been any one of them. I decided not to find out. A man only has room for so many mysteries, and I was already full up.",
+          "spoken": "Could've been any one of them. -- I decided not to find out. ---- A man only has room for so many mysteries, and I was already full up."
         }
       ]
     },
@@ -193,23 +200,28 @@
       "lines": [
         {
           "speaker": "vixen",
-          "text": "Well, well. A detective. And such a compact one."
+          "text": "Well, well. A detective. And such a compact one.",
+          "spoken": "Well, well. - A detective. --- And such a compact one."
         },
         {
           "speaker": "tiny",
-          "text": "Vixen. Lounge singer. She'd had this slot for years, until Jimmy took it. A dame with a motive and a beauty mark that moved around depending on the light."
+          "text": "Vixen. Lounge singer. She'd had this slot for years, until Jimmy took it. A dame with a motive and a beauty mark that moved around depending on the light.",
+          "spoken": "Vixen. -- Lounge singer. -- She'd had this slot for years, until Jimmy took it. ---- A dame with a motive and a beauty mark that moved around depending on the light."
         },
         {
           "speaker": "vixen",
-          "text": "You think I did it? Darling, I lost my slot to Jimmy, and tonight I lost it to Cupid. Clearly I'm not getting what I want."
+          "text": "You think I did it? Darling, I lost my slot to Jimmy, and tonight I lost it to Cupid. Clearly I'm not getting what I want.",
+          "spoken": "You think I did it? - Darling, I lost my slot to Jimmy, and tonight I lost it to Cupid. --- Clearly I'm not getting what I want."
         },
         {
           "speaker": "vixen",
-          "text": "If I were you, I'd ask the girl at the bar. The one whose hooves are on fire."
+          "text": "If I were you, I'd ask the girl at the bar. The one whose hooves are on fire.",
+          "spoken": "If I were you, I'd ask the girl at the bar. - The one whose hooves are on fire."
         },
         {
           "speaker": "tiny",
-          "text": "Pointing me at someone else. Classic. Only a guilty person would try to help me solve a crime."
+          "text": "Pointing me at someone else. Classic. Only a guilty person would try to help me solve a crime.",
+          "spoken": "Pointing me at someone else. -- Classic. ---- Only a guilty person would try to help me solve a crime."
         }
       ]
     },
@@ -217,35 +229,43 @@
       "lines": [
         {
           "speaker": "prancer",
-          "text": "Prancer. Jimmy's manager. Forty percent. Fifty on holidays. He was my boy, my client, my brand."
+          "text": "Prancer. Jimmy's manager. Forty percent. Fifty on holidays. He was my boy, my client, my brand.",
+          "spoken": "Prancer. - Jimmy's manager. - Forty percent. - Fifty on holidays. --- He was my boy, my client, my brand."
         },
         {
           "speaker": "easter_bunny",
-          "text": "And I'm just here networking. In December. At the North Pole. Totally normal."
+          "text": "And I'm just here networking. In December. At the North Pole. Totally normal.",
+          "spoken": "And I'm just here networking. - In December. - At the North Pole. --- Totally normal."
         },
         {
           "speaker": "tiny",
-          "text": "The Easter Bunny. Out of season and out of his depth. I asked him where he was last night."
+          "text": "The Easter Bunny. Out of season and out of his depth. I asked him where he was last night.",
+          "spoken": "The Easter Bunny. -- Out of season and out of his depth. ---- I asked him where he was last night."
         },
         {
           "speaker": "easter_bunny",
-          "text": "I have an alibi. Here. This egg. It's hard-boiled."
+          "text": "I have an alibi. Here. This egg. It's hard-boiled.",
+          "spoken": "I have an alibi. - Here. - This egg. --- It's hard-boiled."
         },
         {
           "speaker": "tiny",
-          "text": "A hard-boiled egg. I respected that. A fellow hard-boiled type. I let it slide."
+          "text": "A hard-boiled egg. I respected that. A fellow hard-boiled type. I let it slide.",
+          "spoken": "A hard-boiled egg. -- I respected that. -- A fellow hard-boiled type. ---- I let it slide."
         },
         {
           "speaker": "prancer",
-          "text": "Look, pal, if you want my professional opinion, Jimmy left with Comet. Tall, hot, steaming. You can't miss her."
+          "text": "Look, pal, if you want my professional opinion, Jimmy left with Comet. Tall, hot, steaming. You can't miss her.",
+          "spoken": "Look, pal, if you want my professional opinion, Jimmy left with Comet. - Tall, hot, steaming. --- You can't miss her."
         },
         {
           "speaker": "easter_bunny",
-          "text": "Comet. Definitely Comet. We'd both swear on the egg."
+          "text": "Comet. Definitely Comet. We'd both swear on the egg.",
+          "spoken": "Comet. - Definitely Comet. --- We'd both swear on the egg."
         },
         {
           "speaker": "tiny",
-          "text": "They'd rehearsed it. Same name, same story. Somebody was coaching these two. I just didn't know who. Yet."
+          "text": "They'd rehearsed it. Same name, same story. Somebody was coaching these two. I just didn't know who. Yet.",
+          "spoken": "They'd rehearsed it. -- Same name, same story. -- Somebody was coaching these two. -- I just didn't know who. ---- Yet."
         }
       ]
     },
@@ -253,27 +273,33 @@
       "lines": [
         {
           "speaker": "dancer",
-          "text": "I choreographed Jimmy's act. Do you know what it's like teaching a snowman to move? He had no hips. He had a bottom ball."
+          "text": "I choreographed Jimmy's act. Do you know what it's like teaching a snowman to move? He had no hips. He had a bottom ball.",
+          "spoken": "I choreographed Jimmy's act. - Do you know what it's like teaching a snowman to move? - He had no hips. --- He had a bottom ball."
         },
         {
           "speaker": "tiny",
-          "text": "Dancer. Hated the man's moves. Hated them enough to kill? I watched her closely. She did a little spin. I couldn't tell if it was a confession or a habit."
+          "text": "Dancer. Hated the man's moves. Hated them enough to kill? I watched her closely. She did a little spin. I couldn't tell if it was a confession or a habit.",
+          "spoken": "Dancer. -- Hated the man's moves. -- Hated them enough to kill? -- I watched her closely. -- She did a little spin. ---- I couldn't tell if it was a confession or a habit."
         },
         {
           "speaker": "dancer",
-          "text": "Listen. Last week, Comet tapped a little rhythm on this stage and set it on fire. Literally. We had to call the fire department."
+          "text": "Listen. Last week, Comet tapped a little rhythm on this stage and set it on fire. Literally. We had to call the fire department.",
+          "spoken": "Listen. - Last week, Comet tapped a little rhythm on this stage and set it on fire. - Literally. --- We had to call the fire department."
         },
         {
           "speaker": "dancer",
-          "text": "Jimmy watched the whole thing and said, 'That's my kind of girl.'"
+          "text": "Jimmy watched the whole thing and said, 'That's my kind of girl.'",
+          "spoken": "Jimmy watched the whole thing and said, 'That's my kind of girl.'"
         },
         {
           "speaker": "tiny",
-          "text": "Three suspects. Three stories. All pointing in the same direction. You know what that tells me? It tells me they're covering for each other."
+          "text": "Three suspects. Three stories. All pointing in the same direction. You know what that tells me? It tells me they're covering for each other.",
+          "spoken": "Three suspects. -- Three stories. -- All pointing in the same direction. -- You know what that tells me? ---- It tells me they're covering for each other."
         },
         {
           "speaker": "tiny",
-          "text": "The question was who they were covering for. I needed a drink. Something cold. With a straw. A long straw."
+          "text": "The question was who they were covering for. I needed a drink. Something cold. With a straw. A long straw.",
+          "spoken": "The question was who they were covering for. -- I needed a drink. -- Something cold. -- With a straw. ---- A long straw."
         }
       ]
     },
@@ -281,7 +307,8 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Between me and the bar stood fourteen tables, a hat stand, and a reindeer doing the cha-cha. I plotted a route. Then I plotted a backup route. Then I walked in a straight line."
+          "text": "Between me and the bar stood fourteen tables, a hat stand, and a reindeer doing the cha-cha. I plotted a route. Then I plotted a backup route. Then I walked in a straight line.",
+          "spoken": "Between me and the bar stood fourteen tables, a hat stand, and a reindeer doing the cha-cha. -- I plotted a route. -- Then I plotted a backup route. ---- Then I walked in a straight line."
         }
       ]
     },
@@ -289,11 +316,13 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "The bar. From down here, it was a polished wooden cliff with a brass foot rail I could use as a bench."
+          "text": "The bar. From down here, it was a polished wooden cliff with a brass foot rail I could use as a bench.",
+          "spoken": "The bar. --- From down here, it was a polished wooden cliff with a brass foot rail I could use as a bench."
         },
         {
           "speaker": "tiny",
-          "text": "At the far end, a lady reindeer with her hooves on fire was sipping something that had stopped being a drink and started being steam."
+          "text": "At the far end, a lady reindeer with her hooves on fire was sipping something that had stopped being a drink and started being steam.",
+          "spoken": "At the far end, a lady reindeer with her hooves on fire was sipping something that had stopped being a drink and started being steam."
         }
       ]
     },
@@ -301,27 +330,33 @@
       "lines": [
         {
           "speaker": "silverbough",
-          "text": "Greetings, small traveler. I am Silverbough. I have tended this bar for four hundred winters. What shall it be?"
+          "text": "Greetings, small traveler. I am Silverbough. I have tended this bar for four hundred winters. What shall it be?",
+          "spoken": "Greetings, small traveler. - I am Silverbough. - I have tended this bar for four hundred winters. --- What shall it be?"
         },
         {
           "speaker": "tiny",
-          "text": "An elf. One of the tall ones. Not the toy-making kind. The kind with flowing hair and a harp somewhere. We don't talk about each other at reunions."
+          "text": "An elf. One of the tall ones. Not the toy-making kind. The kind with flowing hair and a harp somewhere. We don't talk about each other at reunions.",
+          "spoken": "An elf. -- One of the tall ones. -- Not the toy-making kind. -- The kind with flowing hair and a harp somewhere. ---- We don't talk about each other at reunions."
         },
         {
           "speaker": "tiny",
-          "text": "A hot cocoa, Stretch. And whatever you know about Jimmy Mittens."
+          "text": "A hot cocoa, Stretch. And whatever you know about Jimmy Mittens.",
+          "spoken": "A hot cocoa, Stretch. --- And whatever you know about Jimmy Mittens."
         },
         {
           "speaker": "silverbough",
-          "text": "In my homeland, we have no word for 'short.' We never needed one."
+          "text": "In my homeland, we have no word for 'short.' We never needed one.",
+          "spoken": "In my homeland, we have no word for 'short.' We never needed one."
         },
         {
           "speaker": "tiny",
-          "text": "Cute. In mine, we have no word for 'quit.' We also have no word for 'ladder,' which is its own problem."
+          "text": "Cute. In mine, we have no word for 'quit.' We also have no word for 'ladder,' which is its own problem.",
+          "spoken": "Cute. --- In mine, we have no word for 'quit.' We also have no word for 'ladder,' which is its own problem."
         },
         {
           "speaker": "silverbough",
-          "text": "Jimmy sat here last night, as he did every night. He was not alone. The stool beside him has not been the same since."
+          "text": "Jimmy sat here last night, as he did every night. He was not alone. The stool beside him has not been the same since.",
+          "spoken": "Jimmy sat here last night, as he did every night. - He was not alone. --- The stool beside him has not been the same since."
         }
       ]
     },
@@ -329,19 +364,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "Through the tinsel goggles, the stool next to Jimmy's lit up like the Fourth of July. It was scorched black. Right through the cushion."
+          "text": "Through the tinsel goggles, the stool next to Jimmy's lit up like the Fourth of July. It was scorched black. Right through the cushion.",
+          "spoken": "Through the tinsel goggles, the stool next to Jimmy's lit up like the Fourth of July. -- It was scorched black. ---- Right through the cushion."
         },
         {
           "speaker": "tiny",
-          "text": "Somebody'd spilled a coffee here. A hot one. A very hot one. Possibly several hot coffees, over a period of years."
+          "text": "Somebody'd spilled a coffee here. A hot one. A very hot one. Possibly several hot coffees, over a period of years.",
+          "spoken": "Somebody'd spilled a coffee here. -- A hot one. -- A very hot one. ---- Possibly several hot coffees, over a period of years."
         },
         {
           "speaker": "silverbough",
-          "text": "That was not coffee."
+          "text": "That was not coffee.",
+          "spoken": "That was not coffee."
         },
         {
           "speaker": "tiny",
-          "text": "I'll be the judge of what's coffee, Stretch."
+          "text": "I'll be the judge of what's coffee, Stretch.",
+          "spoken": "I'll be the judge of what's coffee, Stretch."
         }
       ]
     },
@@ -349,11 +388,13 @@
       "lines": [
         {
           "speaker": "silverbough",
-          "text": "Allow me. Ascend, little one, as the eagle ascends."
+          "text": "Allow me. Ascend, little one, as the eagle ascends.",
+          "spoken": "Allow me. - Ascend, little one, as the eagle ascends."
         },
         {
           "speaker": "tiny",
-          "text": "He set me on the bar like a drink order. I've been lifted by better. Not many."
+          "text": "He set me on the bar like a drink order. I've been lifted by better. Not many.",
+          "spoken": "He set me on the bar like a drink order. -- I've been lifted by better. ---- Not many."
         }
       ]
     },
@@ -361,19 +402,23 @@
       "lines": [
         {
           "speaker": "tiny",
-          "text": "A reserved card, standing on the bar where Jimmy sat. Table for two. It read: 'J. Mittens, plus C.'"
+          "text": "A reserved card, standing on the bar where Jimmy sat. Table for two. It read: 'J. Mittens, plus C.'",
+          "spoken": "A reserved card, standing on the bar where Jimmy sat. -- Table for two. ---- It read: 'J. Mittens, plus C.'"
         },
         {
           "speaker": "tiny",
-          "text": "The C was scorched around the edges. Still warm."
+          "text": "The C was scorched around the edges. Still warm.",
+          "spoken": "The C was scorched around the edges. --- Still warm."
         },
         {
           "speaker": "tiny",
-          "text": "C. Could be anyone. Cupid. Carl. Carol. Some guy named Clive. A mysterious stranger simply known as 'the Letter C.'"
+          "text": "C. Could be anyone. Cupid. Carl. Carol. Some guy named Clive. A mysterious stranger simply known as 'the Letter C.'",
+          "spoken": "C. -- Could be anyone. -- Cupid. -- Carl. -- Carol. -- Some guy named Clive. ---- A mysterious stranger simply known as 'the Letter C.'"
         },
         {
           "speaker": "tiny",
-          "text": "I ran through the alphabet twice. I kept coming back to C. Which, if you think about it, was very suspicious of C."
+          "text": "I ran through the alphabet twice. I kept coming back to C. Which, if you think about it, was very suspicious of C.",
+          "spoken": "I ran through the alphabet twice. -- I kept coming back to C. ---- Which, if you think about it, was very suspicious of C."
         }
       ]
     },
@@ -381,31 +426,38 @@
       "lines": [
         {
           "speaker": "comet",
-          "text": "Well, if it isn't my favorite little detective. Again."
+          "text": "Well, if it isn't my favorite little detective. Again.",
+          "spoken": "Well, if it isn't my favorite little detective. - Again."
         },
         {
           "speaker": "tiny",
-          "text": "Comet. The dame from the alley. Every suspect in this joint had said her name. That's how I knew she was the one person I could trust."
+          "text": "Comet. The dame from the alley. Every suspect in this joint had said her name. That's how I knew she was the one person I could trust.",
+          "spoken": "Comet. -- The dame from the alley. -- Every suspect in this joint had said her name. ---- That's how I knew she was the one person I could trust."
         },
         {
           "speaker": "tiny",
-          "text": "Hold my drink, would you, sweetheart?"
+          "text": "Hold my drink, would you, sweetheart?",
+          "spoken": "Hold my drink, would you, sweetheart?"
         },
         {
           "speaker": "comet",
-          "text": "Sure thing, sugar."
+          "text": "Sure thing, sugar.",
+          "spoken": "Sure thing, sugar."
         },
         {
           "speaker": "tiny",
-          "text": "She held it. It boiled. The glass whistled like a kettle and the ice cubes left the building. Must've been a warm room."
+          "text": "She held it. It boiled. The glass whistled like a kettle and the ice cubes left the building. Must've been a warm room.",
+          "spoken": "She held it. -- It boiled. -- The glass whistled like a kettle and the ice cubes left the building. ---- Must've been a warm room."
         },
         {
           "speaker": "comet",
-          "text": "Poor Jimmy. We sat right here last night. He said I made him feel like a new man. Then he said he felt a little light-headed. Then he said a lot of things. Then he was quiet."
+          "text": "Poor Jimmy. We sat right here last night. He said I made him feel like a new man. Then he said he felt a little light-headed. Then he said a lot of things. Then he was quiet.",
+          "spoken": "Poor Jimmy. - We sat right here last night. - He said I made him feel like a new man. - Then he said he felt a little light-headed. - Then he said a lot of things. --- Then he was quiet."
         },
         {
           "speaker": "tiny",
-          "text": "A grieving acquaintance. Sitting right where it happened. Some dames just can't let go."
+          "text": "A grieving acquaintance. Sitting right where it happened. Some dames just can't let go.",
+          "spoken": "A grieving acquaintance. -- Sitting right where it happened. ---- Some dames just can't let go."
         }
       ]
     },
@@ -413,19 +465,23 @@
       "lines": [
         {
           "speaker": "comet",
-          "text": "Well, I'd love to stay, sugar, but I've got practice at the training grounds. Laps. A girl's gotta stay warm."
+          "text": "Well, I'd love to stay, sugar, but I've got practice at the training grounds. Laps. A girl's gotta stay warm.",
+          "spoken": "Well, I'd love to stay, sugar, but I've got practice at the training grounds. - Laps. --- A girl's gotta stay warm."
         },
         {
           "speaker": "tiny",
-          "text": "She swished out the door. The welcome mat caught fire. Nobody said anything. It's that kind of place."
+          "text": "She swished out the door. The welcome mat caught fire. Nobody said anything. It's that kind of place.",
+          "spoken": "She swished out the door. -- The welcome mat caught fire. -- Nobody said anything. ---- It's that kind of place."
         },
         {
           "speaker": "tiny",
-          "text": "The training grounds. Where the whole Reindeer Squad goes to sweat. Every one of them with a motive, and every one of them pointing the same direction."
+          "text": "The training grounds. Where the whole Reindeer Squad goes to sweat. Every one of them with a motive, and every one of them pointing the same direction.",
+          "spoken": "The training grounds. -- Where the whole Reindeer Squad goes to sweat. ---- Every one of them with a motive, and every one of them pointing the same direction."
         },
         {
           "speaker": "tiny",
-          "text": "I knew what I had to do. I had to go to the training grounds and tail every reindeer in that squad. Except one. She'd been through enough."
+          "text": "I knew what I had to do. I had to go to the training grounds and tail every reindeer in that squad. Except one. She'd been through enough.",
+          "spoken": "I knew what I had to do. -- I had to go to the training grounds and tail every reindeer in that squad. -- Except one. ---- She'd been through enough."
         }
       ]
     }
