@@ -1,1 +1,553 @@
-{}
+{
+  "office_open": [
+    {
+      "speaker": "tiny",
+      "file": "office_open_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_open_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_open_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_open_4.mp3"
+    }
+  ],
+  "office_knock": [
+    {
+      "speaker": "granny",
+      "file": "office_knock_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_knock_2.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "office_knock_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_knock_4.mp3"
+    }
+  ],
+  "office_drip": [
+    {
+      "speaker": "tiny",
+      "file": "office_drip_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_drip_2.mp3"
+    }
+  ],
+  "office_granny": [
+    {
+      "speaker": "granny",
+      "file": "office_granny_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "office_granny_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_granny_3.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "office_granny_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_granny_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_granny_6.mp3"
+    }
+  ],
+  "office_drawer": [
+    {
+      "speaker": "tiny",
+      "file": "office_drawer_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_drawer_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_drawer_3.mp3"
+    }
+  ],
+  "office_leave": [
+    {
+      "speaker": "granny",
+      "file": "office_leave_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "office_leave_2.mp3"
+    }
+  ],
+  "street_enter": [
+    {
+      "speaker": "tiny",
+      "file": "street_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "street_enter_2.mp3"
+    }
+  ],
+  "street_granny": [
+    {
+      "speaker": "granny",
+      "file": "street_granny_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "street_granny_2.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "street_granny_3.mp3"
+    }
+  ],
+  "street_choice": [
+    {
+      "speaker": "tiny",
+      "file": "street_choice_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "street_choice_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "street_choice_3.mp3"
+    }
+  ],
+  "bus_stop_enter": [
+    {
+      "speaker": "tiny",
+      "file": "bus_stop_enter_1.mp3"
+    }
+  ],
+  "bus_ride": [
+    {
+      "speaker": "tiny",
+      "file": "bus_ride_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "bus_ride_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bus_ride_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bus_ride_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bus_ride_5.mp3"
+    }
+  ],
+  "alley_enter": [
+    {
+      "speaker": "tiny",
+      "file": "alley_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_enter_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_enter_3.mp3"
+    }
+  ],
+  "alley_snap": [
+    {
+      "speaker": "sgt_snap",
+      "file": "alley_snap_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_snap_2.mp3"
+    },
+    {
+      "speaker": "sgt_snap",
+      "file": "alley_snap_3.mp3"
+    },
+    {
+      "speaker": "sgt_snap",
+      "file": "alley_snap_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_snap_5.mp3"
+    },
+    {
+      "speaker": "sgt_snap",
+      "file": "alley_snap_6.mp3"
+    }
+  ],
+  "alley_puddle": [
+    {
+      "speaker": "tiny",
+      "file": "alley_puddle_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "alley_puddle_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_puddle_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_puddle_4.mp3"
+    }
+  ],
+  "alley_comet": [
+    {
+      "speaker": "comet",
+      "file": "alley_comet_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_comet_2.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "alley_comet_3.mp3"
+    },
+    {
+      "speaker": "lil_sleet",
+      "file": "alley_comet_4.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "alley_comet_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_comet_6.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_comet_7.mp3"
+    }
+  ],
+  "alley_scorch": [
+    {
+      "speaker": "tiny",
+      "file": "alley_scorch_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_scorch_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_scorch_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_scorch_4.mp3"
+    }
+  ],
+  "alley_boost": [
+    {
+      "speaker": "granny",
+      "file": "alley_boost_1.mp3"
+    }
+  ],
+  "alley_kiss": [
+    {
+      "speaker": "tiny",
+      "file": "alley_kiss_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_kiss_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_kiss_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_kiss_4.mp3"
+    }
+  ],
+  "alley_demand": [
+    {
+      "speaker": "granny",
+      "file": "alley_demand_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_demand_2.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "alley_demand_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "alley_demand_4.mp3"
+    }
+  ],
+  "lounge_enter": [
+    {
+      "speaker": "tiny",
+      "file": "lounge_enter_1.mp3"
+    },
+    {
+      "speaker": "granny",
+      "file": "lounge_enter_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_enter_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_enter_4.mp3"
+    }
+  ],
+  "lounge_cupid": [
+    {
+      "speaker": "tiny",
+      "file": "lounge_cupid_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_cupid_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_cupid_3.mp3"
+    }
+  ],
+  "lounge_vixen": [
+    {
+      "speaker": "vixen",
+      "file": "lounge_vixen_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_vixen_2.mp3"
+    },
+    {
+      "speaker": "vixen",
+      "file": "lounge_vixen_3.mp3"
+    },
+    {
+      "speaker": "vixen",
+      "file": "lounge_vixen_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_vixen_5.mp3"
+    }
+  ],
+  "lounge_prancer": [
+    {
+      "speaker": "prancer",
+      "file": "lounge_prancer_1.mp3"
+    },
+    null,
+    {
+      "speaker": "tiny",
+      "file": "lounge_prancer_3.mp3"
+    },
+    null,
+    {
+      "speaker": "tiny",
+      "file": "lounge_prancer_5.mp3"
+    },
+    {
+      "speaker": "prancer",
+      "file": "lounge_prancer_6.mp3"
+    },
+    null,
+    {
+      "speaker": "tiny",
+      "file": "lounge_prancer_8.mp3"
+    }
+  ],
+  "lounge_dancer": [
+    {
+      "speaker": "dancer",
+      "file": "lounge_dancer_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_dancer_2.mp3"
+    },
+    {
+      "speaker": "dancer",
+      "file": "lounge_dancer_3.mp3"
+    },
+    {
+      "speaker": "dancer",
+      "file": "lounge_dancer_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_dancer_5.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "lounge_dancer_6.mp3"
+    }
+  ],
+  "lounge_to_bar": [
+    {
+      "speaker": "tiny",
+      "file": "lounge_to_bar_1.mp3"
+    }
+  ],
+  "bar_enter": [
+    {
+      "speaker": "tiny",
+      "file": "bar_enter_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_enter_2.mp3"
+    }
+  ],
+  "bar_silverbough": [
+    {
+      "speaker": "silverbough",
+      "file": "bar_silverbough_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_silverbough_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_silverbough_3.mp3"
+    },
+    {
+      "speaker": "silverbough",
+      "file": "bar_silverbough_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_silverbough_5.mp3"
+    },
+    {
+      "speaker": "silverbough",
+      "file": "bar_silverbough_6.mp3"
+    }
+  ],
+  "bar_stool": [
+    {
+      "speaker": "tiny",
+      "file": "bar_stool_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_stool_2.mp3"
+    },
+    {
+      "speaker": "silverbough",
+      "file": "bar_stool_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_stool_4.mp3"
+    }
+  ],
+  "bar_boost": [
+    {
+      "speaker": "silverbough",
+      "file": "bar_boost_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_boost_2.mp3"
+    }
+  ],
+  "bar_card": [
+    {
+      "speaker": "tiny",
+      "file": "bar_card_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_card_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_card_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_card_4.mp3"
+    }
+  ],
+  "bar_comet": [
+    {
+      "speaker": "comet",
+      "file": "bar_comet_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_3.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "bar_comet_4.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_5.mp3"
+    },
+    {
+      "speaker": "comet",
+      "file": "bar_comet_6.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_7.mp3"
+    }
+  ],
+  "bar_comet_leaves": [
+    {
+      "speaker": "comet",
+      "file": "bar_comet_leaves_1.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_leaves_2.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_leaves_3.mp3"
+    },
+    {
+      "speaker": "tiny",
+      "file": "bar_comet_leaves_4.mp3"
+    }
+  ]
+}
